@@ -10,7 +10,7 @@ public class ShakeTrigger : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            StartCoroutine(cameraShake.Shake(.15f, .4f));
+            StartCoroutine(cameraShake.Shake(.05f, .2f));
         }
     }
 }
