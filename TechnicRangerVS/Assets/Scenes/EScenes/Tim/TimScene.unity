@@ -1155,7 +1155,7 @@ Transform:
   m_LocalScale: {x: 62.825756, y: 62.825756, z: 62.82654}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &112096739
 PrefabInstance:
@@ -1227,17 +1227,22 @@ PrefabInstance:
     - target: {fileID: 1367821077124135604, guid: 35bb1e989f349074d956b606201dd59f,
         type: 3}
       propertyPath: MovementSpeed
-      value: 10
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1367821077124135604, guid: 35bb1e989f349074d956b606201dd59f,
         type: 3}
       propertyPath: JumpSpeed
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1367821077124135604, guid: 35bb1e989f349074d956b606201dd59f,
         type: 3}
       propertyPath: AirControlMultiplier
-      value: 1
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367821077124135604, guid: 35bb1e989f349074d956b606201dd59f,
+        type: 3}
+      propertyPath: Gravity
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 1367821076425170677, guid: 35bb1e989f349074d956b606201dd59f,
         type: 3}
@@ -1816,7 +1821,7 @@ PrefabInstance:
     - target: {fileID: 7503372889695381166, guid: 9efd66a65e43fc042bf66778e1d84a2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7503372889695381166, guid: 9efd66a65e43fc042bf66778e1d84a2d,
         type: 3}
@@ -4834,7 +4839,7 @@ PrefabInstance:
     - target: {fileID: 1227646086509101192, guid: d23624fe1db08d84f96f7f2d19688c7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1227646086509101192, guid: d23624fe1db08d84f96f7f2d19688c7b,
         type: 3}
@@ -6666,7 +6671,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &654314369
 GameObject:
@@ -12840,7 +12845,7 @@ Transform:
   - {fileID: 654314370}
   - {fileID: 72287613}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029334035
 GameObject:
