@@ -639,8 +639,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913c09e4e0ed73b4483204c81af79c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartWarper: {fileID: 0}
-  EndWarper: {fileID: 0}
+  StartWarper: {fileID: 5123575439542394794, guid: dd30713a903dffd4782132812cd240fc,
+    type: 3}
+  EndWarper: {fileID: 2698642831423173174, guid: 8f6b3ae0d15af4347902fdfb83032d01,
+    type: 3}
   warpRealmStartPosition: {fileID: 0}
   warpRealmEndPosition: {fileID: 0}
   RealmSkybox: {fileID: 0}
