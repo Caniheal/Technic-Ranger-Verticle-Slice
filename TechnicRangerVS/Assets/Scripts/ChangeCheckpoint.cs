@@ -4,10 +4,12 @@ public class ChangeCheckpoint : MonoBehaviour
 {
     public GameObject checkpoint;
 
-    void OnTriggerEnter(Collider player)
+    void OnTriggerEnter(Collider plyr)
     {
-        if (player.gameObject.tag == "Player")
+        if (plyr.gameObject.tag == "Player")
+        {
             Destroy(checkpoint);
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
     }
 }

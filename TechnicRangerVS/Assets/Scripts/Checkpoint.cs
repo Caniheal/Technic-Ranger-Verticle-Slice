@@ -11,9 +11,9 @@ public class Checkpoint : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    void OnTriggerEnter (Collider player)
+    void OnTriggerEnter (Collider plyr)
     {
-        if(player.gameObject.tag == "Player")
+        if(plyr.gameObject.tag == "Player")
         {
             player.transform.position = checkpoint.position;
             player.transform.rotation = checkpoint.rotation;
