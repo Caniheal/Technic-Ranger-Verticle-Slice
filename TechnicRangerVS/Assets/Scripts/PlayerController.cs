@@ -200,7 +200,10 @@ public class PlayerController : MonoBehaviour
             {
                 CameraDirection.y = 0;
           
-                WarpManager.PlaceWarper(hit.point, CameraDirection);
+                if (WarpManager)
+                {
+                    WarpManager.PlaceWarper(hit.point, CameraDirection);
+                }
             }
             else 
             {
