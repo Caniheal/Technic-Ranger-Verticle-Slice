@@ -591,19 +591,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f379f4364babe45b63f7421f163cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 18
+  MovementSpeed: 13
   MouseSensitivity: 1
   CameraDistance: 5
   CameraSphereTestRadius: 0.3
   CameraOffset: {x: 0.5, y: 1, z: 0}
   MinCameraDistance: 0.8
-  Gravity: -16
+  Gravity: -24
   FallingMultiplier: 2.8
   JumpingMultiplier: 2
-  AirControlMultiplier: 0.6
+  AirControlMultiplier: 0.9
   WarpFirstTestRadius: 0.3
   WarpSecondTestRadius: 1
-  JumpSpeed: 20
+  JumpSpeed: 24
   Camera: {fileID: 1367821075929038930}
   WarpManager: {fileID: 1367821077124135610}
   Yaw: 0
