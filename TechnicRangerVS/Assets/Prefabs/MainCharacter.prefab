@@ -496,10 +496,9 @@ GameObject:
   - component: {fileID: 1367821077124135604}
   - component: {fileID: 1367821077124135605}
   - component: {fileID: 1367821077124135610}
-  - component: {fileID: 1367821077124135611}
   m_Layer: 2
   m_Name: MainCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,19 +591,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f379f4364babe45b63f7421f163cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 10
+  MovementSpeed: 13
   MouseSensitivity: 1
   CameraDistance: 5
   CameraSphereTestRadius: 0.3
   CameraOffset: {x: 0.5, y: 1, z: 0}
   MinCameraDistance: 0.8
-  Gravity: -9.8
+  Gravity: -24
   FallingMultiplier: 2.8
   JumpingMultiplier: 2
-  AirControlMultiplier: 0.4
+  AirControlMultiplier: 0.9
   WarpFirstTestRadius: 0.3
   WarpSecondTestRadius: 1
-  JumpSpeed: 10
+  JumpSpeed: 24
   Camera: {fileID: 1367821075929038930}
   WarpManager: {fileID: 1367821077124135610}
   Yaw: 0
@@ -640,33 +639,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913c09e4e0ed73b4483204c81af79c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartWarper: {fileID: 0}
-  EndWarper: {fileID: 0}
+  StartWarper: {fileID: 5123575439542394794, guid: dd30713a903dffd4782132812cd240fc,
+    type: 3}
+  EndWarper: {fileID: 2698642831423173174, guid: 8f6b3ae0d15af4347902fdfb83032d01,
+    type: 3}
   warpRealmStartPosition: {fileID: 0}
   warpRealmEndPosition: {fileID: 0}
-  RealmSkybox: {fileID: 2100000, guid: 0441bd85461c3a64999eb079bf736d8b, type: 2}
+  RealmSkybox: {fileID: 0}
   NormalSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   warpRealmCameraOrientation: {x: 0, y: 0, z: 0, w: 0}
   WarpTime: 1
   DistanceToWarp: 2
   WarperTestRadius: 1
   WarpTestDistance: 5
---- !u!114 &1367821077124135611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367821077124135608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b499c397b946d94c9dc20bc104afb21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 1367821076673619779}
-  spawnPoint: {fileID: 1367821076425170681}
-  projectilePrefab: {fileID: 2608224924012400760, guid: 3d4da60ef9dd3554693073498fc0f333,
-    type: 3}
-  platformPrefab: {fileID: 3068435684183916809, guid: 721f8f5538c14704ca287c9b170a6a4e,
-    type: 3}
-  launchForce: 700
