@@ -21,14 +21,17 @@ public class ColorSwap : MonoBehaviour
         }
         if (Input.GetKeyDown("2"))
         {
+            //VISTA
             GetComponent<Renderer>().material = Purple;
         }
         if (Input.GetKeyDown("3"))
         {
+            //ANCHOR
             GetComponent<Renderer>().material = Teal;
         }
         if (Input.GetKeyDown("4"))
         {
+            //SHIELD
             GetComponent<Renderer>().material = White;
         }
         if (Input.GetKeyDown("5"))
