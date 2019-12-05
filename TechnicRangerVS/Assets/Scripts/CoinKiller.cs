@@ -27,7 +27,7 @@ public class CoinKiller : MonoBehaviour
 
         
 
-        Object.Destroy(gameObject);
+        Object.Destroy(gameObject, .15f);
 
      
             
