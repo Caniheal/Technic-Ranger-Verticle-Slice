@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //For our animations
-    private Animator anim;
-
     public float MovementSpeed = 1;
     public float MouseSensitivity = 1;
     public float CameraDistance = 3;
@@ -39,8 +36,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-
         characterController = GetComponent<CharacterController>();
     }
 
@@ -102,18 +97,7 @@ public class PlayerController : MonoBehaviour
             MoveDirection += right;
         }
 
-        //Animations
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
-        {
-            anim.SetBool("isRunning", true);
-        }
-        else
-        {
-            anim.SetBool("isRunning", false);
-        }
-            
-
-            MoveDirection = MoveDirection * MovementSpeed;
+        MoveDirection = MoveDirection * MovementSpeed;
 
         //How far you can move when in air
         //! = not
