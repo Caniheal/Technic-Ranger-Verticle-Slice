@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-   
 
-    }
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform startPoint;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float hoverF = 12;
+
     void OnTriggerEnter(Collider other)
     {
+        player.transform.position = startPoint.transform.position;
+  
         Debug.Log("working");
     }
 }
