@@ -27,6 +27,12 @@ public class PlayerController : MonoBehaviour
     public Camera Camera;
     public WarpManager WarpManager;
 
+    //Sound Stuff by Fran
+    private AudioSource source;
+    public AudioClip jumpClip;
+    public AudioClip walkClip;
+    public AudioClip landingClip;
+
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
     public float Yaw;
@@ -46,6 +52,11 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
 
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
     }
 
     public void DisableMovement()
@@ -116,7 +127,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
         if (Input.GetKey(KeyCode.Space))
-        {
+        {             
             anim.SetTrigger("jump");
         }
 
@@ -134,6 +145,9 @@ public class PlayerController : MonoBehaviour
         if (characterController.isGrounded && Input.GetKey(KeyCode.Space))
         {
             MoveDirection += Vector3.up * JumpSpeed;
+
+            //jumpsound
+            source.PlayOneShot(jumpClip);
         }
 
         //current character velocity
