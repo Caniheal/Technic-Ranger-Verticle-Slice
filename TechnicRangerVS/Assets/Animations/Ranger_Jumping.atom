@@ -1,0 +1,22 @@
+atomVersion 1.0;
+mayaVersion 2018;
+mayaSceneFile D:/School/GameDesignWorkshop/Other/RiggedRanger/Ranger_Rigged4.0_.mb;
+timeUnit film;
+linearUnit cm;
+angularUnit deg;
+startTime 0;
+endTime 60;
+dagNode {
+  HIP_CTRL 1 2;
+  anim visibility visibility 0;
+  animData {
+    input time;
+    output unitless;
+    weighted 0;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      0 1 spline step 1 0 0;
+    }
+  }
+}
