@@ -13,28 +13,65 @@ public class SkateboardController : MonoBehaviour
         public bool steering;
     }
 
-
+    public GameObject AttachPoint;
     public List<AxleInfo> axleInfos;
     public float maxMotorTorque;
     public float maxSteeringAngle;
 
-    public void FixedUpdate()
-    {
-        float motor = maxMotorTorque * Input.GetAxis("Vertical");
-        float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+    PlayerController player;
+    bool enabletriggerenter = true;
 
-        foreach (AxleInfo axleInfo in axleInfos)
+    private void OnTriggerEnter(Collider other)
+    {
+        player = other.gameObject.GetComponent<PlayerController>();
+
+        if (player && enabletriggerenter)
         {
-            if (axleInfo.steering)
+            player.DisableMovement();
+            player.transform.parent = AttachPoint.gameObject.transform;
+            player.transform.position = AttachPoint.gameObject.transform.position;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            enabletriggerenter = true;
+        }
+    }
+
+public void FixedUpdate()
+    {
+        if (player)
+        {
+            if (Input.GetKey(KeyCode.Space))
             {
-                axleInfo.leftWheel.steerAngle = steering;
-                axleInfo.rightWheel.steerAngle = steering;
+                player.transform.parent = null;
+                player.EnableMovement();
+                player.transform.rotation = Quaternion.identity;
+                player = null;
+                enabletriggerenter = false;
             }
 
-            if (axleInfo.motor)
+            float motor = maxMotorTorque * Input.GetAxis("Vertical");
+            Debug.Log(motor + "");
+            float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+            Debug.Log(steering + "");
+
+            foreach (AxleInfo axleInfo in axleInfos)
             {
-                axleInfo.leftWheel.motorTorque = motor;
-                axleInfo.rightWheel.motorTorque = motor;
+                if (axleInfo.steering)
+                {
+                    axleInfo.leftWheel.steerAngle = steering;
+                    axleInfo.rightWheel.steerAngle = steering;
+                }
+
+                if (axleInfo.motor)
+                {
+                    axleInfo.leftWheel.motorTorque = motor;
+                    axleInfo.rightWheel.motorTorque = motor;
+                }
             }
         }
     }
