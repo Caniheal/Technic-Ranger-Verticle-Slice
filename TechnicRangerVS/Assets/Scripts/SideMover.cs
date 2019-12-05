@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SideMover : MonoBehaviour
+public class SidetoSideMover : MonoBehaviour
 {
     public float DistanceToMove = 6;
     public float Speed = 1;
@@ -40,13 +40,13 @@ public class SideMover : MonoBehaviour
         currentDistance = currentDistance + Vector3.Distance(PreviousLocation, transform.position);
 
         //if current distance >= 6 then reverse direction
-     /*   if (currentDistance >= DistanceToMove)
+        if (currentDistance >= DistanceToMove)
         {
             //  Vector3(1, 0, 0) ->  Vector3(-1, 0, 0)
             DirectionToMove = DirectionToMove * -1;
             //starting distance before moving again set back to 0
             currentDistance = 0;
-        } */
+        }
 
         //(0,0,0) + (Speed * deltatime, 0, 0)
         // transform.position = transform.position + PositionWeWantToMoveTo;--
