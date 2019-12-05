@@ -42,6 +42,10 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
 
         characterController = GetComponent<CharacterController>();
+
+        Cursor.visible = false;
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void DisableMovement()
