@@ -13,7 +13,7 @@ public class Death : MonoBehaviour
         if (PC)
         {
             PC.DisableMovement();
-            other.gameObject.transform.position = startPos.position;
+            other.gameObject.transform.position = GameManager.Instance.lastCheckPoint.position;
             PC.EnableMovement();
         }
 
