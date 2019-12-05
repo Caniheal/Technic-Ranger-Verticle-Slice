@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void SettingsMenu()
     {
-
+        SceneManager.LoadScene("Settings");
     }
     
     public void Credits()
