@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class PlaySound : MonoBehaviour
 {
-    public AudioClip SoundToPlay;
-    public float Volume;
-    AudioSource audio;
+   
+    public AudioSource sound;
     public bool alreadyPlayed = false;
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        sound = GetComponent<AudioSource>();
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        if (!alreadyPlayed)
-        {
-            audio.PlayOneShot(SoundToPlay, Volume);
-            alreadyPlayed = true;
-        }
+        Debug.Log("workplz");
+
+
+
+        sound.Play();
     }
 }
