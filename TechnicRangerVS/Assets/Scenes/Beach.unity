@@ -238,8 +238,8 @@ Light:
   m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 28.96
+  m_Color: {r: 1, g: 0.9477398, b: 0, a: 1}
+  m_Intensity: 15
   m_Range: 3.084015
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1079,7 +1079,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6ae14d9df45a2e94dabb1f2acadbded6, type: 2}
+  - {fileID: 2100000, guid: 3b32b92aecb7e3745b7c57fea162a036, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3488,7 +3488,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 3aef4576fac565545baa951f568bf30b, type: 3}
 --- !u!1001 &699140946
@@ -9823,8 +9823,8 @@ Light:
   m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 28.96
+  m_Color: {r: 1, g: 0.91404873, b: 0, a: 1}
+  m_Intensity: 15
   m_Range: 3.084015
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -11475,7 +11475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101302330}
   m_LocalRotation: {x: -0, y: 0.3466813, z: -0, w: 0.937983}
-  m_LocalPosition: {x: -19.42, y: 10.246, z: 14.84}
+  m_LocalPosition: {x: -23.11, y: 10.246, z: 18.29}
   m_LocalScale: {x: 1.0508432, y: 9.124279, z: 5.1505647}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12302,6 +12302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 346.93533
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937953439843067164, guid: 0c4ecb00cf759c84fb87b3318e3ae8a1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4ecb00cf759c84fb87b3318e3ae8a1, type: 3}
