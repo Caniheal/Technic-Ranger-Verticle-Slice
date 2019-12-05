@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    
-    public Transform startPos;
 
+    public Transform startPos;
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.gameObject.CompareTag("player"))
+        PlayerController PC = other.gameObject.GetComponent<PlayerController>();
+
+        if (PC)
         {
+            PC.DisableMovement();
             other.gameObject.transform.position = startPos.position;
+            PC.EnableMovement();
         }
+
     }
 }
