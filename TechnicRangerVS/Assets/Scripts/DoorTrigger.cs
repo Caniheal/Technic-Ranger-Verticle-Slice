@@ -5,15 +5,23 @@ using UnityEngine;
 public class DoorTrigger : MonoBehaviour
 {
 
-    [SerializeField] private Transform player;
-    [SerializeField] private Transform startPoint;
+    // [SerializeField] private Transform player;
+    // [SerializeField] private Transform startPoint;
 
-    public float hoverF = 12;
+    public GameObject player;
+    public GameObject lefty;
+    public GameObject righty;
 
     void OnTriggerEnter(Collider other)
     {
-        player.transform.position = startPoint.transform.position;
-  
+        // player.transform.position = new Vector3(0,0,0);
+
+        player.GetComponent<SideMover>().enabled = true;
+
+        lefty.GetComponent<Light>().enabled = true;
+
+        righty.GetComponent<Light>().enabled = true;
+
         Debug.Log("working");
     }
 }
