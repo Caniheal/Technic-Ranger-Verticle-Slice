@@ -78,24 +78,8 @@ public class PlayerController : MonoBehaviour
         //Default when you're not moving
         MoveDirection = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            MoveDirection += forward;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            //back
-            MoveDirection += -forward;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            //left
-            MoveDirection += -right;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            MoveDirection += right;
-        }
+        Input.GetAxis("Mouse X");
+        Input.GetAxis("Mouse Y");
 
         MoveDirection = MoveDirection * MovementSpeed;
 
@@ -107,7 +91,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jump
-        if (characterController.isGrounded && Input.GetKey(KeyCode.Space))
+        if (characterController.isGrounded && Input.GetButton("A Button"))
         {
             MoveDirection += Vector3.up * JumpSpeed;
         }
@@ -137,11 +121,11 @@ public class PlayerController : MonoBehaviour
     {
         //Keep yaw between -180 and 180 (360 camera rotation)
         //adding to yaw
-        Yaw += MouseSensitivity * Input.GetAxis("Mouse X");
+        Yaw += MouseSensitivity * Input.GetAxis("Horizontal");
 
         //Keep pitch between -90 and 90 (180 camera rotation) to not flip backwards
         //pitch gets inverted so subtract
-        Pitch -= MouseSensitivity * Input.GetAxis("Mouse Y");
+        Pitch -= MouseSensitivity * Input.GetAxis("Vertical");
         Pitch = Mathf.Clamp(Pitch, -90, 90);
 
         //make rotation from euler angles
