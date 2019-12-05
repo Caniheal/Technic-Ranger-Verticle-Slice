@@ -111,9 +111,15 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
+<<<<<<< HEAD
 
 
         MoveDirection = MoveDirection * MovementSpeed;
+=======
+            
+
+            MoveDirection = MoveDirection * MovementSpeed;
+>>>>>>> parent of 4e447c1... Revert "Merge branch 'master' of https://github.com/Caniheal/Technic-Ranger-Verticle-Slice"
 
         //How far you can move when in air
         //! = not
