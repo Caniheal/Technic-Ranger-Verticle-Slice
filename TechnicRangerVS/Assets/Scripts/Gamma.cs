@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Gamma : MonoBehaviour
 {
 
     public float GammaCorrection;
 
-    public Rect SliderLocation;
 
     void Update()
     {
@@ -18,7 +18,6 @@ public class Gamma : MonoBehaviour
     void OnGUI()
     {
 
-        GammaCorrection = GUI.HorizontalSlider(SliderLocation, GammaCorrection, 0, 1.0f);
 
     }
 

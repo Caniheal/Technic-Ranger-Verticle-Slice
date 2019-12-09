@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class SceneSwitching : MonoBehaviour
 {
     private void Start()
     {
@@ -24,6 +24,10 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
 
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Exit()
