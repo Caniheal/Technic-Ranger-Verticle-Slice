@@ -23,8 +23,9 @@ public class SceneSwitching : MonoBehaviour
     
     public void Credits()
     {
-
+        SceneManager.LoadScene("Credits Menu");
     }
+
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
