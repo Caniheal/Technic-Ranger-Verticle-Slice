@@ -1,22 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using System.Collections;
 
 public class Gamma : MonoBehaviour
 {
 
-    public GameObject GammaController;
-    public Slider gamma;
-    public float globalVolume;
-    void Start()
+    public float GammaCorrection;
+
+    public Rect SliderLocation;
+
+    void Update()
     {
-        gamma = GameObject.Find("Slider").GetComponent<Slider>();
-        GammaController = GameObject.Find("ambientLight");
+
+        RenderSettings.ambientLight = new Color(GammaCorrection, GammaCorrection, GammaCorrection, 1.0f);
+
     }
 
     void OnGUI()
     {
-        
+
+        GammaCorrection = GUI.HorizontalSlider(SliderLocation, GammaCorrection, 0, 1.0f);
+
     }
+
 }

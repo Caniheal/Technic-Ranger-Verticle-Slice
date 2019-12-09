@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -200,6 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212025503}
+  - component: {fileID: 212025504}
   m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
@@ -227,6 +228,25 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &212025504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212025502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88243608bdb1604ca043bc1dcb18177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GammaCorrection: 0
+  SliderLocation:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!1 &252570978
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +572,7 @@ GameObject:
   - component: {fileID: 911916472}
   - component: {fileID: 911916471}
   - component: {fileID: 911916470}
+  - component: {fileID: 911916474}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -643,6 +664,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &911916474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911916469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec408f6ee348714cb06a4e3104bd88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: eb34e8103a2dc3b458e203d5df48647c, type: 2}
 --- !u!1 &1172614988
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +844,7 @@ GameObject:
   - component: {fileID: 1310334541}
   - component: {fileID: 1310334543}
   - component: {fileID: 1310334542}
+  - component: {fileID: 1310334544}
   m_Layer: 5
   m_Name: Gamma
   m_TagString: Untagged
@@ -879,6 +914,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310334540}
   m_CullTransparentMesh: 0
+--- !u!114 &1310334544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310334540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88243608bdb1604ca043bc1dcb18177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GammaCorrection: 0
+  SliderLocation:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!1 &1326311528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,19 +1436,19 @@ MonoBehaviour:
   m_FillRect: {fileID: 1851278254}
   m_HandleRect: {fileID: 1326311529}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: -80
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 777bd9c57ecdc414ca38dfc0eff0a721, type: 3}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 911916474}
+        m_MethodName: SetVolume
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

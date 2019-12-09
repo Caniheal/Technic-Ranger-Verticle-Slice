@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class SetVolume : MonoBehaviour
+public class SetMasterVolume : MonoBehaviour
 {
 
     public AudioMixer mixer;
 
-    public void SetLevel(float sliderValue)
+    public void SetVolume(float MasterVolume)
     {
-        mixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
+        mixer.SetFloat("MasterVolume", MasterVolume);
     }
 }
