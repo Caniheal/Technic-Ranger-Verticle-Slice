@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 1024966}
   - component: {fileID: 1024965}
   - component: {fileID: 1024964}
+  - component: {fileID: 1024968}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -213,6 +214,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1024968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9801528b679aa98469cfda503bbe5ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 2064286881}
 --- !u!1 &11462177
 GameObject:
   m_ObjectHideFlags: 0
@@ -6418,40 +6432,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &988955114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988955111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a94375105edbe304eb36f9db47a1c102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftTriggerSphere: {fileID: 0}
-  rightTriggerSphere: {fileID: 0}
-  leftBumperBox: {fileID: 0}
-  rightBumperBox: {fileID: 0}
-  aButtonSphere: {fileID: 0}
-  bButtonSphere: {fileID: 0}
-  xButtonSphere: {fileID: 0}
-  yButtonSphere: {fileID: 0}
-  dpadLeft: {fileID: 0}
-  dpadUp: {fileID: 0}
-  dpadRight: {fileID: 0}
-  dpadDown: {fileID: 0}
-  startBox: {fileID: 0}
-  backBox: {fileID: 0}
-  cubeLS: {fileID: 988955123}
-  cubeRS: {fileID: 0}
---- !u!4 &988955123 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 707891785, guid: 021ed632c63d6be4e969259cc0696cac,
-    type: 3}
-  m_PrefabInstance: {fileID: 988955110}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1115525196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7053,7 +7033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 459}
+  m_AnchoredPosition: {x: 0, y: 485}
   m_SizeDelta: {x: 229.2, y: 102.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211869002
@@ -10208,7 +10188,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1819156547}
+      - m_Target: {fileID: 1024968}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -11224,51 +11204,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1808520383}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1819156546
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1819156548}
-  - component: {fileID: 1819156547}
-  m_Layer: 0
-  m_Name: Pause Menu Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1819156547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819156546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9801528b679aa98469cfda503bbe5ed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameIsPaused: 0
-  pauseMenuUI: {fileID: 2064286881}
---- !u!4 &1819156548
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819156546}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1461143, y: 4.8512697, z: -10.615364}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1825086668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12193,7 +12128,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1819156547}
+      - m_Target: {fileID: 1024968}
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -12827,7 +12762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2064286882
 RectTransform:
   m_ObjectHideFlags: 0
