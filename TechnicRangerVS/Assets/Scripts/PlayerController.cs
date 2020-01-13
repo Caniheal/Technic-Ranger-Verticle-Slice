@@ -167,9 +167,17 @@ public class PlayerController : MonoBehaviour
 
         //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
         characterController.Move(MoveDirection * Time.deltaTime);
+         
+        //set y (pitch) to ZERO because we don't cause about up and down direction
+        Vector3 XZMoveDirection = MoveDirection.normalized;
+        XZMoveDirection.y = 0f;
+
+        //check to see if we're moving
+        if (XZMoveDirection.magnitude > .1f)
+        {       
+            gameObject.transform.rotation = Quaternion.LookRotation(XZMoveDirection.normalized, Vector3.up);
+        }
     }
-
-
 
     void UpdateCamera()
     {
