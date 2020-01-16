@@ -15,11 +15,11 @@ public class SetMasterVolume : MonoBehaviour
 
     public void SetBGMVolume(float volume)
     {
-        Master.SetFloat("BGM", volume);
+        Master.SetFloat("BGMVolume", volume);
     }
 
     public void SetSFXVolume(float volume)
     {
-        Master.SetFloat("SFX", volume);
+        Master.SetFloat("SFXVolume", volume);
     }
 }
