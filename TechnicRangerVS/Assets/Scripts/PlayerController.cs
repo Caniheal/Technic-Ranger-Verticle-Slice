@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     public Camera Camera;
     public WarpManager WarpManager;
     public ColorSwap ColorSwapper;
+    public GameObject ShieldPrefab;
 
     //Sound Stuff by Fran
     private AudioSource source;
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController characterController;
     private bool movementEnabled = true;
+    private GameObject SpawnedShield;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +86,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         UpdateWeapon();
+        UpdateSpawnShield();
         UpdateMovement();
         UpdateCamera();
         UpdateWarper();
@@ -274,6 +277,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void UpdateSpawnShield()
+    {
+        if (CurrentWeaponState == WeaponState.Shield)
+        {
+            if (Input.GetKey(KeyCode.Mouse0) && SpawnedShield == null)
+            {
+                Vector3 spawnLocation = transform.position + (transform.rotation * Vector3.forward * 2f);
+                spawnLocation.y += -.5f;
+                SpawnedShield = Instantiate(ShieldPrefab, spawnLocation, Quaternion.identity);
+            }
+        }
+    }
+
     void UpdateWeapon()
     {
         if (WarpManager.IsWarperActive())
@@ -306,6 +322,12 @@ public class PlayerController : MonoBehaviour
             if (CurrentWeaponState == WeaponState.Vista)
             {
                 WarpManager.DisableWarper();
+            }
+
+            if (CurrentWeaponState == WeaponState.Shield)
+            {
+                Destroy(SpawnedShield);
+                SpawnedShield = null;
             }
 
             ColorSwapper.UpdateColors(CurrentWeaponState);

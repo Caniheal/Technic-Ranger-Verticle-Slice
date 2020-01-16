@@ -74,7 +74,7 @@ public class WarpManager : MonoBehaviour
             //distance from the player to the startwarper 
             float DistanceToStartWarper = Vector3.Distance(StartWarper.transform.position, player.transform.position);
 
-            Debug.Log(DistanceToStartWarper);
+           // Debug.Log(DistanceToStartWarper);
             if (DistanceToStartWarper < DistanceToWarp)
             {
                 Warp();
