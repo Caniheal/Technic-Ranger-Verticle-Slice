@@ -12,31 +12,32 @@ public class ColorSwap : MonoBehaviour
         //GetComponent<Renderer>().material = Tan;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateColors(WeaponState CurrentWeaponState)
     {
-        if (Input.GetKeyDown("1"))
+        Debug.Log("Test");
+
+        if (CurrentWeaponState == WeaponState.Default)
         {
             GetComponent<Renderer>().material = Tan;
         }
-        if (Input.GetKeyDown("2"))
+        if (CurrentWeaponState == WeaponState.Vista)
         {
             //VISTA
             GetComponent<Renderer>().material = Purple;
         }
-        if (Input.GetKeyDown("3"))
+        if (CurrentWeaponState == WeaponState.Anchor)
         {
             //ANCHOR
             GetComponent<Renderer>().material = Teal;
         }
-        if (Input.GetKeyDown("4"))
+        if (CurrentWeaponState == WeaponState.Shield)
         {
             //SHIELD
             GetComponent<Renderer>().material = White;
         }
-        if (Input.GetKeyDown("5"))
+       // if (Input.GetKeyDown("5"))
         {
-            GetComponent<Renderer>().material = Blue;
+           // GetComponent<Renderer>().material = Blue;
         }
     }
 }

@@ -69,14 +69,28 @@ public class WarpManager : MonoBehaviour
             }
         }
 
-        //distance from the player to the startwarper 
-        float DistanceToStartWarper = Vector3.Distance(StartWarper.transform.position, player.transform.position);
-
-        Debug.Log(DistanceToStartWarper);
-        if (DistanceToStartWarper < DistanceToWarp)
+        if (StartWarper.activeSelf)
         {
-            Warp();
+            //distance from the player to the startwarper 
+            float DistanceToStartWarper = Vector3.Distance(StartWarper.transform.position, player.transform.position);
+
+            Debug.Log(DistanceToStartWarper);
+            if (DistanceToStartWarper < DistanceToWarp)
+            {
+                Warp();
+            }
         }
+    }
+
+    public bool IsWarperActive()
+    {
+        return isActive;
+    }
+
+    public void DisableWarper()
+    {
+        StartWarper.SetActive(false);
+        EndWarper.SetActive(false);
     }
 
     //public lets other scripts call the function
@@ -96,6 +110,11 @@ public class WarpManager : MonoBehaviour
 
         StartWarper.SetActive(true);
         EndWarper.SetActive(true);
+
+        Quaternion rotation = Quaternion.LookRotation(placedDirection, Vector3.up);
+
+        StartWarper.transform.rotation = rotation;
+        EndWarper.transform.rotation = rotation;
 
         StartWarper.transform.position = placePosition;
         EndWarper.transform.position = endWarperLocation;

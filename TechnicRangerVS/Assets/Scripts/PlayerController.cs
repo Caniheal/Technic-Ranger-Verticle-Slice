@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum WeaponState
+{
+    Default,
+    Vista,
+    Anchor,
+    Shield,
+}
+
 public class PlayerController : MonoBehaviour
 {
     //For our animations
@@ -12,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float CameraDistance = 3;
     public float CameraSphereTestRadius = .3f;
     public Vector3 CameraOffset;
+    public WeaponState CurrentWeaponState = WeaponState.Default;
 
     public float MinCameraDistance = .1f;
     public float Gravity = 9.8f;
@@ -26,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     public Camera Camera;
     public WarpManager WarpManager;
+    public ColorSwap ColorSwapper;
 
     //Sound Stuff by Fran
     private AudioSource source;
@@ -73,6 +83,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateWeapon();
         UpdateMovement();
         UpdateCamera();
         UpdateWarper();
@@ -85,6 +96,8 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+
+
 
         //Our "forward" is the same as the camera
         //Zero out the y so you don't fly up or fall down 
@@ -235,26 +248,69 @@ public class PlayerController : MonoBehaviour
 
     void UpdateWarper()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (CurrentWeaponState == WeaponState.Vista)
         {
-            Vector3 CameraDirection = Camera.transform.rotation * Vector3.forward;
-            RaycastHit hit;
-
-            Debug.DrawLine(Camera.transform.position, Camera.transform.position + CameraDirection * 100, Color.red, 30);
-
-            if (Physics.SphereCast(Camera.transform.position, WarpFirstTestRadius, CameraDirection, out hit, 10f))
+            if (Input.GetKey(KeyCode.Mouse0))
             {
-                CameraDirection.y = 0;
-          
-                if (WarpManager)
+                Vector3 CameraDirection = Camera.transform.rotation * Vector3.forward;
+                RaycastHit hit;
+
+                Debug.DrawLine(Camera.transform.position, Camera.transform.position + CameraDirection * 100, Color.red, 30);
+
+                if (Physics.SphereCast(Camera.transform.position, WarpFirstTestRadius, CameraDirection, out hit, 10f))
                 {
-                    WarpManager.PlaceWarper(hit.point, CameraDirection);
+                    CameraDirection.y = 0;
+
+                    if (WarpManager)
+                    {
+                        WarpManager.PlaceWarper(hit.point, CameraDirection);
+                    }
+                }
+                else
+                {
+                    // no warping cast sound
                 }
             }
-            else 
+        }
+    }
+
+    void UpdateWeapon()
+    {
+        if (WarpManager.IsWarperActive())
+        {
+            //return = exiting out of this function
+            return;
+        }
+
+        WeaponState NewWeaponState = CurrentWeaponState;
+
+        if (Input.GetKeyDown("1"))
+        {
+            NewWeaponState = WeaponState.Default;
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            NewWeaponState = WeaponState.Vista;
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            NewWeaponState = WeaponState.Anchor;
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            NewWeaponState = WeaponState.Shield;
+        }
+
+        if (NewWeaponState != CurrentWeaponState)
+        {
+            if (CurrentWeaponState == WeaponState.Vista)
             {
-                // no warping cast sound
+                WarpManager.DisableWarper();
             }
+
+            ColorSwapper.UpdateColors(CurrentWeaponState);
+
+            CurrentWeaponState = NewWeaponState;
         }
     }
 }

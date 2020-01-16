@@ -506,6 +506,10 @@ PrefabInstance:
       propertyPath: jumpClip
       value: 
       objectReference: {fileID: 8300000, guid: 6db4306c5b2749d4fbbbf44c259a315d, type: 3}
+    - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: ColorSwapper
+      value: 
+      objectReference: {fileID: 1852956717}
     - target: {fileID: 707891779, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -530,11 +534,28 @@ PrefabInstance:
       propertyPath: EndWarper
       value: 
       objectReference: {fileID: 1209030379}
+    - target: {fileID: 707891779, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: WarpTestDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 707891779, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: WarperTestRadius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 707891783, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 325076615, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699095688, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1699095688, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
 --- !u!1001 &61887537
 PrefabInstance:
@@ -19443,6 +19464,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2095950296}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1852956717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 325076617, guid: 021ed632c63d6be4e969259cc0696cac,
+    type: 3}
+  m_PrefabInstance: {fileID: 51704144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610ce3bf2efd80e429844264fa6dc179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1858071709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4405289759799210437, guid: c6a0edac5d65e0840995cce3f0751c4c,
