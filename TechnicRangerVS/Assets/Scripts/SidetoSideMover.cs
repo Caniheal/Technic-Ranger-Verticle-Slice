@@ -12,14 +12,35 @@ public class SideMover : MonoBehaviour
 
     private float currentDistance;
 
+    private bool moving;
+
+    private Vector3 velocity;
+
 	// Use this for initialization
 	void Start ()
     {
         currentDistance = 0;
     }
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+    // child player to platfrom
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            moving = true;
+            collision.collider.transform.SetParent(transform);
+        }
+    }
+    // unchild player to platfrom
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.collider.transform.SetParent(null);
+            moving = false;
+        }
+    }
+    // Update is called once per frame
+    void FixedUpdate ()
     {
         //Vector 3 stores transform location info
         Vector3 PreviousLocation = transform.position;
@@ -40,17 +61,24 @@ public class SideMover : MonoBehaviour
         currentDistance = currentDistance + Vector3.Distance(PreviousLocation, transform.position);
 
         //if current distance >= 6 then reverse direction
-     /*   if (currentDistance >= DistanceToMove)
-        {
-            //  Vector3(1, 0, 0) ->  Vector3(-1, 0, 0)
-            DirectionToMove = DirectionToMove * -1;
-            //starting distance before moving again set back to 0
-            currentDistance = 0;
-        } */
+        /*   if (currentDistance >= DistanceToMove)
+           {
+               //  Vector3(1, 0, 0) ->  Vector3(-1, 0, 0)
+               DirectionToMove = DirectionToMove * -1;
+               //starting distance before moving again set back to 0
+               currentDistance = 0;
+           } */
 
         //(0,0,0) + (Speed * deltatime, 0, 0)
         // transform.position = transform.position + PositionWeWantToMoveTo;--
         //Local Position = relative to parent; Position = relative to world 
 
-    }
+     // make is so the player is moving with the platfrom
+     if (moving)
+        {
+            transform.position += (velocity * Time.deltaTime);
+        }
+
+
+}
 }
