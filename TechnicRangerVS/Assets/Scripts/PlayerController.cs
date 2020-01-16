@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Animations A LITTLE JANK RN BUT IT WORKS
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetButtonDown("Left Joystick"))
         {
             anim.SetBool("isRunning", true);
         }
@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetButtonDown ("A Button"))
         {             
             anim.SetTrigger("jump");
         }
