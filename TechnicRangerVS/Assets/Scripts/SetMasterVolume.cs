@@ -6,10 +6,20 @@ using UnityEngine.Audio;
 public class SetMasterVolume : MonoBehaviour
 {
 
-    public AudioMixer mixer;
+    public AudioMixer Master;
 
-    public void SetVolume(float MasterVolume)
+    public void SetVolume(float volume)
     {
-        mixer.SetFloat("MasterVolume", MasterVolume);
+        Master.SetFloat("MasterVolume", volume);
+    }
+
+    public void SetBGMVolume(float volume)
+    {
+        Master.SetFloat("BGM", volume);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        Master.SetFloat("SFX", volume);
     }
 }
