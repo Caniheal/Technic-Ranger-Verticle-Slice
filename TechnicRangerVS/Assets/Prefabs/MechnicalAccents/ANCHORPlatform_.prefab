@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2778969330294172718}
   - component: {fileID: 5912631341498208776}
   - component: {fileID: 5506206596900568773}
+  - component: {fileID: 3643670753851765181}
   m_Layer: 0
   m_Name: ANCHORPlatform_
   m_TagString: Untagged
@@ -91,3 +92,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000007, y: 0.020000005, z: 0.070558816}
   m_Center: {x: -4.656613e-10, y: -9.313224e-10, z: -0.025279406}
+--- !u!65 &3643670753851765181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376404829816369484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000022, y: 0.020000005, z: 0.08026391}
+  m_Center: {x: 0, y: -9.536743e-10, z: 0.05941694}

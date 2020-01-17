@@ -6,14 +6,32 @@ public class SidetoSideMover : MonoBehaviour
 {
     public float DistanceToMove = 6;
     public float Speed = 1;
-    
+    public GameObject Player;
+
     //Vector 3 = DirectionToMoveXYZ <-- SAME SHIT
     public Vector3 DirectionToMove = new Vector3(1, 0, 0);
 
     private float currentDistance;
 
-	// Use this for initialization
-	void Start ()
+    // child player to platfrom
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == Player)
+        {
+            Player.transform.parent = transform;
+        }
+    }
+    // unchild player to platfrom
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == Player)
+        {
+            Player.transform.parent = null;
+        }
+    }
+
+    // Use this for initialization
+    void Start ()
     {
         currentDistance = 0;
     }

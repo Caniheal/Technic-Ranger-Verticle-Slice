@@ -6,15 +6,12 @@ public class SideMover : MonoBehaviour
 {
     public float DistanceToMove = 6;
     public float Speed = 1;
+    public GameObject Player;
     
     //Vector 3 = DirectionToMoveXYZ <-- SAME SHIT
     public Vector3 DirectionToMove = new Vector3(1, 0, 0);
 
     private float currentDistance;
-
-    private bool moving;
-
-    private Vector3 velocity;
 
 	// Use this for initialization
 	void Start ()
@@ -22,21 +19,19 @@ public class SideMover : MonoBehaviour
         currentDistance = 0;
     }
     // child player to platfrom
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject == Player)
         {
-            moving = true;
-            collision.collider.transform.SetParent(transform);
+            Player.transform.parent = transform;
         }
     }
     // unchild player to platfrom
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject == Player)
         {
-            collision.collider.transform.SetParent(null);
-            moving = false;
+            Player.transform.parent = null;
         }
     }
     // Update is called once per frame
@@ -73,12 +68,8 @@ public class SideMover : MonoBehaviour
         // transform.position = transform.position + PositionWeWantToMoveTo;--
         //Local Position = relative to parent; Position = relative to world 
 
-     // make is so the player is moving with the platfrom
-     if (moving)
-        {
-            transform.position += (velocity * Time.deltaTime);
-        }
-
+    
+  
 
 }
 }
