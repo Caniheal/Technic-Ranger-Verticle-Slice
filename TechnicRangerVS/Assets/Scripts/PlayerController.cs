@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
         //Default when you're not moving
         MoveDirection = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || InputManager.GetAxis("Left Joystick"))
         {
             MoveDirection += forward;
         }
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Animations A LITTLE JANK RN BUT IT WORKS
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetButtonDown("Left Joystick"))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
             anim.SetBool("isRunning", true);
         }
@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jump
-        if (characterController.isGrounded && Input.GetKey(KeyCode.Space))
+        if (characterController.isGrounded && Input.GetKey(KeyCode.Space) || Input.GetButtonDown("A Button"))
         {
             MoveDirection += Vector3.up * JumpSpeed;
 
