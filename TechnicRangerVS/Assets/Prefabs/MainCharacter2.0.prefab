@@ -684,21 +684,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f379f4364babe45b63f7421f163cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 13
+  MovementSpeed: 15
   MouseSensitivity: 1
   CameraDistance: 5
   CameraSphereTestRadius: 0.3
   CameraOffset: {x: 0.5, y: 1, z: 0}
+  CurrentWeaponState: 0
   MinCameraDistance: 0.8
   Gravity: -24
-  FallingMultiplier: 2.8
-  JumpingMultiplier: 2
+  FallingMultiplier: 2
+  JumpingMultiplier: 2.5
   AirControlMultiplier: 0.9
   WarpFirstTestRadius: 0.3
   WarpSecondTestRadius: 1
   JumpSpeed: 24
   Camera: {fileID: 345726777}
   WarpManager: {fileID: 707891779}
+  ColorSwapper: {fileID: 0}
+  ShieldPrefab: {fileID: 0}
   jumpClip: {fileID: 8300000, guid: 6db4306c5b2749d4fbbbf44c259a315d, type: 3}
   walkClip: {fileID: 0}
   landingClip: {fileID: 0}
@@ -1467,7 +1470,7 @@ Animator:
   m_GameObject: {fileID: 1699095686}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: af8fbaf547f88504c865148b6d1cbd29, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2291f04a302670c4d8d3a5c53fd4ec57, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
