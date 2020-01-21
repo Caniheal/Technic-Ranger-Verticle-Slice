@@ -500,7 +500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: MovementSpeed
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: jumpClip
@@ -515,6 +515,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6686648620388127562, guid: d4fe71890c8c3554ca8ddae0c482bef3,
         type: 3}
+    - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: FallingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: JumpingMultiplier
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 325076615, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -555,6 +563,12 @@ PrefabInstance:
       propertyPath: WarperTestRadius
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 227729563609134229, guid: 021ed632c63d6be4e969259cc0696cac,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243003931232457952, guid: eb34e8103a2dc3b458e203d5df48647c,
+        type: 2}
     - target: {fileID: 1699095688, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -7430,7 +7444,8 @@ AudioSource:
   m_GameObject: {fileID: 707891777}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243003931232457952, guid: eb34e8103a2dc3b458e203d5df48647c,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 6db4306c5b2749d4fbbbf44c259a315d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.21
