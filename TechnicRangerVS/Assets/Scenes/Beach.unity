@@ -338,8 +338,7 @@ AudioSource:
   m_GameObject: {fileID: 44204327}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243319854153227468, guid: eb34e8103a2dc3b458e203d5df48647c,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 213d6af945199fc4a85d325dac2a7052, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.246
@@ -6054,7 +6053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: MovementSpeed
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: jumpClip
@@ -6064,6 +6063,24 @@ PrefabInstance:
       propertyPath: walkClip
       value: 
       objectReference: {fileID: 8300000, guid: cb5a06f021743624085ce31862e65a48, type: 3}
+    - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: FallingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: JumpingMultiplier
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 325076615, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 227729563609134229, guid: 021ed632c63d6be4e969259cc0696cac,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243003931232457952, guid: eb34e8103a2dc3b458e203d5df48647c,
+        type: 2}
     - target: {fileID: 183102320, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -6081,10 +6098,6 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 52578617, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 325076615, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -6220,12 +6233,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 227729563609134229, guid: 021ed632c63d6be4e969259cc0696cac,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243003931232457952, guid: eb34e8103a2dc3b458e203d5df48647c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
 --- !u!1 &988955111 stripped
@@ -10261,7 +10268,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10869,7 +10876,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -12201,7 +12208,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13198,7 +13205,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 1

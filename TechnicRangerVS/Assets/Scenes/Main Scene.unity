@@ -500,7 +500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: MovementSpeed
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: jumpClip
@@ -515,6 +515,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6686648620388127562, guid: d4fe71890c8c3554ca8ddae0c482bef3,
         type: 3}
+    - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: FallingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 707891781, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
+      propertyPath: JumpingMultiplier
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 325076615, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3865,8 +3873,7 @@ AudioSource:
   m_GameObject: {fileID: 394776859}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243319854153227468, guid: eb34e8103a2dc3b458e203d5df48647c,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2484d86963426fa4b94cc7ff9a2f6b4a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
