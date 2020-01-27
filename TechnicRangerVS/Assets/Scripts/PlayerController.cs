@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
         //Default when you're not moving
         MoveDirection = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || InputManager.GetAxis("Left Joystick"))
         {
             MoveDirection += forward;
         }

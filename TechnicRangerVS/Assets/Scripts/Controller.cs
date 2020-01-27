@@ -3,6 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Controller : MonoBehaviour {
+	// Triggers
+	public Renderer leftTriggerSphere;
+	public Renderer rightTriggerSphere;
+
+	// Bumpers
+	public Renderer leftBumperBox;
+	public Renderer rightBumperBox;
+
+	// Buttons
+	public Renderer aButtonSphere;
+	public Renderer bButtonSphere;
+	public Renderer xButtonSphere;
+	public Renderer yButtonSphere;
+
+	// DPad
+	public Renderer dpadLeft;
+	public Renderer dpadUp;
+	public Renderer dpadRight;
+	public Renderer dpadDown;
+
+	// Start and Back
+	public Renderer startBox;
+	public Renderer backBox;
 
 	// Joysticks
 	public Transform cubeLS;
@@ -26,16 +49,11 @@ public class Controller : MonoBehaviour {
 		float moveVL = Input.GetAxis("Vertical") * movementSpeed;
 		float moveHR = Input.GetAxis("Mouse X") * movementSpeed;
 		float moveVR = Input.GetAxis("Mouse Y") * movementSpeed;
-		
 
 		// Movement in per second measurements
 		moveHL *= Time.deltaTime;
 		moveVL *= Time.deltaTime;
 		moveHR *= Time.deltaTime;
 		moveVR *= Time.deltaTime;
-
-		// Move cube with Left Joystick and Right Joystick
-		cubeLS.Translate(moveVL,0,moveHL);
-		cubeRS.Translate(moveVR,0,moveHR);
 	}
 }

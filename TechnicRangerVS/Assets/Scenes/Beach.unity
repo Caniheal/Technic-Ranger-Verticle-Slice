@@ -6435,6 +6435,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!114 &988955114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6455,6 +6456,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 988955110}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 5b7fb0d... Camera Movement for the controller working
 --- !u!1001 &1115525196
 PrefabInstance:
   m_ObjectHideFlags: 0
