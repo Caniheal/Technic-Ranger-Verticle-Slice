@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12080765, g: 0.36486712, b: 0.89534134, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -6431,6 +6431,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a94375105edbe304eb36f9db47a1c102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftTriggerSphere: {fileID: 0}
+  rightTriggerSphere: {fileID: 0}
+  leftBumperBox: {fileID: 0}
+  rightBumperBox: {fileID: 0}
+  aButtonSphere: {fileID: 0}
+  bButtonSphere: {fileID: 0}
+  xButtonSphere: {fileID: 0}
+  yButtonSphere: {fileID: 0}
+  dpadLeft: {fileID: 0}
+  dpadUp: {fileID: 0}
+  dpadRight: {fileID: 0}
+  dpadDown: {fileID: 0}
+  startBox: {fileID: 0}
+  backBox: {fileID: 0}
   cubeLS: {fileID: 988955123}
   cubeRS: {fileID: 988955123}
 --- !u!4 &988955123 stripped
