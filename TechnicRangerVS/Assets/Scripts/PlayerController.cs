@@ -114,41 +114,11 @@ public class PlayerController : MonoBehaviour
         //Default when you're not moving
         MoveDirection = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W) || InputManager.GetAxis("Left Joystick"))
-        {
-            MoveDirection += forward;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            //back
-            MoveDirection += -forward;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            //left
-            MoveDirection += -right;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            MoveDirection += right;
-        }
+        MoveDirection += forward * Input.GetAxis("Vertical");
+        MoveDirection += right * Input.GetAxis("Horizontal");
 
-        //Animations A LITTLE JANK RN BUT IT WORKS
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
-        {
-            anim.SetBool("isRunning", true);
-        }
-        else
-        {
-            anim.SetBool("isRunning", false);
-        }
-        if (Input.GetKey(KeyCode.Space) || Input.GetButtonDown ("A Button"))
-        {             
-            anim.SetTrigger("jump");
-        }
-
-
-            MoveDirection = MoveDirection * MovementSpeed;
+    
+        MoveDirection = MoveDirection * MovementSpeed;
 
         //How far you can move when in air
         //! = not
@@ -158,12 +128,14 @@ public class PlayerController : MonoBehaviour
         }
 
         // jump
-        if (characterController.isGrounded && Input.GetKey(KeyCode.Space) || Input.GetButtonDown("A Button"))
+        if (characterController.isGrounded && Input.GetButton("Jump"))
         {
             MoveDirection += Vector3.up * JumpSpeed;
 
             //jumpsound
             source.PlayOneShot(jumpClip);
+
+            anim.SetTrigger("jump");
         }
 
         //current character velocity
@@ -190,8 +162,13 @@ public class PlayerController : MonoBehaviour
 
         //check to see if we're moving
         if (XZMoveDirection.magnitude > .1f)
-        {       
+        {
+            anim.SetBool("isRunning", true);
             gameObject.transform.rotation = Quaternion.LookRotation(XZMoveDirection.normalized, Vector3.up);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
         }
     }
 
@@ -199,6 +176,10 @@ public class PlayerController : MonoBehaviour
     {
         //Keep yaw between -180 and 180 (360 camera rotation)
         //adding to yaw
+        Debug.Log(Input.GetAxis("Mouse X"));
+        Debug.Log(Input.GetAxis("Mouse Y"));
+        Debug.Log("----");
+
         Yaw += MouseSensitivity * Input.GetAxis("Mouse X");
 
         //Keep pitch between -90 and 90 (180 camera rotation) to not flip backwards
