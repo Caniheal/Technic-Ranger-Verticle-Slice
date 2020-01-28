@@ -54,12 +54,15 @@ public class PlayerController : MonoBehaviour
     private bool movementEnabled = true;
     private GameObject SpawnedShield;
 
+    private Vector3 forward;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
 
         characterController = GetComponent<CharacterController>();
+        forward = transform.forward;
 
         Cursor.visible = false;
 
@@ -104,12 +107,22 @@ public class PlayerController : MonoBehaviour
 
         //Our "forward" is the same as the camera
         //Zero out the y so you don't fly up or fall down 
-        Vector3 forward = Camera.transform.forward;
-        forward.y = 0;
+        Vector3 cameraF = Camera.transform.forward;
+        cameraF.y = 0f;
 
+        if (cameraF.magnitude > .3f)
+        {
+            forward = Camera.transform.forward.normalized;
+            forward.y = 0f;
+        }
+        else
+        {
+            forward = forward.normalized * .8f;
+        }
 
         Vector3 right = Camera.transform.right;
-        right.y = 0;
+        right.y = 0f;
+
 
         //Default when you're not moving
         MoveDirection = Vector3.zero;
@@ -185,7 +198,7 @@ public class PlayerController : MonoBehaviour
         //Keep pitch between -90 and 90 (180 camera rotation) to not flip backwards
         //pitch gets inverted so subtract
         Pitch -= MouseSensitivity * Input.GetAxis("Mouse Y");
-        Pitch = Mathf.Clamp(Pitch, -90, 90);
+        Pitch = Mathf.Clamp(Pitch, -89, 89);
 
         //make rotation from euler angles
         Quaternion rotation = Quaternion.Euler(Pitch, Yaw, 0);
