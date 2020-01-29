@@ -203,6 +203,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d4edb1f72e47d438d296e97e6688ee, type: 3}
+--- !u!1 &10125540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1313617501, guid: cec69eb6c344fbd45af26af21ced1ded,
+    type: 3}
+  m_PrefabInstance: {fileID: 1145709972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &13877019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,11 +482,11 @@ PrefabInstance:
     - target: {fileID: 707891779, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: StartWarper
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2070022048}
     - target: {fileID: 707891779, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: EndWarper
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 10125540}
     - target: {fileID: 707891779, guid: 021ed632c63d6be4e969259cc0696cac, type: 3}
       propertyPath: WarpTestDistance
       value: 20
@@ -12446,7 +12452,7 @@ PrefabInstance:
     - target: {fileID: 7619171854157716650, guid: e8b8dfc2c56596b42939048355831740,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.91
+      value: -17.94
       objectReference: {fileID: 0}
     - target: {fileID: 7619171854157716650, guid: e8b8dfc2c56596b42939048355831740,
         type: 3}
@@ -13269,7 +13275,7 @@ PrefabInstance:
     - target: {fileID: 1287650847483026414, guid: cec69eb6c344fbd45af26af21ced1ded,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.51
+      value: -18.54
       objectReference: {fileID: 0}
     - target: {fileID: 1287650847483026414, guid: cec69eb6c344fbd45af26af21ced1ded,
         type: 3}
@@ -25120,6 +25126,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8545772199272323691, guid: a619cd62fe1f83346a8edb16f702c28f,
     type: 3}
   m_PrefabInstance: {fileID: 2067577969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2070022048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1759464504129384084, guid: e8b8dfc2c56596b42939048355831740,
+    type: 3}
+  m_PrefabInstance: {fileID: 1076458143}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2070846750
 PrefabInstance:
