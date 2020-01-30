@@ -694,7 +694,7 @@ MonoBehaviour:
   CurrentWeaponState: 0
   MinCameraDistance: 0.8
   Gravity: -24
-  FallingMultiplier: 2.8
+  FallingMultiplier: 1.5
   JumpingMultiplier: 2
   AirControlMultiplier: 0.9
   WarpFirstTestRadius: 0.3
@@ -781,7 +781,8 @@ AudioSource:
   m_GameObject: {fileID: 707891777}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243003931232457952, guid: eb34e8103a2dc3b458e203d5df48647c,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 6db4306c5b2749d4fbbbf44c259a315d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
