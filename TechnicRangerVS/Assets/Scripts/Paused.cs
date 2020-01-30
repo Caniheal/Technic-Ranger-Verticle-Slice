@@ -12,7 +12,7 @@ public class Paused : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("escape") || Input.GetButtonDown("Start") || Input.GetKeyDown(KeyCode.P))
+        if (Input.GetButtonDown("Pause") || Input.GetKeyDown(KeyCode.P))
         {
             if (GameIsPaused)
             {
