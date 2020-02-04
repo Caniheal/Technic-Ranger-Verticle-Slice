@@ -2709,6 +2709,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 250.00023
       objectReference: {fileID: 0}
+    - target: {fileID: 357211447244786998, guid: c0592b7426fc37b4da980967d20296e8,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 707891777}
+    - target: {fileID: 357211447244786998, guid: c0592b7426fc37b4da980967d20296e8,
+        type: 3}
+      propertyPath: DirectionToMove.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 357211447244786998, guid: c0592b7426fc37b4da980967d20296e8,
+        type: 3}
+      propertyPath: DirectionToMove.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0592b7426fc37b4da980967d20296e8, type: 3}
 --- !u!4 &258567948 stripped
@@ -3329,6 +3344,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3394,11 +3414,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 388.59766
       objectReference: {fileID: 0}
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_Lightmapping
@@ -3431,6 +3446,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3501,10 +3521,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 793.905
       objectReference: {fileID: 0}
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+    - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3694320091453057785, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -3515,11 +3535,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0064
-      objectReference: {fileID: 0}
-    - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbd9d588259eb3c40880976958fb7d78, type: 3}
@@ -5588,6 +5603,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5658,10 +5678,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 922.3366
       objectReference: {fileID: 0}
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+    - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (1)
+      propertyPath: m_Range
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3694320091453057785, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -5677,16 +5702,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0007
-      objectReference: {fileID: 0}
-    - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Range
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbd9d588259eb3c40880976958fb7d78, type: 3}
@@ -7670,6 +7685,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 250.00037
       objectReference: {fileID: 0}
+    - target: {fileID: 357211447244786998, guid: c0592b7426fc37b4da980967d20296e8,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 707891777}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0592b7426fc37b4da980967d20296e8, type: 3}
 --- !u!4 &648153569 stripped
@@ -9768,7 +9788,7 @@ PrefabInstance:
     - target: {fileID: 5350790132541857265, guid: da2cbdd94e7a95c4db095313692d8a9c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5350790132541857265, guid: da2cbdd94e7a95c4db095313692d8a9c,
         type: 3}
@@ -10482,6 +10502,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 879334126}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &894987006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1678840721}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894987007}
+  m_Layer: 0
+  m_Name: Drone_01 (1) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894987007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1678840721}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894987006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &898923366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8545772199272323691, guid: a619cd62fe1f83346a8edb16f702c28f,
@@ -11188,6 +11238,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11258,10 +11313,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 716.3409
       objectReference: {fileID: 0}
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+    - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (2)
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3694320091453057785, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -11277,11 +11332,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0169
-      objectReference: {fileID: 0}
-    - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbd9d588259eb3c40880976958fb7d78, type: 3}
@@ -12913,7 +12963,7 @@ PrefabInstance:
     - target: {fileID: 5350790132541857265, guid: da2cbdd94e7a95c4db095313692d8a9c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5350790132541857265, guid: da2cbdd94e7a95c4db095313692d8a9c,
         type: 3}
@@ -17208,6 +17258,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 250.00009
       objectReference: {fileID: 0}
+    - target: {fileID: 357211447244786998, guid: c0592b7426fc37b4da980967d20296e8,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 707891777}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0592b7426fc37b4da980967d20296e8, type: 3}
 --- !u!4 &1441313726 stripped
@@ -17465,6 +17520,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d4edb1f72e47d438d296e97e6688ee, type: 3}
+--- !u!1 &1457617426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1773931680}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1457617427}
+  m_Layer: 0
+  m_Name: Drone_01 (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1457617427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1773931680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457617426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1459233087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5910679557057527482, guid: 30f0bfad049ebf74f9178e1d90776090,
@@ -22495,6 +22580,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22564,11 +22654,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1001.6494
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (3)
       objectReference: {fileID: 0}
     - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -23101,7 +23186,7 @@ PrefabInstance:
     - target: {fileID: 7030921578065337653, guid: b7d4edb1f72e47d438d296e97e6688ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7030921578065337653, guid: b7d4edb1f72e47d438d296e97e6688ee,
         type: 3}
@@ -23805,6 +23890,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23874,11 +23964,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 388.59796
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -24700,6 +24785,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24769,11 +24859,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 388.59793
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
