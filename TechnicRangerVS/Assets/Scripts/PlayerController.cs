@@ -50,6 +50,14 @@ public class PlayerController : MonoBehaviour
     public float Pitch;
     public Vector3 MoveDirection;
 
+    //Nora fiddling with acceleration: the variables
+    /*{
+    public Vector3 acceleration_2;
+    public float speed;
+    public Vector3 moveVector;
+    public Vector3 velocity_2;
+    }*/
+
     private CharacterController characterController;
     private bool movementEnabled = true;
     private GameObject SpawnedShield;
@@ -168,6 +176,10 @@ public class PlayerController : MonoBehaviour
 
         //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
         characterController.Move(MoveDirection * Time.deltaTime);
+        //nora fiddling with acceleration: the code
+        /*{
+            
+        }*/
          
         //set y (pitch) to ZERO because we don't cause about up and down direction
         Vector3 XZMoveDirection = MoveDirection.normalized;
