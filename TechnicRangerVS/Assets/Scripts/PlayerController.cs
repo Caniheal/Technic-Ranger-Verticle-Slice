@@ -201,9 +201,11 @@ public class PlayerController : MonoBehaviour
     {
         //Keep yaw between -180 and 180 (360 camera rotation)
         //adding to yaw
+        /* commenting this out because it spams the debug.log
         Debug.Log(Input.GetAxis("Mouse X"));
         Debug.Log(Input.GetAxis("Mouse Y"));
         Debug.Log("----");
+        */
 
         Yaw += MouseSensitivity * Input.GetAxis("Mouse X");
 
