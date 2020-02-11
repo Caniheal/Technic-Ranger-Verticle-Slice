@@ -315,7 +315,7 @@ public class PlayerController : MonoBehaviour
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
-        if (Input.GetKeyDown("1"))
+        if (Input.GetAxis("Dpad X") == 1)
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
