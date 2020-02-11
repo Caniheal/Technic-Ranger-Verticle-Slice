@@ -10,9 +10,6 @@ public class Shooting : MonoBehaviour
     private Rigidbody projectilePrefab;
     [SerializeField]
     private float launchForce = 700f;
-    private AudioSource source;
-    public AudioClip fireClip;
-    public AudioClip impact;
 
 
     public void Update()
@@ -20,7 +17,6 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             LaunchProjectile();
-            source.PlayOneShot(fireClip);
         }
 
 
