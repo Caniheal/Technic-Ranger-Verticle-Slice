@@ -43,6 +43,11 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpClip;
     public AudioClip walkClip;
     public AudioClip landingClip;
+    public AudioClip maskSwitchClip;
+    public AudioClip createPortalClip;
+    public AudioClip createBoardClip;
+    public AudioClip fireBoltClip;
+    public AudioClip destroyClip;
 
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
@@ -275,6 +280,7 @@ public class PlayerController : MonoBehaviour
                     if (WarpManager)
                     {
                         WarpManager.PlaceWarper(hit.point, CameraDirection);
+                        source.PlayOneShot(createPortalClip);
                     }
                 }
                 else
@@ -294,6 +300,7 @@ public class PlayerController : MonoBehaviour
                 Vector3 spawnLocation = transform.position + (transform.rotation * Vector3.forward * 2f);
                 spawnLocation.y += -.5f;
                 SpawnedShield = Instantiate(ShieldPrefab, spawnLocation, Quaternion.identity);
+                source.PlayOneShot(createBoardClip);
             }
         }
     }
@@ -311,18 +318,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("1"))
         {
             NewWeaponState = WeaponState.Default;
+            source.PlayOneShot(maskSwitchClip);
         }
         if (Input.GetKeyDown("2"))
         {
             NewWeaponState = WeaponState.Vista;
+            source.PlayOneShot(maskSwitchClip);
         }
         if (Input.GetKeyDown("3"))
         {
             NewWeaponState = WeaponState.Anchor;
+            source.PlayOneShot(maskSwitchClip);
         }
         if (Input.GetKeyDown("4"))
         {
             NewWeaponState = WeaponState.Shield;
+            source.PlayOneShot(maskSwitchClip);
         }
 
         if (NewWeaponState != CurrentWeaponState)
@@ -330,12 +341,14 @@ public class PlayerController : MonoBehaviour
             if (CurrentWeaponState == WeaponState.Vista)
             {
                 WarpManager.DisableWarper();
+                source.PlayOneShot(destroyClip);
             }
 
             if (CurrentWeaponState == WeaponState.Shield)
             {
                 Destroy(SpawnedShield);
                 SpawnedShield = null;
+                source.PlayOneShot(destroyClip);
             }
 
             ColorSwapper.UpdateColors(CurrentWeaponState);
