@@ -46,8 +46,8 @@ public void FixedUpdate()
         //{
             if (Input.GetKey(KeyCode.Space))
             {
-                player.transform.parent = null;
-                player.EnableMovement();
+            Transform transform1 = _ = player.transform.parent = null;
+            player.EnableMovement();
                 player.transform.rotation = Quaternion.identity;
                 player = null;
                 enabletriggerenter = false;
