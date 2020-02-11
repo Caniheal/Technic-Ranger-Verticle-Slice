@@ -13,6 +13,8 @@ public enum WeaponState
 public class PlayerController : MonoBehaviour
 {
     //For our animations
+    private float DpadX;
+    private float DpadY;
     private Animator anim;
 
     public float MovementSpeed = 1;
@@ -307,6 +309,10 @@ public class PlayerController : MonoBehaviour
 
     void UpdateWeapon()
     {
+
+        DpadX = Input.GetAxis("Dpad X");
+        DpadY = Input.GetAxis("Dpad Y");
+
         if (WarpManager.IsWarperActive())
         {
             //return = exiting out of this function
@@ -315,22 +321,22 @@ public class PlayerController : MonoBehaviour
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
-        if (Input.GetKeyDown("1"))
+        if (Input.GetAxis("Dpad X") == 1)
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("2"))
+        if (Input.GetAxis("Dpad X") == -1)
         {
             NewWeaponState = WeaponState.Vista;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("3"))
+        if (Input.GetAxis("Dpad Y") == 1)
         {
             NewWeaponState = WeaponState.Anchor;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("4"))
+        if (Input.GetAxis("Dpad Y") == -1)
         {
             NewWeaponState = WeaponState.Shield;
             source.PlayOneShot(maskSwitchClip);
