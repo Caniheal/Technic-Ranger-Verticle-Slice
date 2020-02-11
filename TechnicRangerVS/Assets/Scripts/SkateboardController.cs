@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SkateboardController : MonoBehaviour
@@ -43,8 +42,8 @@ public class SkateboardController : MonoBehaviour
 
 public void FixedUpdate()
     {
-        if (player)
-        {
+        //if (player)
+        //{
             if (Input.GetKey(KeyCode.Space))
             {
                 player.transform.parent = null;
@@ -55,9 +54,7 @@ public void FixedUpdate()
             }
 
             float motor = maxMotorTorque * Input.GetAxis("Vertical");
-            Debug.Log(motor + "");
             float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
-            Debug.Log(steering + "");
 
             foreach (AxleInfo axleInfo in axleInfos)
             {
@@ -73,6 +70,6 @@ public void FixedUpdate()
                     axleInfo.rightWheel.motorTorque = motor;
                 }
             }
-        }
+        //}
     }
 }
