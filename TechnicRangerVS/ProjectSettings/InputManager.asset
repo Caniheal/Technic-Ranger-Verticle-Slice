@@ -345,8 +345,8 @@ InputManager:
     m_Name: Dpad X
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
+    negativeButton: 1
+    positiveButton: 1
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -361,8 +361,8 @@ InputManager:
     m_Name: Dpad Y
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
+    negativeButton: 1
+    positiveButton: 1
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
