@@ -9,13 +9,36 @@ public class RaycastShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            Shoot();
+            RaycastHit hit;
+            // Does the ray intersect any objects excluding the player layer
+            if (Physics.Raycast(AnchorCam.transform.position, AnchorCam.transform.forward, out hit, Mathf.Infinity))
+            {
+                if (hit.collider != null)
+                {
+                    var anchorAnimation = hit.collider.gameObject.GetComponent<AnchorAnimation>();
+                    if (anchorAnimation != null)
+                    {
+                        anchorAnimation.OnRayHit();
+                        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                        Debug.Log("Did Hit");
+                    }
+                }
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                Debug.Log("Did not Hit");
+            }
         }
+        
     }
 
+}
 
+/*
     void Shoot()
     {
        
@@ -30,7 +53,7 @@ public class RaycastShoot : MonoBehaviour
             {
                 target.GetComponent<Animation>().enabled = true;
             } 
-            */
+            
         }
     }
-}
+} */

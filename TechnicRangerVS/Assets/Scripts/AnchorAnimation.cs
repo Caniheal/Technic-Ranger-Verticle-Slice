@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AnchorAnimation : MonoBehaviour
 {
+    
     public GameObject Projectile;
     public GameObject MovingPlatform;
+    /*
 
     private void OnTriggerEnter(Collider other)
         {
@@ -15,7 +17,13 @@ public class AnchorAnimation : MonoBehaviour
             Debug.Log("Hit");
 
     }
+    */
 
-        
-    
+    public void OnRayHit ()
+    {
+        MovingPlatform.GetComponent<Animation>().enabled = true;
+    }
+
+
+
 }
