@@ -13,6 +13,8 @@ public enum WeaponState
 public class PlayerController : MonoBehaviour
 {
     //For our animations
+    private float DpadX;
+    private float DpadY;
     private Animator anim;
 
     public float MovementSpeed = 1;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public float WarpSecondTestRadius = 1;
 
     public float JumpSpeed = 8;
+    public float TotalSlideTime = .2f;
 
     public Camera Camera;
     public WarpManager WarpManager;
@@ -43,6 +46,11 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpClip;
     public AudioClip walkClip;
     public AudioClip landingClip;
+    public AudioClip maskSwitchClip;
+    public AudioClip createPortalClip;
+    public AudioClip createBoardClip;
+    public AudioClip fireBoltClip;
+    public AudioClip destroyClip;
 
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
@@ -63,6 +71,8 @@ public class PlayerController : MonoBehaviour
     private GameObject SpawnedShield;
 
     private Vector3 forward;
+    private bool IsSliding = false;
+    private float slideTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -132,14 +142,29 @@ public class PlayerController : MonoBehaviour
         right.y = 0f;
 
 
-        //Default when you're not moving
-        MoveDirection = Vector3.zero;
+        if (!IsSliding)
+        {
+            //Default when you're not moving
+            MoveDirection = Vector3.zero;
 
-        MoveDirection += forward * Input.GetAxis("Vertical");
-        MoveDirection += right * Input.GetAxis("Horizontal");
+            MoveDirection += forward * Input.GetAxis("Vertical");
+            MoveDirection += right * Input.GetAxis("Horizontal");
 
-    
-        MoveDirection = MoveDirection * MovementSpeed;
+            MoveDirection = MoveDirection * MovementSpeed;
+        }
+        else
+        {
+            slideTimer += Time.deltaTime;
+
+            if (slideTimer >= TotalSlideTime)
+            {
+                MoveDirection.x -= .3f * Time.deltaTime;
+                MoveDirection.z -= .3f * Time.deltaTime;
+                MoveDirection.y = 0;
+
+                IsSliding = false;
+            }
+        }
 
         //How far you can move when in air
         //! = not
@@ -149,7 +174,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jump
-        if (characterController.isGrounded && Input.GetButton("Jump"))
+        if (!IsSliding && characterController.isGrounded && Input.GetButton("Jump"))
         {
             MoveDirection += Vector3.up * JumpSpeed;
 
@@ -174,13 +199,6 @@ public class PlayerController : MonoBehaviour
         //maintain up/down velocity; continue to move the way ya moving
         MoveDirection.y += characterController.velocity.y;
 
-        //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
-        characterController.Move(MoveDirection * Time.deltaTime);
-        //nora fiddling with acceleration: the code
-        /*{
-            
-        }*/
-         
         //set y (pitch) to ZERO because we don't cause about up and down direction
         Vector3 XZMoveDirection = MoveDirection.normalized;
         XZMoveDirection.y = 0f;
@@ -190,11 +208,28 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isRunning", true);
             gameObject.transform.rotation = Quaternion.LookRotation(XZMoveDirection.normalized, Vector3.up);
+
+            if (Input.GetKey(KeyCode.LeftControl) && !IsSliding)
+            {
+                IsSliding = true;
+                MoveDirection.x *= 2f;
+                MoveDirection.z *= 2f;
+                slideTimer = 0f;
+            }
+
         }
         else
         {
             anim.SetBool("isRunning", false);
         }
+
+        //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
+        characterController.Move(MoveDirection * Time.deltaTime);
+        //nora fiddling with acceleration: the code
+        /*{
+            
+        }*/
+
     }
 
     void UpdateCamera()
@@ -275,6 +310,7 @@ public class PlayerController : MonoBehaviour
                     if (WarpManager)
                     {
                         WarpManager.PlaceWarper(hit.point, CameraDirection);
+                        source.PlayOneShot(createPortalClip);
                     }
                 }
                 else
@@ -294,12 +330,17 @@ public class PlayerController : MonoBehaviour
                 Vector3 spawnLocation = transform.position + (transform.rotation * Vector3.forward * 2f);
                 spawnLocation.y += -.5f;
                 SpawnedShield = Instantiate(ShieldPrefab, spawnLocation, Quaternion.identity);
+                source.PlayOneShot(createBoardClip);
             }
         }
     }
 
     void UpdateWeapon()
     {
+
+        DpadX = Input.GetAxis("Dpad X");
+        DpadY = Input.GetAxis("Dpad Y");
+
         if (WarpManager.IsWarperActive())
         {
             //return = exiting out of this function
@@ -308,21 +349,25 @@ public class PlayerController : MonoBehaviour
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
-        if (Input.GetKeyDown("1"))
+        if (Input.GetAxis("Dpad X") == 1)
         {
             NewWeaponState = WeaponState.Default;
+            source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("2"))
+        if (Input.GetAxis("Dpad X") == -1)
         {
             NewWeaponState = WeaponState.Vista;
+            source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("3"))
+        if (Input.GetAxis("Dpad Y") == 1)
         {
             NewWeaponState = WeaponState.Anchor;
+            source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("4"))
+        if (Input.GetAxis("Dpad Y") == -1)
         {
             NewWeaponState = WeaponState.Shield;
+            source.PlayOneShot(maskSwitchClip);
         }
 
         if (NewWeaponState != CurrentWeaponState)
@@ -330,12 +375,14 @@ public class PlayerController : MonoBehaviour
             if (CurrentWeaponState == WeaponState.Vista)
             {
                 WarpManager.DisableWarper();
+                source.PlayOneShot(destroyClip);
             }
 
             if (CurrentWeaponState == WeaponState.Shield)
             {
                 Destroy(SpawnedShield);
                 SpawnedShield = null;
+                source.PlayOneShot(destroyClip);
             }
 
             ColorSwapper.UpdateColors(CurrentWeaponState);

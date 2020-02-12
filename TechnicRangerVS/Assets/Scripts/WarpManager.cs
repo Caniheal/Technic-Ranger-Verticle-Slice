@@ -28,6 +28,12 @@ public class WarpManager : MonoBehaviour
 
     private float currentTime = 0;
 
+    //sounds by nora and fran sorta
+    private AudioSource source;
+    public AudioClip destroyClip;
+    public AudioClip portalEnterClip;
+    public AudioClip portalExitClip;
+
     void Start()
     {
         player = GetComponent<PlayerController>();
@@ -66,6 +72,7 @@ public class WarpManager : MonoBehaviour
             
                 player.EnableMovement();
                 RenderSettings.skybox = NormalSkybox;
+                source.PlayOneShot(destroyClip);
             }
         }
 

@@ -16,6 +16,9 @@ public class SkateboardController : MonoBehaviour
     public List<AxleInfo> axleInfos;
     public float maxMotorTorque;
     public float maxSteeringAngle;
+    //public GameObject Player;
+
+
 
     PlayerController player;
     bool enabletriggerenter = true;
@@ -29,7 +32,17 @@ public class SkateboardController : MonoBehaviour
             player.DisableMovement();
             player.transform.parent = AttachPoint.gameObject.transform;
             player.transform.position = AttachPoint.gameObject.transform.position;
+            GetComponent<Collider>().enabled = false;
         }
+
+        /*if (Input.GetButton("Jump"))
+        {
+            player.transform.parent = null;
+            player.EnableMovement();
+            player.transform.rotation = Quaternion.identity;
+            player = null;
+            enabletriggerenter = false;
+        }*/
     }
 
     private void OnTriggerExit(Collider other)
@@ -40,17 +53,18 @@ public class SkateboardController : MonoBehaviour
         }
     }
 
-public void FixedUpdate()
+    public void FixedUpdate()
     {
         //if (player)
         //{
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetButton("Jump"))
             {
-            Transform transform1 = _ = player.transform.parent = null;
-            player.EnableMovement();
+                player.transform.parent = null;
+                player.EnableMovement();
                 player.transform.rotation = Quaternion.identity;
                 player = null;
                 enabletriggerenter = false;
+                Destroy(gameObject, 3);
             }
 
             float motor = maxMotorTorque * Input.GetAxis("Vertical");
