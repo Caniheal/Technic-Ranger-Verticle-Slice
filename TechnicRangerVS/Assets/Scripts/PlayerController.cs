@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
     public float WarpSecondTestRadius = 1;
 
     public float JumpSpeed = 8;
-    public float TotalSlideTime = .2f;
 
     public Camera Camera;
     public WarpManager WarpManager;
@@ -71,8 +70,6 @@ public class PlayerController : MonoBehaviour
     private GameObject SpawnedShield;
 
     private Vector3 forward;
-    private bool IsSliding = false;
-    private float slideTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -142,29 +139,14 @@ public class PlayerController : MonoBehaviour
         right.y = 0f;
 
 
-        if (!IsSliding)
-        {
-            //Default when you're not moving
-            MoveDirection = Vector3.zero;
+        //Default when you're not moving
+        MoveDirection = Vector3.zero;
 
-            MoveDirection += forward * Input.GetAxis("Vertical");
-            MoveDirection += right * Input.GetAxis("Horizontal");
+        MoveDirection += forward * Input.GetAxis("Vertical");
+        MoveDirection += right * Input.GetAxis("Horizontal");
 
-            MoveDirection = MoveDirection * MovementSpeed;
-        }
-        else
-        {
-            slideTimer += Time.deltaTime;
-
-            if (slideTimer >= TotalSlideTime)
-            {
-                MoveDirection.x -= .3f * Time.deltaTime;
-                MoveDirection.z -= .3f * Time.deltaTime;
-                MoveDirection.y = 0;
-
-                IsSliding = false;
-            }
-        }
+    
+        MoveDirection = MoveDirection * MovementSpeed;
 
         //How far you can move when in air
         //! = not
@@ -174,7 +156,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jump
-        if (!IsSliding && characterController.isGrounded && Input.GetButton("Jump"))
+        if (characterController.isGrounded && Input.GetButton("Jump"))
         {
             MoveDirection += Vector3.up * JumpSpeed;
 
@@ -199,6 +181,13 @@ public class PlayerController : MonoBehaviour
         //maintain up/down velocity; continue to move the way ya moving
         MoveDirection.y += characterController.velocity.y;
 
+        //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
+        characterController.Move(MoveDirection * Time.deltaTime);
+        //nora fiddling with acceleration: the code
+        /*{
+            
+        }*/
+         
         //set y (pitch) to ZERO because we don't cause about up and down direction
         Vector3 XZMoveDirection = MoveDirection.normalized;
         XZMoveDirection.y = 0f;
@@ -208,28 +197,11 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isRunning", true);
             gameObject.transform.rotation = Quaternion.LookRotation(XZMoveDirection.normalized, Vector3.up);
-
-            if (Input.GetKey(KeyCode.LeftControl) && !IsSliding)
-            {
-                IsSliding = true;
-                MoveDirection.x *= 2f;
-                MoveDirection.z *= 2f;
-                slideTimer = 0f;
-            }
-
         }
         else
         {
             anim.SetBool("isRunning", false);
         }
-
-        //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
-        characterController.Move(MoveDirection * Time.deltaTime);
-        //nora fiddling with acceleration: the code
-        /*{
-            
-        }*/
-
     }
 
     void UpdateCamera()
