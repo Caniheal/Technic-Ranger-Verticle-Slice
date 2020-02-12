@@ -310,8 +310,8 @@ public class PlayerController : MonoBehaviour
     void UpdateWeapon()
     {
 
-        DpadX = Input.GetAxis("Dpad X");
-        DpadY = Input.GetAxis("Dpad Y");
+        float DpadX = Input.GetAxis("Dpad X");
+        float DpadY = Input.GetAxis("Dpad Y");
 
         if (WarpManager.IsWarperActive())
         {
@@ -321,22 +321,22 @@ public class PlayerController : MonoBehaviour
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
-        if (Input.GetAxis("Dpad X") == 1)
+        if (Input.GetKeyDown("1") || (Input.GetAxis("Dpad Y") > 0))
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetAxis("Dpad X") == -1)
+        if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") < 0))
         {
             NewWeaponState = WeaponState.Vista;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetAxis("Dpad Y") == 1)
+        if (Input.GetKeyDown("3") || (Input.GetAxis("Dpad X") > 0))
         {
             NewWeaponState = WeaponState.Anchor;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetAxis("Dpad Y") == -1)
+        if (Input.GetKeyDown("4") || (Input.GetAxis("Dpad X") < 0))
         {
             NewWeaponState = WeaponState.Shield;
             source.PlayOneShot(maskSwitchClip);
