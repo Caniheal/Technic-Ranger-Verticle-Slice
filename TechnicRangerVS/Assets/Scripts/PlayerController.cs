@@ -295,6 +295,11 @@ public class PlayerController : MonoBehaviour
         Camera.transform.rotation = Quaternion.LookRotation(cameraToCapsuleDirection, Vector3.up);
     }
 
+    
+    /// <summary>
+    /// NOTE FOR TIM: COPY THE WARPER LAYOUT, MAKE A FUNCTION LIKE UPDATE WARPER, CHECK IF THE CURRENT WEAPONSTATE IS "ANCHOR"
+    ///THEN SET TO BUTTON CLICK THAT YOU CARE ABOUT (mouse0) (Its the same as the warper, copy and paste the first 2 if statements)
+    /// </summary>
     void UpdateWarper()
     {
         bool rightBumper = Input.GetButton("Right Bumper");
