@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+guid: 447a61bc392df2e4aad3189b4a1d30ec
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cube.031
+    100002: Head_J
+    100004: HeadTip_J
+    100006: HIP_CTRL
+    100008: Hip_Joint
+    100010: //RootNode
+    100012: IK_L_Arm
+    100014: IK_L_Leg
+    100016: IK_R_Arm
+    100018: IK_R_Leg
+    100020: IK_Spine
+    100022: L_Clavicle_J
+    100024: L_Elbow_J
+    100026: L_Foot_CTRL
+    100028: L_Foot_J
+    100030: L_Knee2_J
+    100032: L_Knee_J
+    100034: L_LegTop_J
+    100036: L_Shoulder_J
+    100038: L_Toe_J
+    100040: L_Wrist_CTRL
+    100042: L_Wrist_J
+    100044: Neck_J
+    100046: R_Clavicle_J
+    100048: R_Elbow_J
+    100050: R_Foot_CTRL
+    100052: R_Foot_J
+    100054: R_Knee2_J
+    100056: R_Knee_J
+    100058: R_LegTop_J
+    100060: R_Shoulder_J
+    100062: R_Toe_J
+    100064: R_Wrist_CTRL
+    100066: R_Wrist_J
+    100068: Spine01_J
+    100070: Spine02_J
+    400000: Cube.031
+    400002: Head_J
+    400004: HeadTip_J
+    400006: HIP_CTRL
+    400008: Hip_Joint
+    400010: //RootNode
+    400012: IK_L_Arm
+    400014: IK_L_Leg
+    400016: IK_R_Arm
+    400018: IK_R_Leg
+    400020: IK_Spine
+    400022: L_Clavicle_J
+    400024: L_Elbow_J
+    400026: L_Foot_CTRL
+    400028: L_Foot_J
+    400030: L_Knee2_J
+    400032: L_Knee_J
+    400034: L_LegTop_J
+    400036: L_Shoulder_J
+    400038: L_Toe_J
+    400040: L_Wrist_CTRL
+    400042: L_Wrist_J
+    400044: Neck_J
+    400046: R_Clavicle_J
+    400048: R_Elbow_J
+    400050: R_Foot_CTRL
+    400052: R_Foot_J
+    400054: R_Knee2_J
+    400056: R_Knee_J
+    400058: R_LegTop_J
+    400060: R_Shoulder_J
+    400062: R_Toe_J
+    400064: R_Wrist_CTRL
+    400066: R_Wrist_J
+    400068: Spine01_J
+    400070: Spine02_J
+    2100000: lambert1
+    4300000: Cube.031
+    7400000: IdleAnimation
+    9500000: //RootNode
+    13700000: Cube.031
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'L_Knee2_J' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'R_Knee2_J' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: IdleAnimation
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: IdleAnimation(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube.031
+      parentName: IdleAnimation(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK_L_Leg
+      parentName: IdleAnimation(Clone)
+      position: {x: 0.11317653, y: 0.33800137, z: -0.77795917}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK_R_Leg
+      parentName: IdleAnimation(Clone)
+      position: {x: 0.113177, y: 0.33800098, z: 0.777959}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK_L_Arm
+      parentName: IdleAnimation(Clone)
+      position: {x: 5.1982857e-10, y: 3.3272645, z: -2.8537621}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Foot_CTRL
+      parentName: IdleAnimation(Clone)
+      position: {x: 0.11317653, y: 0.33800137, z: -0.77795917}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Foot_CTRL
+      parentName: IdleAnimation(Clone)
+      position: {x: 0.113177, y: 0.33800098, z: 0.777959}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Wrist_CTRL
+      parentName: IdleAnimation(Clone)
+      position: {x: 5.1982857e-10, y: 3.3272645, z: -2.8537621}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK_Spine
+      parentName: IdleAnimation(Clone)
+      position: {x: 0.10571794, y: 6.430876, z: 0.0009970608}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK_R_Arm
+      parentName: IdleAnimation(Clone)
+      position: {x: -0.0000028880513, y: 3.1619687, z: 2.84724}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Wrist_CTRL
+      parentName: IdleAnimation(Clone)
+      position: {x: -0.0000028880513, y: 3.1619687, z: 2.84724}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HIP_CTRL
+      parentName: IdleAnimation(Clone)
+      position: {x: -0, y: 4.5371776, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hip_Joint
+      parentName: IdleAnimation(Clone)
+      position: {x: 0.0020764305, y: 4.5743732, z: 0.0003333524}
+      rotation: {x: -0.011757552, y: -0.5788054, z: -0.025843414, w: 0.8149714}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_LegTop_J
+      parentName: Hip_Joint
+      position: {x: -0.77873665, y: -0.4166007, z: -0.089071356}
+      rotation: {x: 0.43393034, y: 0.38332897, z: 0.615783, w: 0.534392}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Knee_J
+      parentName: L_LegTop_J
+      position: {x: -1.4373977, y: 7.81597e-16, z: -1.1368684e-15}
+      rotation: {x: 0.00034383018, y: 0.000026715068, z: 0.00000042356666, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Knee2_J
+      parentName: L_Knee_J
+      position: {x: -1.1248462, y: -4.2632563e-16, z: -2.842171e-16}
+      rotation: {x: 0.0020228268, y: -0.000015517724, z: -0.00000026144045, w: 0.999998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Foot_J
+      parentName: L_Knee2_J
+      position: {x: -1.2860019, y: 4.6185276e-16, z: 1.4210854e-16}
+      rotation: {x: -0.0025640232, y: -0.0003784604, z: -0.59020203, w: 0.8072514}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Toe_J
+      parentName: L_Foot_J
+      position: {x: -0.5164142, y: -3.1974422e-16, z: -1.4210854e-16}
+      rotation: {x: 0, y: -0, z: -1.110223e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_LegTop_J
+      parentName: Hip_Joint
+      position: {x: 0.6646611, y: -0.41659766, z: 0.41543898}
+      rotation: {x: 0.42810562, y: 0.3895439, z: 0.6110045, w: 0.54005075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Knee_J
+      parentName: R_LegTop_J
+      position: {x: -1.4373995, y: 7.194245e-16, z: 4.2632563e-16}
+      rotation: {x: 0.0006307292, y: 0.0031220638, z: 0.07436338, w: 0.9972261}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Knee2_J
+      parentName: R_Knee_J
+      position: {x: -1.1248453, y: 9.947598e-16, z: -2.842171e-16}
+      rotation: {x: -0.0010682388, y: -0.0032009701, z: -0.10540923, w: 0.9944232}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Foot_J
+      parentName: R_Knee2_J
+      position: {x: -1.2860048, y: 1.1546319e-15, z: -8.5265126e-16}
+      rotation: {x: 0.0012372761, y: -0.0007692246, z: -0.55567, w: 0.83140165}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Toe_J
+      parentName: R_Foot_J
+      position: {x: -0.51641446, y: 3.907985e-16, z: 4.2632563e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine01_J
+      parentName: Hip_Joint
+      position: {x: -0.0031630802, y: 0.3223906, z: -0.0011055898}
+      rotation: {x: 0.5787171, y: -0.574463, z: -0.40630794, w: 0.41230175}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine02_J
+      parentName: Spine01_J
+      position: {x: -0.7480414, y: 3.5527136e-17, z: 8.9928065e-17}
+      rotation: {x: 4.9129597e-13, y: 0.0000016309141, z: -0.00000030123473, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_J
+      parentName: Spine02_J
+      position: {x: -0.7889441, y: -1.4210854e-15, z: -3.5194068e-16}
+      rotation: {x: -3.7837855e-15, y: 9.20677e-16, z: -0.08279603, w: 0.99656653}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_J
+      parentName: Neck_J
+      position: {x: -0.54111654, y: -4.2632563e-16, z: -8.787415e-16}
+      rotation: {x: -7.499283e-18, y: -3.9070715e-17, z: -0.09467545, w: 0.9955082}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HeadTip_J
+      parentName: Head_J
+      position: {x: -0.9530963, y: 8.5265126e-16, z: -2.3814284e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Clavicle_J
+      parentName: Neck_J
+      position: {x: 0.41783217, y: 0.15482952, z: 0.2019809}
+      rotation: {x: 0.5226441, y: -0.47628054, z: -0.5073221, w: -0.4925691}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Shoulder_J
+      parentName: L_Clavicle_J
+      position: {x: -0.58779496, y: 0, z: -5.9034327e-16}
+      rotation: {x: -0.022360608, y: 0.009872763, z: 0.45635352, w: 0.88946277}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Elbow_J
+      parentName: L_Shoulder_J
+      position: {x: -0.9125383, y: 1.1368684e-15, z: -3.9630046e-16}
+      rotation: {x: -6.0589892e-18, y: 6.813651e-17, z: -0.00000039413578, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Wrist_J
+      parentName: L_Elbow_J
+      position: {x: -1.1485218, y: 4.5474734e-15, z: -6.5542663e-16}
+      rotation: {x: 0.00032250577, y: 0.00066530064, z: -0.4446473, w: 0.89570546}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Clavicle_J
+      parentName: Neck_J
+      position: {x: 0.41841683, y: 0.15487309, z: -0.2007328}
+      rotation: {x: 0.53382844, y: -0.46448702, z: 0.51953995, w: 0.4789126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Shoulder_J
+      parentName: R_Clavicle_J
+      position: {x: -0.5877955, y: -3.410605e-15, z: -8.8207216e-16}
+      rotation: {x: -0.0152750695, y: -0.0107039325, z: 0.46809244, w: 0.8834827}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Elbow_J
+      parentName: R_Shoulder_J
+      position: {x: -0.91252244, y: 0.00014689252, z: 0.005931723}
+      rotation: {x: -0.00000006765483, y: 0.0032500648, z: -0.0000818359, w: 0.99999475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Wrist_J
+      parentName: R_Elbow_J
+      position: {x: -1.1485159, y: 5.7938676e-10, z: 0.000000011840783}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

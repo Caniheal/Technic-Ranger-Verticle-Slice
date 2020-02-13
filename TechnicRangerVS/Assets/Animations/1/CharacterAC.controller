@@ -227,6 +227,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &1102129727625837676
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New State
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &1102492774695860900
 AnimatorState:
   serializedVersion: 5
@@ -248,7 +274,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f59ba1a221f61914e9e9983d518edca1, type: 3}
+  m_Motion: {fileID: 7400000, guid: 0855e707529977842ae7134ecae8b6ab, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -288,7 +314,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IdleAnimation
-  m_Speed: 1
+  m_Speed: 0.45
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101208071211473418}
@@ -301,7 +327,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 447a61bc392df2e4aad3189b4a1d30ec, type: 3}
+  m_Motion: {fileID: 7400002, guid: a72645dc666a4ba4190df912c084d9d3, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -331,6 +357,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102492774695860900}
     m_Position: {x: 456, y: 96, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102129727625837676}
+    m_Position: {x: 505.7816, y: 213.17929, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 1101615240417964722}
