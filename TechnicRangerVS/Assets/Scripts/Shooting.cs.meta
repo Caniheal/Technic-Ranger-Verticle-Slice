@@ -3,7 +3,11 @@ guid: 4f112445b883b3e4a86158498fbcdd3a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - firePoint: {instanceID: 0}
+  - projectilePrefab: {instanceID: 0}
+  - fireBoltClip: {fileID: 8300000, guid: c2cccd13854bee44683fc1c1c2e182d7, type: 3}
+  - impactClip: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
