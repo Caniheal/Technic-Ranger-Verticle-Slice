@@ -18,6 +18,9 @@ public class AnchorAnimation : MonoBehaviour
 
     }
     */
+
+    
+
     // child player to platfrom
     private void OnTriggerEnter(Collider other)
     {
@@ -37,7 +40,9 @@ public class AnchorAnimation : MonoBehaviour
 
     public void OnRayHit ()
     {
-        MovingPlatform.GetComponent<Animation>().enabled = true;
+        // the animation is bugged so im using the mover script for now
+      //  MovingPlatform.GetComponent<Animation>().enabled = true;
+        MovingPlatform.GetComponent<SidetoSideMover>().enabled = true;
     }
 
 }

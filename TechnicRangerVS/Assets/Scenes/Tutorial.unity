@@ -4302,6 +4302,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovingPlatform: {fileID: 322313925}
   Player: {fileID: 44640763}
+--- !u!114 &322313928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322313925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be0071d808c0a1498559bce924cbcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceToMove: 6
+  Speed: 1
+  Player: {fileID: 0}
+  DirectionToMove: {x: 1, y: 0, z: 0}
+--- !u!114 &322313933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322313925}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0fa004c3cfebd4dbadb2fd55971277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceToMove: 10
+  Speed: 1
+  Player: {fileID: 44640763}
+  DirectionToMove: {x: 0, y: 1, z: 0}
 --- !u!1001 &326158099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20489,12 +20521,17 @@ PrefabInstance:
     - target: {fileID: 3643670753851765181, guid: c0592b7426fc37b4da980967d20296e8,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.18499057
+      value: 0.29928315
       objectReference: {fileID: 0}
     - target: {fileID: 3643670753851765181, guid: c0592b7426fc37b4da980967d20296e8,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.1117802
+      value: 0.16892633
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643670753851765181, guid: c0592b7426fc37b4da980967d20296e8,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -9.536741e-10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 357211447244786998, guid: c0592b7426fc37b4da980967d20296e8, type: 3}
