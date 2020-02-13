@@ -689,7 +689,7 @@ MonoBehaviour:
   ColorSwapper: {fileID: 1852956717}
   ShieldPrefab: {fileID: 6686648620388127562, guid: d4fe71890c8c3554ca8ddae0c482bef3,
     type: 3}
-  jumpClip: {fileID: 8300000, guid: 6db4306c5b2749d4fbbbf44c259a315d, type: 3}
+  jumpClip: {fileID: 8300000, guid: 6280fc031bfd03f4e85bec20cd558545, type: 3}
   walkClip: {fileID: 0}
   landingClip: {fileID: 0}
   maskSwitchClip: {fileID: 8300000, guid: 033c67c73eec4594a9c8c9529a2477af, type: 3}
@@ -1065,7 +1065,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243354758731064324, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 6db4306c5b2749d4fbbbf44c259a315d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6280fc031bfd03f4e85bec20cd558545, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
