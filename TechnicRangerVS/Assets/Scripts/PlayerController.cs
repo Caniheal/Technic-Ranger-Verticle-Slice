@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     //For our animations
     private float DpadX;
     private float DpadY;
-    private Animator anim;
+    public Animator anim;
 
     public float MovementSpeed = 1;
     public float MouseSensitivity = 1;
@@ -50,9 +50,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip createBoardClip;
     public AudioClip fireBoltClip;
     public AudioClip destroyClip;
-
     
-
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
     public float Yaw;
@@ -76,8 +74,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-
         characterController = GetComponent<CharacterController>();
         forward = transform.forward;
 
