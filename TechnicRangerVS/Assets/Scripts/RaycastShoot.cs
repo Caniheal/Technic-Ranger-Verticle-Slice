@@ -9,9 +9,9 @@ public class RaycastShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-      
-        if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButtonDown("rightTrigger"))
+        float rTriggerFloat = Input.GetAxis("Right Trigger");
+
+        if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButtonDown("Right Trigger"))
         {
             RaycastHit hit;
             // Does the ray intersect any objects excluding the player layer
