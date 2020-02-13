@@ -5,6 +5,8 @@ public class Checkpoint : MonoBehaviour
 
     public Transform checkpoint;
     GameObject player;
+    private AudioSource source;
+    public AudioClip save;
 
     void Start()
     {
@@ -16,6 +18,7 @@ public class Checkpoint : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             player.transform.position = checkpoint.position;
+            source.PlayOneShot(save);
         }
     }
 }

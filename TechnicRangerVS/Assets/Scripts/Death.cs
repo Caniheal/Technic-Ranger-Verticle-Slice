@@ -6,6 +6,8 @@ public class Death : MonoBehaviour
 {
 
     public Transform startPos;
+    private AudioSource source;
+    public AudioClip deathClip;
     private void OnTriggerEnter(Collider other)
     {
         PlayerController PC = other.gameObject.GetComponent<PlayerController>();
@@ -14,7 +16,9 @@ public class Death : MonoBehaviour
         {
             PC.DisableMovement();
             other.gameObject.transform.position = GameManager.Instance.lastCheckPoint.position;
+            
             PC.EnableMovement();
+            source.PlayOneShot(deathClip);
         }
 
     }
