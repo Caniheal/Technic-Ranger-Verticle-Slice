@@ -336,7 +336,7 @@ public class PlayerController : MonoBehaviour
         if (CurrentWeaponState == WeaponState.Anchor)
         {
 
-            if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButtonDown("Right Trigger"))
+            if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButton("Right Bumper"))
             {
                 RaycastHit hit;
                 // Does the ray intersect any objects excluding the player layer
