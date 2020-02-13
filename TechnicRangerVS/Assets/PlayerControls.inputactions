@@ -14,6 +14,16 @@
                     "processors": "",
                     "interactions": "",
                     "bindings": []
+                },
+                {
+                    "name": "AnchorShoot",
+                    "id": "df0b5feb-54fe-427f-9fef-0f7246d0b84c",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": true,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
                 }
             ],
             "bindings": [
@@ -75,6 +85,18 @@
                     "chainWithPrevious": false,
                     "isComposite": false,
                     "isPartOfComposite": true,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AnchorShoot",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
                     "modifiers": ""
                 }
             ]

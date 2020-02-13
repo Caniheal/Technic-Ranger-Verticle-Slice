@@ -110,6 +110,7 @@ public class PlayerController : MonoBehaviour
         UpdateMovement();
         UpdateCamera();
         UpdateWarper();
+        UpdateAnchor();
     }
 
 
@@ -323,6 +324,39 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     // no warping cast sound
+                }
+            }
+        }
+    }
+    // Anchor fuctionallity
+    void UpdateAnchor()
+    {
+        bool rightBumper = Input.GetButton("Right Bumper");
+
+        if (CurrentWeaponState == WeaponState.Anchor)
+        {
+
+            if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButtonDown("Right Trigger"))
+            {
+                RaycastHit hit;
+                // Does the ray intersect any objects excluding the player layer
+                if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out hit, Mathf.Infinity))
+                {
+                    if (hit.collider != null)
+                    {
+                        var anchorAnimation = hit.collider.gameObject.GetComponent<AnchorAnimation>();
+                        if (anchorAnimation != null)
+                        {
+                            anchorAnimation.OnRayHit();
+                            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                            Debug.Log("Did Hit");
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                    Debug.Log("Did not Hit");
                 }
             }
         }

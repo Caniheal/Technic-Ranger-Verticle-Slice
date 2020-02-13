@@ -21,12 +21,14 @@ public class PlayerControls : InputActionAssetReference
         // PlayerControl
         m_PlayerControl = asset.GetActionMap("PlayerControl");
         m_PlayerControl_Newaction = m_PlayerControl.GetAction("New action");
+        m_PlayerControl_AnchorShoot = m_PlayerControl.GetAction("AnchorShoot");
         m_Initialized = true;
     }
     private void Uninitialize()
     {
         m_PlayerControl = null;
         m_PlayerControl_Newaction = null;
+        m_PlayerControl_AnchorShoot = null;
         m_Initialized = false;
     }
     public void SetAsset(InputActionAsset newAsset)
@@ -42,11 +44,13 @@ public class PlayerControls : InputActionAssetReference
     // PlayerControl
     private InputActionMap m_PlayerControl;
     private InputAction m_PlayerControl_Newaction;
+    private InputAction m_PlayerControl_AnchorShoot;
     public struct PlayerControlActions
     {
         private PlayerControls m_Wrapper;
         public PlayerControlActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Newaction { get { return m_Wrapper.m_PlayerControl_Newaction; } }
+        public InputAction @AnchorShoot { get { return m_Wrapper.m_PlayerControl_AnchorShoot; } }
         public InputActionMap Get() { return m_Wrapper.m_PlayerControl; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }

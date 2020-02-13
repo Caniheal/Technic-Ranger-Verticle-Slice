@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AnchorAnimation : MonoBehaviour
 {
-    
-    public GameObject Projectile;
+
     public GameObject MovingPlatform;
+    public GameObject Player;
     /*
 
     private void OnTriggerEnter(Collider other)
@@ -18,12 +18,26 @@ public class AnchorAnimation : MonoBehaviour
 
     }
     */
+    // child player to platfrom
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == Player)
+        {
+            Player.transform.parent = transform;
+        }
+    }
+    // unchild player to platfrom
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == Player)
+        {
+            Player.transform.parent = null;
+        }
+    }
 
     public void OnRayHit ()
     {
         MovingPlatform.GetComponent<Animation>().enabled = true;
     }
-
-
 
 }
