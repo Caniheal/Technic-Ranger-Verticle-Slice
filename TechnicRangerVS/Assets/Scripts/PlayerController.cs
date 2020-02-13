@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip fireBoltClip;
     public AudioClip destroyClip;
 
+    
+
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
     public float Yaw;
@@ -266,9 +268,11 @@ public class PlayerController : MonoBehaviour
 
     void UpdateWarper()
     {
+        bool rightBumper = Input.GetButton("Right Bumper");
+
         if (CurrentWeaponState == WeaponState.Vista)
         {
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper"))
             {
                 Vector3 CameraDirection = Camera.transform.rotation * Vector3.forward;
                 RaycastHit hit;
@@ -321,12 +325,12 @@ public class PlayerController : MonoBehaviour
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
-        if (Input.GetKeyDown("1") || (Input.GetAxis("Dpad Y") > 0))
+        if (Input.GetKeyDown("1") || (Input.GetAxis("Dpad Y") < 0))
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") < 0))
+        if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") > 0))
         {
             NewWeaponState = WeaponState.Vista;
             source.PlayOneShot(maskSwitchClip);
@@ -336,6 +340,7 @@ public class PlayerController : MonoBehaviour
             NewWeaponState = WeaponState.Anchor;
             source.PlayOneShot(maskSwitchClip);
         }
+
         if (Input.GetKeyDown("4") || (Input.GetAxis("Dpad X") < 0))
         {
             NewWeaponState = WeaponState.Shield;
