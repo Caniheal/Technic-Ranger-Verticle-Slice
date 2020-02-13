@@ -356,23 +356,23 @@ public class PlayerController : MonoBehaviour
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
-        if (Input.GetKeyDown("1"))
+        if (Input.GetKeyDown("1") || (Input.GetAxis("Dpad Y") < 0))
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("2"))
+        if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") > 0))
         {
             NewWeaponState = WeaponState.Vista;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("3"))
+        if (Input.GetKeyDown("3") || (Input.GetAxis("Dpad X") > 0))
         {
             NewWeaponState = WeaponState.Anchor;
             source.PlayOneShot(maskSwitchClip);
         }
 
-        if (Input.GetKeyDown("4"))
+        if (Input.GetKeyDown("4") || (Input.GetAxis("Dpad X") < 0))
         {
             NewWeaponState = WeaponState.Shield;
             source.PlayOneShot(maskSwitchClip);
