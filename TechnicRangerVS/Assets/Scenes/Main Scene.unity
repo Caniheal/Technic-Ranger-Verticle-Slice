@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -446,6 +446,11 @@ PrefabInstance:
       propertyPath: warpRealmEndPosition
       value: 
       objectReference: {fileID: 1308066393}
+    - target: {fileID: 9197620586133457519, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
 --- !u!1001 &61887537
@@ -1218,11 +1223,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarpPortal
       objectReference: {fileID: 0}
-    - target: {fileID: 1212880126556159519, guid: 3806aa68cfa70ed41981f3f937a06774,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8217347070534417655, guid: 3806aa68cfa70ed41981f3f937a06774,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1277,21 +1277,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8217347070534417655, guid: 3806aa68cfa70ed41981f3f937a06774,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8217347070534417655, guid: 3806aa68cfa70ed41981f3f937a06774,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8217347070534417655, guid: 3806aa68cfa70ed41981f3f937a06774,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3806aa68cfa70ed41981f3f937a06774, type: 3}
@@ -12679,11 +12664,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartWarper
       objectReference: {fileID: 0}
-    - target: {fileID: 1759464504129384084, guid: e8b8dfc2c56596b42939048355831740,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7619171854157716650, guid: e8b8dfc2c56596b42939048355831740,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13433,10 +13413,6 @@ PrefabInstance:
     - target: {fileID: 1313617501, guid: cec69eb6c344fbd45af26af21ced1ded, type: 3}
       propertyPath: m_Name
       value: EndWarper
-      objectReference: {fileID: 0}
-    - target: {fileID: 1313617501, guid: cec69eb6c344fbd45af26af21ced1ded, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1287650847483026414, guid: cec69eb6c344fbd45af26af21ced1ded,
         type: 3}
