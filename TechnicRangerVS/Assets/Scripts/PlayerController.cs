@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     //For our animations
     private float DpadX;
     private float DpadY;
-    private Animator anim;
+    public Animator anim;
 
     public float MovementSpeed = 1;
     public float MouseSensitivity = 1;
@@ -78,8 +78,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-
         characterController = GetComponent<CharacterController>();
         forward = transform.forward;
 
@@ -122,7 +120,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-
+        bool IsCrouching = Input.GetKey(KeyCode.LeftControl);
 
         //Our "forward" is the same as the camera
         //Zero out the y so you don't fly up or fall down 
@@ -144,6 +142,7 @@ public class PlayerController : MonoBehaviour
 
 
         anim.SetBool("isSliding", IsSliding);
+        anim.SetBool("isCrouching", IsCrouching);
 
         if (!IsSliding)
         {
@@ -213,14 +212,15 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isRunning", true);
             gameObject.transform.rotation = Quaternion.LookRotation(XZMoveDirection.normalized, Vector3.up);
 
-            if (Input.GetKey(KeyCode.LeftControl) && !IsSliding)
+            if (IsCrouching && !IsSliding && XZMoveDirection.magnitude > .3f)
             {
                 IsSliding = true;
-                MoveDirection.x *= 2f;
-                MoveDirection.z *= 2f;
+                MoveDirection.x *= 1.5f;
+                MoveDirection.z *= 1.5f;
+                MoveDirection.y = 0f;
+
                 slideTimer = 0f;
             }
-
         }
         else
         {
