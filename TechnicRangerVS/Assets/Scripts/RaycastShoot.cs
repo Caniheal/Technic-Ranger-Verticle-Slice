@@ -11,7 +11,7 @@ public class RaycastShoot : MonoBehaviour
     {
        
       
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButtonDown("rightTrigger"))
         {
             RaycastHit hit;
             // Does the ray intersect any objects excluding the player layer
