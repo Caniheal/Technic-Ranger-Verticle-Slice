@@ -55,8 +55,8 @@ public class SkateboardController : MonoBehaviour
 
     public void FixedUpdate()
     {
-        //if (player)
-        //{
+        if (player)
+        {
             if (Input.GetButton("Jump"))
             {
                 player.transform.parent = null;
@@ -84,6 +84,6 @@ public class SkateboardController : MonoBehaviour
                     axleInfo.rightWheel.motorTorque = motor;
                 }
             }
-        //}
+        }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColorSwap : MonoBehaviour
 {
     public Material Purple, Teal, Tan, Blue, White;
+    public SkinnedMeshRenderer Render;
 
     // Start is called before the first frame update
     void Start()
@@ -14,27 +15,41 @@ public class ColorSwap : MonoBehaviour
 
     public void UpdateColors(WeaponState CurrentWeaponState)
     {
-        Debug.Log("Test");
+        return;
+
+        Material[] materials = Render.materials;
+        Debug.Log(materials[0]);
 
         if (CurrentWeaponState == WeaponState.Default)
         {
-            GetComponent<Renderer>().material = Tan;
+            Debug.Log("Default Color");
+
+            materials[0] = Tan;
         }
         if (CurrentWeaponState == WeaponState.Vista)
         {
+            Debug.Log("vista color");
+
             //VISTA
-            GetComponent<Renderer>().material = Purple;
+            materials[0] = Purple;
         }
         if (CurrentWeaponState == WeaponState.Anchor)
         {
+            Debug.Log("anchor color");
+
             //ANCHOR
-            GetComponent<Renderer>().material = Teal;
+            materials[0] = Teal;
         }
         if (CurrentWeaponState == WeaponState.Shield)
         {
+            Debug.Log("shield color");
+
             //SHIELD
-            GetComponent<Renderer>().material = White;
+            materials[0] = White;
         }
+
+        Render.materials = materials;
+
        // if (Input.GetKeyDown("5"))
         {
            // GetComponent<Renderer>().material = Blue;

@@ -277,6 +277,8 @@ public class PlayerController : MonoBehaviour
 
                 if (Physics.SphereCast(Camera.transform.position, WarpFirstTestRadius, CameraDirection, out hit, 10f))
                 {
+                    Debug.Log(hit.collider);
+
                     CameraDirection.y = 0;
 
                     if (WarpManager)
@@ -312,7 +314,7 @@ public class PlayerController : MonoBehaviour
 
         float DpadX = Input.GetAxis("Dpad X");
         float DpadY = Input.GetAxis("Dpad Y");
-
+   
         if (WarpManager.IsWarperActive())
         {
             //return = exiting out of this function
@@ -321,23 +323,23 @@ public class PlayerController : MonoBehaviour
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
-        if (Input.GetKeyDown("1") || (Input.GetAxis("Dpad Y") < 0))
+        if (Input.GetKeyDown("1"))
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") > 0))
+        if (Input.GetKeyDown("2"))
         {
             NewWeaponState = WeaponState.Vista;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("3") || (Input.GetAxis("Dpad X") > 0))
+        if (Input.GetKeyDown("3"))
         {
             NewWeaponState = WeaponState.Anchor;
             source.PlayOneShot(maskSwitchClip);
         }
 
-        if (Input.GetKeyDown("4") || (Input.GetAxis("Dpad X") < 0))
+        if (Input.GetKeyDown("4"))
         {
             NewWeaponState = WeaponState.Shield;
             source.PlayOneShot(maskSwitchClip);
@@ -357,6 +359,8 @@ public class PlayerController : MonoBehaviour
                 SpawnedShield = null;
                 source.PlayOneShot(destroyClip);
             }
+
+            Debug.Log("changed update colors");
 
             ColorSwapper.UpdateColors(CurrentWeaponState);
 
