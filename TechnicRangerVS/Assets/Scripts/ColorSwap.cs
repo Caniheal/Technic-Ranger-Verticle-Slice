@@ -15,7 +15,6 @@ public class ColorSwap : MonoBehaviour
 
     public void UpdateColors(WeaponState CurrentWeaponState)
     {
-        return;
 
         Material[] materials = Render.materials;
         Debug.Log(materials[0]);
