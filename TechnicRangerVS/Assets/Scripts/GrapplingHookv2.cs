@@ -21,13 +21,16 @@ public class GrapplingHookv2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        bool leftTrigger = Input.GetButton("Left Trigger");
+        bool rightBumper = Input.GetButton("Right Bumper");
         if (IsActive)
         {
             return;
         }
 
         //RMB - ADS (aim down sights)
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKey(KeyCode.Mouse1) || Input.GetButton("Left Trigger"))
         {
             Camera.fieldOfView = AimDownSightsFOV;
         }
@@ -37,7 +40,7 @@ public class GrapplingHookv2 : MonoBehaviour
         }
 
         //LMB - Shoot
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper"))
         {
             //grapping hook shoots from center of camera
             Vector3 CameraDirection = Camera.transform.rotation * Vector3.forward;
