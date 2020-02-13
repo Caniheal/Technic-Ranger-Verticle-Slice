@@ -23,16 +23,12 @@ public class WarpManager : MonoBehaviour
     public float WarpTestDistance = 3;
 
     //This is the warp; not in use
-    private bool isActive = false;
+    public bool isActive = false;
+    public bool wasWarperSpawned = false;
+
     private PlayerController player;
 
     private float currentTime = 0;
-
-    //sounds by nora and fran sorta
-    private AudioSource source;
-    public AudioClip destroyClip;
-    public AudioClip portalEnterClip;
-    public AudioClip portalExitClip;
 
     void Start()
     {
@@ -46,10 +42,10 @@ public class WarpManager : MonoBehaviour
         {
             currentTime += Time.deltaTime;
 
-         //Need this ratio to go from 0-1 (total distance)
+            //Need this ratio to go from 0-1 (total distance)
             float lerpRatio = currentTime / WarpTime;
 
-        //Lerp ratio; EXAMPLE; percentage between start/end values
+            //Lerp ratio; EXAMPLE; percentage between start/end values
             // float start = 10;
             //float end = 20;
             // lerpRatio(10, 20, 0) = 10;
@@ -61,18 +57,34 @@ public class WarpManager : MonoBehaviour
 
             player.gameObject.transform.position = currentPostion;
 
+            //END WARPER STUFFS
             if (currentTime >= WarpTime)
             {
                 //current time larger than 1
+                //timer to despawn starts when we reach the end warper
                 isActive = false;
+                wasWarperSpawned = true;
+                //Set to 0 so we can count up to te despawn time
+                currentTime = 0f;
                 Vector3 EndPostion = EndWarper.transform.position;
                 EndPostion.y = 1.1f;
 
                 player.gameObject.transform.position = EndPostion;
-            
+
                 player.EnableMovement();
                 RenderSettings.skybox = NormalSkybox;
-                source.PlayOneShot(destroyClip);
+            }
+        }
+        else if (wasWarperSpawned)
+        {
+            //THE DESPAWN TIMER INCREMENTING 
+            currentTime += Time.deltaTime;
+
+            if (currentTime >= WarpTime)
+            {
+                currentTime = 0f;
+                wasWarperSpawned = false;
+                DisableWarper();
             }
         }
 
@@ -81,7 +93,7 @@ public class WarpManager : MonoBehaviour
             //distance from the player to the startwarper 
             float DistanceToStartWarper = Vector3.Distance(StartWarper.transform.position, player.transform.position);
 
-           // Debug.Log(DistanceToStartWarper);
+            // Debug.Log(DistanceToStartWarper);
             if (DistanceToStartWarper < DistanceToWarp)
             {
                 Warp();
@@ -104,8 +116,13 @@ public class WarpManager : MonoBehaviour
     //Where the warper is going to be placed in the world
     public void PlaceWarper(Vector3 placePosition, Vector3 placedDirection)
     {
+        if (isActive)
+        {
+            return;
+        }
+
         RaycastHit hit;
-                                                                   //multiply so we can move that distance (in that direction)
+        //multiply so we can move that distance (in that direction)
         Vector3 endWarperLocation = placePosition + placedDirection * WarpTestDistance;
 
         //Where the warper is places, how big the sphere cast is, what direction we're testing, reported hits (walls), how long the sphere cast is
@@ -127,9 +144,10 @@ public class WarpManager : MonoBehaviour
         EndWarper.transform.position = endWarperLocation;
     }
 
-    //Warp activated; in use
+    //Warp activated; in use STARTING
     void Warp()
     {
+        wasWarperSpawned = false;
         isActive = true;
         player.DisableMovement();
         RenderSettings.skybox = RealmSkybox;

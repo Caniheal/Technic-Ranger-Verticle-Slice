@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DistanceToMove: 0.2
   Speed: 0.1
+  Player: {fileID: 0}
   DirectionToMove: {x: 0, y: 1, z: 0}
 --- !u!1001 &8854156964465680073
 PrefabInstance:
@@ -180,6 +181,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a0d359e7141161646a8b8b0aaf1f3bc9, type: 2}
+    - target: {fileID: 2300000, guid: 05a0f8c3267ced24ca61009681b1e58b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05a0f8c3267ced24ca61009681b1e58b, type: 3}
 --- !u!4 &8854156964465280073 stripped
