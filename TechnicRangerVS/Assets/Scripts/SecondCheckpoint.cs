@@ -6,7 +6,7 @@ public class SecondCheckpoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        PlayerController PC = other.gameObject.GetComponent<PlayerController>();
+    PlayerController PC = other.gameObject.GetComponent<PlayerController>();
 
         if (PC)
         {
