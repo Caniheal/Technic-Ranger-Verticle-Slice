@@ -1,88 +1,108 @@
 fileFormatVersion: 2
-guid: 447a61bc392df2e4aad3189b4a1d30ec
+guid: 576b0b887917a4e49b2d6cb69ada5839
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cube.031
-    100002: Head_J
-    100004: HeadTip_J
-    100006: HIP_CTRL
-    100008: Hip_Joint
-    100010: //RootNode
-    100012: IK_L_Arm
-    100014: IK_L_Leg
-    100016: IK_R_Arm
-    100018: IK_R_Leg
-    100020: IK_Spine
-    100022: L_Clavicle_J
-    100024: L_Elbow_J
+    100000: //RootNode
+    100002: Cube.031
+    100004: Head_CTRL
+    100006: Hip_CTRL
+    100008: HipJoint
+    100010: IK_L_Arm
+    100012: IK_L_Leg
+    100014: IK_R_Arm
+    100016: IK_R_Leg
+    100018: IK_Spine
+    100020: L_Arm_CTRL
+    100022: L_Clavical
+    100024: L_Elbow
     100026: L_Foot_CTRL
-    100028: L_Foot_J
-    100030: L_Knee2_J
-    100032: L_Knee_J
-    100034: L_LegTop_J
-    100036: L_Shoulder_J
-    100038: L_Toe_J
-    100040: L_Wrist_CTRL
-    100042: L_Wrist_J
-    100044: Neck_J
-    100046: R_Clavicle_J
-    100048: R_Elbow_J
-    100050: R_Foot_CTRL
-    100052: R_Foot_J
-    100054: R_Knee2_J
-    100056: R_Knee_J
-    100058: R_LegTop_J
-    100060: R_Shoulder_J
-    100062: R_Toe_J
-    100064: R_Wrist_CTRL
-    100066: R_Wrist_J
-    100068: Spine01_J
-    100070: Spine02_J
-    400000: Cube.031
-    400002: Head_J
-    400004: HeadTip_J
-    400006: HIP_CTRL
-    400008: Hip_Joint
-    400010: //RootNode
-    400012: IK_L_Arm
-    400014: IK_L_Leg
-    400016: IK_R_Arm
-    400018: IK_R_Leg
-    400020: IK_Spine
-    400022: L_Clavicle_J
-    400024: L_Elbow_J
+    100028: L_Hand
+    100030: L_Leg_Foot
+    100032: L_Leg_Knee1
+    100034: L_Leg_Knee2
+    100036: L_Leg_Toe
+    100038: L_Leg_Top
+    100040: L_Shoulder_Top
+    100042: L_Wing
+    100044: L_Wrist
+    100046: MasterController
+    100048: Middle_Wing
+    100050: R_Arm_CTRL
+    100052: R_Clavical
+    100054: R_Elbow
+    100056: R_Foot_CTRL
+    100058: R_Hand
+    100060: R_Leg_Foot
+    100062: R_Leg_Knee1
+    100064: R_Leg_Knee2
+    100066: R_Leg_Toe
+    100068: R_Leg_Top
+    100070: R_Shoulder_Top
+    100072: R_Wing
+    100074: R_Wrist
+    100076: Spine_BottomOfTorso
+    100078: Spine_HeadTop
+    100080: Spine_NeckBottom
+    100082: Spine_NeckTop
+    100084: Spine_TopHip
+    100086: Spine_TopOfTorso
+    100088: SpineCurve
+    100090: Torso_CTRL
+    400000: //RootNode
+    400002: Cube.031
+    400004: Head_CTRL
+    400006: Hip_CTRL
+    400008: HipJoint
+    400010: IK_L_Arm
+    400012: IK_L_Leg
+    400014: IK_R_Arm
+    400016: IK_R_Leg
+    400018: IK_Spine
+    400020: L_Arm_CTRL
+    400022: L_Clavical
+    400024: L_Elbow
     400026: L_Foot_CTRL
-    400028: L_Foot_J
-    400030: L_Knee2_J
-    400032: L_Knee_J
-    400034: L_LegTop_J
-    400036: L_Shoulder_J
-    400038: L_Toe_J
-    400040: L_Wrist_CTRL
-    400042: L_Wrist_J
-    400044: Neck_J
-    400046: R_Clavicle_J
-    400048: R_Elbow_J
-    400050: R_Foot_CTRL
-    400052: R_Foot_J
-    400054: R_Knee2_J
-    400056: R_Knee_J
-    400058: R_LegTop_J
-    400060: R_Shoulder_J
-    400062: R_Toe_J
-    400064: R_Wrist_CTRL
-    400066: R_Wrist_J
-    400068: Spine01_J
-    400070: Spine02_J
+    400028: L_Hand
+    400030: L_Leg_Foot
+    400032: L_Leg_Knee1
+    400034: L_Leg_Knee2
+    400036: L_Leg_Toe
+    400038: L_Leg_Top
+    400040: L_Shoulder_Top
+    400042: L_Wing
+    400044: L_Wrist
+    400046: MasterController
+    400048: Middle_Wing
+    400050: R_Arm_CTRL
+    400052: R_Clavical
+    400054: R_Elbow
+    400056: R_Foot_CTRL
+    400058: R_Hand
+    400060: R_Leg_Foot
+    400062: R_Leg_Knee1
+    400064: R_Leg_Knee2
+    400066: R_Leg_Toe
+    400068: R_Leg_Top
+    400070: R_Shoulder_Top
+    400072: R_Wing
+    400074: R_Wrist
+    400076: Spine_BottomOfTorso
+    400078: Spine_HeadTop
+    400080: Spine_NeckBottom
+    400082: Spine_NeckTop
+    400084: Spine_TopHip
+    400086: Spine_TopOfTorso
+    400088: SpineCurve
+    400090: Torso_CTRL
     2100000: lambert1
     4300000: Cube.031
-    7400000: IdleAnimation
+    7400000: Crouching
     9500000: //RootNode
     13700000: Cube.031
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -109,10 +129,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: IdleAnimation
+      name: Crouching
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 60
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -183,7 +203,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Hip_CTRL
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

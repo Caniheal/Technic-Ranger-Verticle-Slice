@@ -13,7 +13,9 @@ public enum WeaponState
 public class PlayerController : MonoBehaviour
 {
     //For our animations
-    private Animator anim;
+    private float DpadX;
+    private float DpadY;
+    public Animator anim;
 
     public float MovementSpeed = 1;
     public float MouseSensitivity = 1;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public float WarpSecondTestRadius = 1;
 
     public float JumpSpeed = 8;
+    public float TotalSlideTime = .2f;
 
     public Camera Camera;
     public WarpManager WarpManager;
@@ -48,6 +51,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip createBoardClip;
     public AudioClip fireBoltClip;
     public AudioClip destroyClip;
+
+    
 
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
@@ -68,12 +73,11 @@ public class PlayerController : MonoBehaviour
     private GameObject SpawnedShield;
 
     private Vector3 forward;
-
+    private bool IsSliding = false;
+    private float slideTimer = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-
         characterController = GetComponent<CharacterController>();
         forward = transform.forward;
 
@@ -106,6 +110,7 @@ public class PlayerController : MonoBehaviour
         UpdateMovement();
         UpdateCamera();
         UpdateWarper();
+        UpdateAnchor();
     }
 
 
@@ -116,7 +121,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-
+        bool IsCrouching = Input.GetKey(KeyCode.LeftControl);
 
         //Our "forward" is the same as the camera
         //Zero out the y so you don't fly up or fall down 
@@ -137,14 +142,33 @@ public class PlayerController : MonoBehaviour
         right.y = 0f;
 
 
-        //Default when you're not moving
-        MoveDirection = Vector3.zero;
+        anim.SetBool("isSliding", IsSliding);
+        anim.SetBool("isCrouching", IsCrouching);
 
-        MoveDirection += forward * Input.GetAxis("Vertical");
-        MoveDirection += right * Input.GetAxis("Horizontal");
+        if (!IsSliding)
+        {
+            //Default when you're not moving
+            MoveDirection = Vector3.zero;
 
-    
-        MoveDirection = MoveDirection * MovementSpeed;
+            MoveDirection += forward * Input.GetAxis("Vertical");
+            MoveDirection += right * Input.GetAxis("Horizontal");
+
+            MoveDirection = MoveDirection * MovementSpeed;
+        }
+        else
+        {
+
+            slideTimer += Time.deltaTime;
+
+            if (slideTimer >= TotalSlideTime)
+            {
+                MoveDirection.x -= .3f * Time.deltaTime;
+                MoveDirection.z -= .3f * Time.deltaTime;
+                MoveDirection.y = 0;
+
+                IsSliding = false;
+            }
+        }
 
         //How far you can move when in air
         //! = not
@@ -154,7 +178,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jump
-        if (characterController.isGrounded && Input.GetButton("Jump"))
+        if (!IsSliding && characterController.isGrounded && Input.GetButton("Jump"))
         {
             MoveDirection += Vector3.up * JumpSpeed;
 
@@ -179,13 +203,6 @@ public class PlayerController : MonoBehaviour
         //maintain up/down velocity; continue to move the way ya moving
         MoveDirection.y += characterController.velocity.y;
 
-        //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
-        characterController.Move(MoveDirection * Time.deltaTime);
-        //nora fiddling with acceleration: the code
-        /*{
-            
-        }*/
-         
         //set y (pitch) to ZERO because we don't cause about up and down direction
         Vector3 XZMoveDirection = MoveDirection.normalized;
         XZMoveDirection.y = 0f;
@@ -195,11 +212,28 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isRunning", true);
             gameObject.transform.rotation = Quaternion.LookRotation(XZMoveDirection.normalized, Vector3.up);
+
+            if (IsCrouching && !IsSliding && XZMoveDirection.magnitude > .3f)
+            {
+                IsSliding = true;
+                MoveDirection.x *= 1.5f;
+                MoveDirection.z *= 1.5f;
+                MoveDirection.y = 0f;
+
+                slideTimer = 0f;
+            }
         }
         else
         {
             anim.SetBool("isRunning", false);
         }
+
+        //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
+        characterController.Move(MoveDirection * Time.deltaTime);
+        //nora fiddling with acceleration: the code
+        /*{
+            
+        }*/
     }
 
     void UpdateCamera()
@@ -264,9 +298,11 @@ public class PlayerController : MonoBehaviour
 
     void UpdateWarper()
     {
+        bool rightBumper = Input.GetButton("Right Bumper");
+
         if (CurrentWeaponState == WeaponState.Vista)
         {
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper"))
             {
                 Vector3 CameraDirection = Camera.transform.rotation * Vector3.forward;
                 RaycastHit hit;
@@ -275,6 +311,8 @@ public class PlayerController : MonoBehaviour
 
                 if (Physics.SphereCast(Camera.transform.position, WarpFirstTestRadius, CameraDirection, out hit, 10f))
                 {
+                    Debug.Log(hit.collider);
+
                     CameraDirection.y = 0;
 
                     if (WarpManager)
@@ -286,6 +324,39 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     // no warping cast sound
+                }
+            }
+        }
+    }
+    // Anchor fuctionallity
+    void UpdateAnchor()
+    {
+        bool rightBumper = Input.GetButton("Right Bumper");
+
+        if (CurrentWeaponState == WeaponState.Anchor)
+        {
+
+            if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButton("Right Bumper"))
+            {
+                RaycastHit hit;
+                // Does the ray intersect any objects excluding the player layer
+                if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out hit, Mathf.Infinity))
+                {
+                    if (hit.collider != null)
+                    {
+                        var anchorAnimation = hit.collider.gameObject.GetComponent<AnchorAnimation>();
+                        if (anchorAnimation != null)
+                        {
+                            anchorAnimation.OnRayHit();
+                            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                            Debug.Log("Did Hit");
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                    Debug.Log("Did not Hit");
                 }
             }
         }
@@ -307,6 +378,10 @@ public class PlayerController : MonoBehaviour
 
     void UpdateWeapon()
     {
+
+        float DpadX = Input.GetAxis("Dpad X");
+        float DpadY = Input.GetAxis("Dpad Y");
+   
         if (WarpManager.IsWarperActive())
         {
             //return = exiting out of this function
@@ -315,22 +390,23 @@ public class PlayerController : MonoBehaviour
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
-        if (Input.GetAxis("Dpad X") == 1)
+        if (Input.GetKeyDown("1") || (Input.GetAxis("Dpad Y") < 0))
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("2"))
+        if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") > 0))
         {
             NewWeaponState = WeaponState.Vista;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("3"))
+        if (Input.GetKeyDown("3") || (Input.GetAxis("Dpad X") > 0))
         {
             NewWeaponState = WeaponState.Anchor;
             source.PlayOneShot(maskSwitchClip);
         }
-        if (Input.GetKeyDown("4"))
+
+        if (Input.GetKeyDown("4") || (Input.GetAxis("Dpad X") < 0))
         {
             NewWeaponState = WeaponState.Shield;
             source.PlayOneShot(maskSwitchClip);
@@ -350,6 +426,8 @@ public class PlayerController : MonoBehaviour
                 SpawnedShield = null;
                 source.PlayOneShot(destroyClip);
             }
+
+            Debug.Log("changed update colors");
 
             ColorSwapper.UpdateColors(CurrentWeaponState);
 

@@ -143,7 +143,7 @@ BoxCollider:
   m_GameObject: {fileID: 198845886}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.1161695, y: 2.1092014, z: 3.335617}
   m_Center: {x: -0.03034997, y: -0.08510351, z: 0.100494385}
@@ -175,8 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb63312ed6a8ba74299a563c718c16fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 707891777, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
   MovingPlatform: {fileID: 198845886}
+  Player: {fileID: 0}
 --- !u!65 &198845890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1154,6 +1154,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9197620586133457519, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2113908845, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.8
@@ -1165,6 +1170,16 @@ PrefabInstance:
     - target: {fileID: 2113908845, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505273753039399705, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772607065328605125, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
@@ -1489,12 +1504,12 @@ GameObject:
   - component: {fileID: 838106681}
   - component: {fileID: 838106680}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasV2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &838106680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3275,7 +3290,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781065254}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ca3a3bb3c73c8f45812ab9faffb59f1, type: 3}
   m_Name: 
@@ -3652,7 +3667,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 79ea989d6745b96408f57d97a7e8c249, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &2030316193
@@ -3667,8 +3682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb63312ed6a8ba74299a563c718c16fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 707891777, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
   MovingPlatform: {fileID: 2030316191}
+  Player: {fileID: 0}
 --- !u!65 &2030316194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3696,7 +3711,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 145
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
@@ -3750,7 +3765,7 @@ BoxCollider:
   m_GameObject: {fileID: 2030316191}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.1161695, y: 2.1092014, z: 3.335617}
   m_Center: {x: -0.03034997, y: -0.08510351, z: 0.100494385}
