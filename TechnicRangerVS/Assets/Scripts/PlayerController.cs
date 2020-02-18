@@ -41,15 +41,18 @@ public class PlayerController : MonoBehaviour
     public ColorSwap ColorSwapper;
     public GameObject ShieldPrefab;
 
-    //Sound Stuff by Fran
+    //Sound Stuff by Fran and Nora!
     private AudioSource source;
     public AudioClip jumpClip;
     public AudioClip walkClip;
     public AudioClip landingClip;
+    public AudioClip slideClip;
     public AudioClip maskSwitchClip;
     public AudioClip createPortalClip;
     public AudioClip createBoardClip;
     public AudioClip fireBoltClip;
+    public AudioClip hitClip;
+    public AudioClip activateClip;
     public AudioClip destroyClip;
 
     
@@ -219,7 +222,7 @@ public class PlayerController : MonoBehaviour
                 MoveDirection.x *= 1.5f;
                 MoveDirection.z *= 1.5f;
                 MoveDirection.y = 0f;
-
+                source.PlayOneShot(slideClip);
                 slideTimer = 0f;
             }
         }
@@ -339,15 +342,18 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButton("Right Bumper"))
             {
                 RaycastHit hit;
+                source.PlayOneShot(fireBoltClip);
                 // Does the ray intersect any objects excluding the player layer
                 if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out hit, Mathf.Infinity))
                 {
                     if (hit.collider != null)
                     {
                         var anchorAnimation = hit.collider.gameObject.GetComponent<AnchorAnimation>();
+                        source.PlayOneShot(hitClip);
                         if (anchorAnimation != null)
                         {
                             anchorAnimation.OnRayHit();
+                            source.PlayOneShot(activateClip);
                             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                             Debug.Log("Did Hit");
                         }
