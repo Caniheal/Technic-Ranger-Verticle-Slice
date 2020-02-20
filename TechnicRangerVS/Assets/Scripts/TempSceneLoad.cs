@@ -9,7 +9,7 @@ public class TempSceneLoad : MonoBehaviour
     {
         if(other.name == "MainCharacter2.0 1")
         {
-            SceneManager.LoadScene("Main Scene");
+            SceneManager.LoadScene("Mines");
         }
     }
 }
