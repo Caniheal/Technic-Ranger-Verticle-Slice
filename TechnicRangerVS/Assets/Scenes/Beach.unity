@@ -2367,7 +2367,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2991,6 +2991,7 @@ GameObject:
   - component: {fileID: 380362262}
   - component: {fileID: 380362261}
   - component: {fileID: 380362260}
+  - component: {fileID: 380362264}
   m_Layer: 5
   m_Name: Settings Canvas
   m_TagString: Untagged
@@ -3085,6 +3086,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &380362264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380362259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344ead753f72cd540979f40bd8eb3c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rgbValue: 0.5
 --- !u!1001 &383808416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4395,11 +4409,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3036859455441686180, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4470,16 +4479,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 95.163635
       objectReference: {fileID: 0}
-    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StitchLightmapSeams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3547970346011534168, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_Lightmapping
@@ -4489,6 +4488,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4bf30fe3300394584896c390a280df, type: 3}
@@ -4606,7 +4620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &569440253
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4787,8 +4801,8 @@ RectTransform:
   m_Father: {fileID: 513016755}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5069,6 +5083,7 @@ GameObject:
   - component: {fileID: 642671138}
   - component: {fileID: 642671140}
   - component: {fileID: 642671139}
+  - component: {fileID: 642671141}
   m_Layer: 5
   m_Name: Gamma
   m_TagString: Untagged
@@ -5220,6 +5235,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642671137}
   m_CullTransparentMesh: 0
+--- !u!114 &642671141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642671137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344ead753f72cd540979f40bd8eb3c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rgbValue: 0
 --- !u!1 &648210987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1325146626296491896, guid: 0c4ecb00cf759c84fb87b3318e3ae8a1,
@@ -7724,11 +7752,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3036859455441686180, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7799,16 +7822,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 95.163635
       objectReference: {fileID: 0}
-    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StitchLightmapSeams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3547970346011534168, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_Lightmapping
@@ -7818,6 +7831,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4bf30fe3300394584896c390a280df, type: 3}
@@ -8281,16 +8309,16 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 380362259}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 380362264}
+        m_MethodName: ChangeLight
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12616,11 +12644,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3036859455441686180, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12691,16 +12714,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 95.163635
       objectReference: {fileID: 0}
-    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StitchLightmapSeams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3547970346011534168, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_Lightmapping
@@ -12710,6 +12723,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4bf30fe3300394584896c390a280df, type: 3}
@@ -16081,11 +16109,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3036859455441686180, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16156,16 +16179,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 95.163605
       objectReference: {fileID: 0}
-    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StitchLightmapSeams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3547970346011534168, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_Lightmapping
@@ -16175,6 +16188,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4bf30fe3300394584896c390a280df, type: 3}
@@ -16363,11 +16391,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3036859455441686180, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16438,16 +16461,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 95.163605
       objectReference: {fileID: 0}
-    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StitchLightmapSeams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3547970346011534168, guid: 3e4bf30fe3300394584896c390a280df,
         type: 3}
       propertyPath: m_Lightmapping
@@ -16457,6 +16470,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758942241404658912, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046255346779784842, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100620695860432744, guid: 3e4bf30fe3300394584896c390a280df,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4bf30fe3300394584896c390a280df, type: 3}
