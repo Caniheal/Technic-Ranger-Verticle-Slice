@@ -176,6 +176,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 217418057548793944, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 217418057548793944, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2113908843, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
       propertyPath: far clip plane
       value: 1000
@@ -326,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 6070134255971583160, guid: 62951875c87536e4fba63ac9ae19ecf4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.355291
+      value: 27.23
       objectReference: {fileID: 0}
     - target: {fileID: 6070134255971583160, guid: 62951875c87536e4fba63ac9ae19ecf4,
         type: 3}
@@ -1708,17 +1718,17 @@ PrefabInstance:
     - target: {fileID: 8756654594276149245, guid: 2d8945ad778202f45a6e7d39d5b2868b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.893642
+      value: 29.75
       objectReference: {fileID: 0}
     - target: {fileID: 8756654594276149245, guid: 2d8945ad778202f45a6e7d39d5b2868b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.017027
+      value: 20.1
       objectReference: {fileID: 0}
     - target: {fileID: 8756654594276149245, guid: 2d8945ad778202f45a6e7d39d5b2868b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.696316
+      value: -38.58
       objectReference: {fileID: 0}
     - target: {fileID: 8756654594276149245, guid: 2d8945ad778202f45a6e7d39d5b2868b,
         type: 3}
