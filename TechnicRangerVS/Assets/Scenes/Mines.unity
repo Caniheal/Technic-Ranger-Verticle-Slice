@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3823,11 +3823,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3893,6 +3888,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 388.59766
       objectReference: {fileID: 0}
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_Lightmapping
@@ -3915,17 +3915,17 @@ PrefabInstance:
     - target: {fileID: 1110885013554740155, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.679848
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 1110885013554740155, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1110885013554740155, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1110885013554740155, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
@@ -3970,27 +3970,27 @@ PrefabInstance:
     - target: {fileID: 1110885013554740154, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
       propertyPath: ShapeModule.m_Scale.y
-      value: 923.63464
+      value: 827.2872
       objectReference: {fileID: 0}
     - target: {fileID: 1110885013554740154, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 405.9381
+      value: 346.5575
       objectReference: {fileID: 0}
     - target: {fileID: 1110885013554740154, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
       propertyPath: ShapeModule.m_Scale.z
-      value: 106.24664
+      value: 68.08986
       objectReference: {fileID: 0}
     - target: {fileID: 1110885013554740154, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10000
+      value: 11000
       objectReference: {fileID: 0}
     - target: {fileID: 1110885013554740154, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 10000
+      value: 11000
       objectReference: {fileID: 0}
     - target: {fileID: 1110885013554740154, guid: 5f00c942777fd51438aa2d2a0137f24a,
         type: 3}
@@ -4024,11 +4024,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4098,6 +4093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 793.905
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3694320091453057785, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -6323,11 +6323,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6397,6 +6392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 922.3366
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3694320091453057785, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -12859,11 +12859,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12933,6 +12928,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 716.3409
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3694320091453057785, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -25985,11 +25985,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26059,6 +26054,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1001.6494
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (3)
       objectReference: {fileID: 0}
     - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -27705,11 +27705,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27779,6 +27774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 388.59796
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
@@ -28785,11 +28785,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446488430}
     m_Modifications:
-    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
-        type: 3}
-      propertyPath: m_Name
-      value: CrystalLarge_Prefab (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2130737850535772313, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28859,6 +28854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 388.59793
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785909227207736189, guid: dbd9d588259eb3c40880976958fb7d78,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalLarge_Prefab (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5496844214243126233, guid: dbd9d588259eb3c40880976958fb7d78,
         type: 3}
