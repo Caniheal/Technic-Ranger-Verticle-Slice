@@ -10,6 +10,6 @@ public class Gamma : MonoBehaviour
     public void ChangeLight(float rgbGamma)
     {
         rgbValue = rgbGamma;
-        RenderSettings.ambientLight = new Color(rgbValue, rgbValue, rgbValue, 1);
+        RenderSettings.ambientLight = new Color(rgbValue, rgbValue, rgbValue, 1.0f);
     }
 }
