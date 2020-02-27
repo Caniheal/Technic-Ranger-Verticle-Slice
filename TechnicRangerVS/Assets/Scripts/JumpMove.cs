@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SideMover : MonoBehaviour
+public class JumpMove : MonoBehaviour
 {
     public float DistanceToMove = 6;
     public float Speed = 1;
     public GameObject Player;
-    
+
     //Vector 3 = DirectionToMoveXYZ <-- SAME SHIT
     public Vector3 DirectionToMove = new Vector3(1, 0, 0);
 
     private float currentDistance;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         currentDistance = 0;
     }
@@ -35,9 +35,8 @@ public class SideMover : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void FixedUpdate ()
+    private void Update()
     {
-
         //Vector 3 stores transform location info
         Vector3 PreviousLocation = transform.position;
 
@@ -49,28 +48,22 @@ public class SideMover : MonoBehaviour
 
 
         // Direction moved at __ speed during __ period of time.
-        Vector3 PositionWeWantToMoveTo = Time.deltaTime * Speed * DirectionToMove;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("working");
+            Vector3 PositionWeWantToMoveTo = Time.deltaTime * Speed * DirectionToMove;
 
-        transform.position = transform.position + (PositionWeWantToMoveTo);
+            transform.position = transform.position + (PositionWeWantToMoveTo);
 
-        // Distance between old&new locations ---> 6 then reverse direction
-        currentDistance = currentDistance + Vector3.Distance(PreviousLocation, transform.position);
+            /*if (transform.position != PreviousLocation)
+            {
+                currentDistance = currentDistance + Vector3.Distance(PreviousLocation, transform.position);
+            }*/
 
-        //if current distance >= 6 then reverse direction
-        /*   if (currentDistance >= DistanceToMove)
-           {
-               //  Vector3(1, 0, 0) ->  Vector3(-1, 0, 0)
-               DirectionToMove = DirectionToMove * -1;
-               //starting distance before moving again set back to 0
-               currentDistance = 0;
-           } */
-
-        //(0,0,0) + (Speed * deltatime, 0, 0)
-        // transform.position = transform.position + PositionWeWantToMoveTo;--
-        //Local Position = relative to parent; Position = relative to world 
+        }
+    }
+   
 
     
-  
+}
 
-}
-}
