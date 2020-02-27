@@ -51,9 +51,24 @@ public class JumpMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("working");
+            // Direction moved at __ speed during __ period of time.
             Vector3 PositionWeWantToMoveTo = Time.deltaTime * Speed * DirectionToMove;
 
             transform.position = transform.position + (PositionWeWantToMoveTo);
+
+            // Distance between old&new locations ---> 6 then reverse direction
+            currentDistance = currentDistance + Vector3.Distance(PreviousLocation, transform.position);
+            Debug.Log(PositionWeWantToMoveTo);
+
+            //if current distance >= 6 then reverse direction
+            if (currentDistance >= DistanceToMove)
+            {
+                //  Vector3(1, 0, 0) ->  Vector3(-1, 0, 0)
+                DirectionToMove = DirectionToMove * -1;
+                //starting distance before moving again set back to 0
+                currentDistance = 0;
+            }
+
 
             /*if (transform.position != PreviousLocation)
             {
