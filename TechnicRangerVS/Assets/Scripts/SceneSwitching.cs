@@ -13,7 +13,7 @@ public class SceneSwitching : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("LevelLoading");
     }
 
     public void SettingsMenu()
