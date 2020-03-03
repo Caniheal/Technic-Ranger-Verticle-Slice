@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum WeaponState
 {
@@ -40,6 +41,9 @@ public class PlayerController : MonoBehaviour
     public WarpManager WarpManager;
     public ColorSwap ColorSwapper;
     public GameObject ShieldPrefab;
+
+    // reference for reticle
+    public Image reticle;
 
     //Sound Stuff by Fran and Nora!
     private AudioSource source;
@@ -87,6 +91,9 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        // make it so the reticle isnt shown by default
+        reticle.enabled = false;
     }
 
     private void Awake()
@@ -338,8 +345,16 @@ public class PlayerController : MonoBehaviour
 
         if (CurrentWeaponState == WeaponState.Anchor)
         {
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                reticle.enabled = true;
+            }
+            else
+            {
+                reticle.enabled = false;
+            }
 
-            if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButton("Right Bumper"))
+            if (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper"))
             {
                 RaycastHit hit;
                 source.PlayOneShot(fireBoltClip);
