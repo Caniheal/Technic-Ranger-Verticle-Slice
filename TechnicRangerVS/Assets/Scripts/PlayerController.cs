@@ -75,6 +75,10 @@ public class PlayerController : MonoBehaviour
     public Vector3 velocity_2;
     }*/
 
+    //fiddling with sliding
+    private double tempSpeedX;
+    private double tempSpeedY;
+
     private CharacterController characterController;
     private bool movementEnabled = true;
     private GameObject SpawnedShield;
@@ -226,6 +230,7 @@ public class PlayerController : MonoBehaviour
             if (IsCrouching && !IsSliding && XZMoveDirection.magnitude > .3f)
             {
                 IsSliding = true;
+                //tempSpeedX = MoveDirection.x * 1.5;
                 MoveDirection.x *= 1.5f;
                 MoveDirection.z *= 1.5f;
                 MoveDirection.y = 0f;
