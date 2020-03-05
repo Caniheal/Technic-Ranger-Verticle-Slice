@@ -39,8 +39,11 @@ public class PlayerController : MonoBehaviour
 
     public Camera Camera;
     public WarpManager WarpManager;
-    public ColorSwap ColorSwapper;
     public GameObject ShieldPrefab;
+    // color swaping references
+    public Material Purple, Teal, Tan, Blue, White;
+    public SkinnedMeshRenderer Render;
+
 
     // reference for reticle
     public Image reticle;
@@ -125,6 +128,7 @@ public class PlayerController : MonoBehaviour
         UpdateCamera();
         UpdateWarper();
         UpdateAnchor();
+        UpdateDefault();
     }
 
 
@@ -313,6 +317,18 @@ public class PlayerController : MonoBehaviour
 
     void UpdateWarper()
     {
+        Material[] materials = Render.materials;
+
+        if (CurrentWeaponState == WeaponState.Vista)
+        {
+           
+
+            //ANCHOR
+            materials[0] = Purple;
+        }
+
+        Render.materials = materials;
+
         bool rightBumper = Input.GetButton("Right Bumper");
 
         if (CurrentWeaponState == WeaponState.Vista)
@@ -346,6 +362,18 @@ public class PlayerController : MonoBehaviour
     // Anchor fuctionallity
     void UpdateAnchor()
     {
+        Material[] materials = Render.materials;
+
+        if (CurrentWeaponState == WeaponState.Anchor)
+        {
+            
+
+            //ANCHOR
+            materials[0] = Teal;
+        }
+
+        Render.materials = materials;
+
         bool rightBumper = Input.GetButton("Right Bumper");
 
         if (CurrentWeaponState == WeaponState.Anchor)
@@ -390,6 +418,18 @@ public class PlayerController : MonoBehaviour
 
     void UpdateSpawnShield()
     {
+        Material[] materials = Render.materials;
+
+        if (CurrentWeaponState == WeaponState.Shield)
+        {
+            
+
+            //ANCHOR
+            materials[0] = White;
+        }
+
+        Render.materials = materials;
+
         if (CurrentWeaponState == WeaponState.Shield)
         {
             if (Input.GetKey(KeyCode.Mouse0) && SpawnedShield == null)
@@ -401,6 +441,22 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    void UpdateDefault()
+    {
+        Material[] materials = Render.materials;
+
+        if (CurrentWeaponState == WeaponState.Default)
+        {
+            
+
+            //ANCHOR
+            materials[0] = Blue;
+        }
+
+        Render.materials = materials;
+    }
+
 
     void UpdateWeapon()
     {
@@ -420,6 +476,7 @@ public class PlayerController : MonoBehaviour
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
+            
         }
         if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") > 0))
         {
@@ -453,11 +510,11 @@ public class PlayerController : MonoBehaviour
                 source.PlayOneShot(destroyClip);
             }
 
-            Debug.Log("changed update colors");
+           /* Debug.Log("changed update colors");
 
-            ColorSwapper.UpdateColors(CurrentWeaponState);
+            ColorSwapper.UpdateColors(CurrentWeaponState); */
 
-            CurrentWeaponState = NewWeaponState;
+            CurrentWeaponState = NewWeaponState; 
         }
     }
 }
