@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
-{
+{/*
     [SerializeField]
     private Transform firePoint;
     [SerializeField]
@@ -44,5 +44,5 @@ public class Shooting : MonoBehaviour
             other.GetComponent<Animation>().enabled = true;
             source.PlayOneShot(impactClip);
     }
-
+    */
 }
