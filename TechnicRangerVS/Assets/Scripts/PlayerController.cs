@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public enum WeaponState
 {
     Default,
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 forward;
     private bool IsSliding = false;
-    private float slideTimer = 0f;
+    private float slideTimer = 1f;
     // Start is called before the first frame update
     void Start()
     {
