@@ -4933,11 +4933,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 357211447244786998, guid: c0592b7426fc37b4da980967d20296e8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5912631341498208776, guid: c0592b7426fc37b4da980967d20296e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5d4cd49a8cca3004f81c52af27c694ae, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c80f4f5b1b638d48bd0d37dcefb626d, type: 2}
+    - target: {fileID: 5912631341498208776, guid: c0592b7426fc37b4da980967d20296e8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0592b7426fc37b4da980967d20296e8, type: 3}
 --- !u!1001 &2107278170
