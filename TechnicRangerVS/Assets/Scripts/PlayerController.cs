@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public float WarpSecondTestRadius = 1;
 
     public float JumpSpeed = 8;
-    public float TotalSlideTime = .2f;
+    public float TotalSlideTime = 1.5f;
 
     public Camera Camera;
     public WarpManager WarpManager;
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 forward;
     private bool IsSliding = false;
-    private float slideTimer = 1f;
+    private float slideTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -181,9 +181,6 @@ public class PlayerController : MonoBehaviour
 
             if (slideTimer >= TotalSlideTime)
             {
-                MoveDirection.x -= .3f * Time.deltaTime;
-                MoveDirection.z -= .3f * Time.deltaTime;
-                MoveDirection.y = 0;
 
                 IsSliding = false;
             }
