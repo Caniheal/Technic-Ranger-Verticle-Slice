@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4631708118300982978}
   - component: {fileID: 4089448430439853111}
   - component: {fileID: 5049928179156839810}
+  - component: {fileID: 1207975313230438637}
+  - component: {fileID: 2735776457506692928}
   m_Layer: 0
   m_Name: TemplePlatform_Prefab
   m_TagString: Untagged
@@ -92,3 +94,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 277b07594c1afb142a4793bc5fcdc6d3, type: 3}
+--- !u!65 &1207975313230438637
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21133605974987021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019330261, y: 0.019651217, z: 0.022994028}
+  m_Center: {x: -0.000034306096, y: -0.000047418016, z: 0.036064222}
+--- !u!114 &2735776457506692928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21133605974987021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0fa004c3cfebd4dbadb2fd55971277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceToMove: 6
+  Speed: 2
+  Player: {fileID: 0}
+  DirectionToMove: {x: 0, y: 1, z: 0}
