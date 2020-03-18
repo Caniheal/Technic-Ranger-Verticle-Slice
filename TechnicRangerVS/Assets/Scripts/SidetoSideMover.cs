@@ -2,21 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+ //PUBLIC CLASS SIDEMOVER AND SIDETOSIDE MOVER SWAPPED IDK WHY 
+ //IT IS WHAT IT IS
 public class SideMover : MonoBehaviour
 {
     public float DistanceToMove = 6;
     public float Speed = 1;
     public GameObject Player;
-    
+    public bool Loop = false;
+
+
+
     //Vector 3 = DirectionToMoveXYZ <-- SAME SHIT
     public Vector3 DirectionToMove = new Vector3(1, 0, 0);
 
     private float currentDistance;
 
+   
+
 	// Use this for initialization
 	void Start ()
     {
         currentDistance = 0;
+      
     }
     // child player to platfrom
     private void OnTriggerEnter(Collider other)
@@ -56,14 +64,19 @@ public class SideMover : MonoBehaviour
         // Distance between old&new locations ---> 6 then reverse direction
         currentDistance = currentDistance + Vector3.Distance(PreviousLocation, transform.position);
 
+
+        //LOOP
         //if current distance >= 6 then reverse direction
-        /*   if (currentDistance >= DistanceToMove)
-           {
+        if (currentDistance >= DistanceToMove && Loop)
+         {
                //  Vector3(1, 0, 0) ->  Vector3(-1, 0, 0)
                DirectionToMove = DirectionToMove * -1;
                //starting distance before moving again set back to 0
                currentDistance = 0;
-           } */
+         }
+
+
+
 
         //(0,0,0) + (Speed * deltatime, 0, 0)
         // transform.position = transform.position + PositionWeWantToMoveTo;--
