@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Temple.unity
     guid: 3874e56a9b82fa747aead079c1069a90
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 51a33ebf4ca87f042ba164c4e13f29f5
+  - enabled: 1
+    path: Assets/Scenes/IntroCutscene.unity
+    guid: a9daba75f5ad91b43aa6e7c5a306a737
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 369ecb8c296087b4f92f63670496aa1f,
       type: 2}
