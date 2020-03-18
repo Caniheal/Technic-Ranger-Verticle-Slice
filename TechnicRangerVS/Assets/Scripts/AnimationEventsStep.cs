@@ -13,7 +13,7 @@ public class AnimationEventsStep : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-    private void Step ()
+    public void Step()
     {
         AudioClip step = GetRandomClip();
         audioSource.PlayOneShot(step);
