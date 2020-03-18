@@ -101,7 +101,7 @@ ModelImporter:
     400094: Torso_CTRL
     2100000: lambert1
     4300000: Cube.031
-    7400000: Take 001
+    7400000: Final_Idle
     9500000: //RootNode
     13700000: Cube.031
   externalObjects: {}
@@ -133,7 +133,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Final_Idle
       takeName: Take 001
       firstFrame: 1
       lastFrame: 20
@@ -143,7 +143,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
