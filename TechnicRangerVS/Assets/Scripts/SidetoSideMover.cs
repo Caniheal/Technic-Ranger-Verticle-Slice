@@ -37,6 +37,7 @@ public class SideMover : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate ()
     {
+
         //Vector 3 stores transform location info
         Vector3 PreviousLocation = transform.position;
 

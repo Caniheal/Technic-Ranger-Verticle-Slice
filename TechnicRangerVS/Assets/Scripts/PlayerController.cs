@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public enum WeaponState
 {
@@ -34,22 +36,31 @@ public class PlayerController : MonoBehaviour
     public float WarpSecondTestRadius = 1;
 
     public float JumpSpeed = 8;
-    public float TotalSlideTime = .2f;
+    public float TotalSlideTime = 1.5f;
 
     public Camera Camera;
     public WarpManager WarpManager;
-    public ColorSwap ColorSwapper;
     public GameObject ShieldPrefab;
+    // color swaping references
+    public Material Purple, Teal, Tan, Blue, White;
+    public SkinnedMeshRenderer Render;
 
-    //Sound Stuff by Fran
+
+    // reference for reticle
+    public Image reticle;
+
+    //Sound Stuff by Fran and Nora!
     private AudioSource source;
     public AudioClip jumpClip;
     public AudioClip walkClip;
     public AudioClip landingClip;
+    public AudioClip slideClip;
     public AudioClip maskSwitchClip;
     public AudioClip createPortalClip;
     public AudioClip createBoardClip;
     public AudioClip fireBoltClip;
+    public AudioClip hitClip;
+    public AudioClip activateClip;
     public AudioClip destroyClip;
 
     
@@ -68,13 +79,17 @@ public class PlayerController : MonoBehaviour
     public Vector3 velocity_2;
     }*/
 
+    //fiddling with sliding
+    private double tempSpeedX;
+    private double tempSpeedY;
+
     private CharacterController characterController;
     private bool movementEnabled = true;
     private GameObject SpawnedShield;
 
     private Vector3 forward;
     private bool IsSliding = false;
-    private float slideTimer = 0f;
+    private float slideTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +99,9 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        // make it so the reticle isnt shown by default
+        reticle.enabled = false;
     }
 
     private void Awake()
@@ -110,6 +128,8 @@ public class PlayerController : MonoBehaviour
         UpdateMovement();
         UpdateCamera();
         UpdateWarper();
+        UpdateAnchor();
+        UpdateDefault();
     }
 
 
@@ -161,9 +181,6 @@ public class PlayerController : MonoBehaviour
 
             if (slideTimer >= TotalSlideTime)
             {
-                MoveDirection.x -= .3f * Time.deltaTime;
-                MoveDirection.z -= .3f * Time.deltaTime;
-                MoveDirection.y = 0;
 
                 IsSliding = false;
             }
@@ -215,10 +232,11 @@ public class PlayerController : MonoBehaviour
             if (IsCrouching && !IsSliding && XZMoveDirection.magnitude > .3f)
             {
                 IsSliding = true;
+                //tempSpeedX = MoveDirection.x * 1.5;
                 MoveDirection.x *= 1.5f;
                 MoveDirection.z *= 1.5f;
                 MoveDirection.y = 0f;
-
+                source.PlayOneShot(slideClip);
                 slideTimer = 0f;
             }
         }
@@ -302,6 +320,18 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void UpdateWarper()
     {
+        Material[] materials = Render.materials;
+
+        if (CurrentWeaponState == WeaponState.Vista)
+        {
+           
+
+            //ANCHOR
+            materials[0] = Purple;
+        }
+
+        Render.materials = materials;
+
         bool rightBumper = Input.GetButton("Right Bumper");
 
         if (CurrentWeaponState == WeaponState.Vista)
@@ -332,9 +362,77 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    // Anchor fuctionallity
+    void UpdateAnchor()
+    {
+        Material[] materials = Render.materials;
+
+        if (CurrentWeaponState == WeaponState.Anchor)
+        {
+            
+
+            //ANCHOR
+            materials[0] = Teal;
+        }
+
+        Render.materials = materials;
+
+        bool rightBumper = Input.GetButton("Right Bumper");
+
+        if (CurrentWeaponState == WeaponState.Anchor)
+        {
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                reticle.enabled = true;
+            }
+            else
+            {
+                reticle.enabled = false;
+            }
+
+            if (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper"))
+            {
+                RaycastHit hit;
+                source.PlayOneShot(fireBoltClip);
+                // Does the ray intersect any objects excluding the player layer
+                if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out hit, Mathf.Infinity))
+                {
+                    if (hit.collider != null)
+                    {
+                        var anchorAnimation = hit.collider.gameObject.GetComponent<AnchorAnimation>();
+                        source.PlayOneShot(hitClip);
+                        if (anchorAnimation != null)
+                        {
+                            anchorAnimation.OnRayHit();
+                            source.PlayOneShot(activateClip);
+                            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                            Debug.Log("Did Hit");
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                    Debug.Log("Did not Hit");
+                }
+            }
+        }
+    }
 
     void UpdateSpawnShield()
     {
+        Material[] materials = Render.materials;
+
+        if (CurrentWeaponState == WeaponState.Shield)
+        {
+            
+
+            //ANCHOR
+            materials[0] = White;
+        }
+
+        Render.materials = materials;
+
         if (CurrentWeaponState == WeaponState.Shield)
         {
             if (Input.GetKey(KeyCode.Mouse0) && SpawnedShield == null)
@@ -346,6 +444,22 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    void UpdateDefault()
+    {
+        Material[] materials = Render.materials;
+
+        if (CurrentWeaponState == WeaponState.Default)
+        {
+            
+
+            //ANCHOR
+            materials[0] = Blue;
+        }
+
+        Render.materials = materials;
+    }
+
 
     void UpdateWeapon()
     {
@@ -365,6 +479,7 @@ public class PlayerController : MonoBehaviour
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
+            
         }
         if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") > 0))
         {
@@ -398,11 +513,11 @@ public class PlayerController : MonoBehaviour
                 source.PlayOneShot(destroyClip);
             }
 
-            Debug.Log("changed update colors");
+           /* Debug.Log("changed update colors");
 
-            ColorSwapper.UpdateColors(CurrentWeaponState);
+            ColorSwapper.UpdateColors(CurrentWeaponState); */
 
-            CurrentWeaponState = NewWeaponState;
+            CurrentWeaponState = NewWeaponState; 
         }
     }
 }

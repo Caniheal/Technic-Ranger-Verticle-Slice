@@ -7,12 +7,21 @@ using UnityEngine.SceneManagement;
 public class Paused : MonoBehaviour
 {
     private static bool GameIsPaused = false;
-
     public GameObject pauseMenuUI;
-    // Update is called once per frame
-    void Update()
+    public GameObject settingsMenuUI;
+    public Button Back;
+
+    void Start()
     {
-        if (Input.GetButton("Pause") || Input.GetKeyDown(KeyCode.P))
+        Button btn = Back.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+
+    }
+        
+        // Update is called once per frame
+        void Update()
+    {
+        if (Input.GetButtonDown("Pause") || Input.GetKeyDown(KeyCode.P))
         {
             if (GameIsPaused)
             {
@@ -23,13 +32,17 @@ public class Paused : MonoBehaviour
                 Pause();
             }
         }
-    }
+       else if (GameIsPaused && settingsMenuUI.activeInHierarchy)
+        {
+            Settings();
+        }
 
-        
+    }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
         AudioListener.pause = false;
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -38,6 +51,7 @@ public class Paused : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        settingsMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -48,4 +62,24 @@ public class Paused : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void Settings()
+    {
+        pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(true);
+        AudioListener.pause = true;
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    void TaskOnClick()
+    {
+        pauseMenuUI.SetActive(true);
+        settingsMenuUI.SetActive(false);
+        AudioListener.pause = true;
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        
+    }
+
 }
