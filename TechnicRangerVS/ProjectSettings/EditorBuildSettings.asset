@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits Menu.unity
     guid: 2c2e735d8082fbe43955b8c96c1f5e45
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beach.unity
     guid: 389b5a45de0cbdc48b20586ede71fde0
   - enabled: 1
@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroCutscene.unity
     guid: a9daba75f5ad91b43aa6e7c5a306a737
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: f6bda6efd0668244c93dd8abb0597c02
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 369ecb8c296087b4f92f63670496aa1f,
       type: 2}

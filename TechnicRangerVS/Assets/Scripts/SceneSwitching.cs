@@ -13,7 +13,7 @@ public class SceneSwitching : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("LevelLoading");
+        SceneManager.LoadScene("IntroCutscene");
     }
 
     public void SettingsMenu()
