@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public float WarpSecondTestRadius = 1;
 
     public float JumpSpeed = 8;
-    public float TotalSlideTime = 1.5f;
+    public float TotalSlideTime = 2f;
 
     public Camera Camera;
     public WarpManager WarpManager;
