@@ -15,6 +15,7 @@ public class Paused : MonoBehaviour
     {
         Button btn = Back.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+        pauseMenuUI.SetActive(false);
 
     }
         
@@ -35,6 +36,10 @@ public class Paused : MonoBehaviour
        else if (GameIsPaused && settingsMenuUI.activeInHierarchy)
         {
             Settings();
+        }
+        if (!GameIsPaused)
+        {
+            pauseMenuUI.SetActive(false);
         }
 
     }
