@@ -490,7 +490,12 @@ public class PlayerController : MonoBehaviour
     //Gets the weapons from persistantData script
     public List<WeaponState> GetUnlockedWeapons()
     {
-        return PersistentData.Instance.UnlockedWeapons;
+        if (PersistentData.Instance)
+        {
+            return PersistentData.Instance.UnlockedWeapons;
+        }
+
+        return new List<WeaponState>();
     }
 
     void UpdateWeapon()
