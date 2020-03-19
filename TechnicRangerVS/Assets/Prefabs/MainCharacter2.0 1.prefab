@@ -959,7 +959,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243354758731064324, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 6df8a178a0006cd45835d4489bc3098a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1056,7 +1056,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243354758731064324, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 6280fc031bfd03f4e85bec20cd558545, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1153,7 +1153,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243354758731064324, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: b94b19a06808f1742870f550e376f493, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1250,7 +1250,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243354758731064324, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 033c67c73eec4594a9c8c9529a2477af, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1347,7 +1347,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243354758731064324, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: c2cccd13854bee44683fc1c1c2e182d7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1444,7 +1444,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243354758731064324, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: b94b19a06808f1742870f550e376f493, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1541,7 +1541,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243354758731064324, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 417a17e857658524b83cc6ec0f63830b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
