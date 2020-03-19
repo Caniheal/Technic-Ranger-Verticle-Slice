@@ -63,7 +63,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip activateClip;
     public AudioClip destroyClip;
 
-    
+    //For Weapon/Ability/Mask pick-ups (also see MaskPickup script)
+    //USE LIST insead of ARRAY because a list CAN GROW, Array can not (can add and contain in a list)
+    public List<WeaponState> UnlockedWeapons;
 
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
@@ -90,6 +92,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 forward;
     private bool IsSliding = false;
     private float slideTimer = 0;
+    private Vector3 groundNormal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -102,6 +106,12 @@ public class PlayerController : MonoBehaviour
 
         // make it so the reticle isnt shown by default
         reticle.enabled = false;
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        groundNormal = hit.normal;
+        Debug.Log(groundNormal);
     }
 
     private void Awake()
@@ -173,14 +183,17 @@ public class PlayerController : MonoBehaviour
             MoveDirection += right * Input.GetAxis("Horizontal");
 
             MoveDirection = MoveDirection * MovementSpeed;
+
+            slideTimer += Time.deltaTime;
         }
         else
         {
             MoveDirection += -MoveDirection * .035f;
-            slideTimer += Time.deltaTime;
+            MoveDirection.y = 0;
 
-            if (slideTimer >= TotalSlideTime)
+            if (!IsCrouching)
             {
+                slideTimer = 0f;
                 IsSliding = false;
             }
         }
@@ -204,7 +217,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //current character velocity
-        if (characterController.velocity.y < 0 || IsSliding)
+        if (characterController.velocity.y < 0)
         {
             //Down
             MoveDirection += Vector3.up * Gravity * FallingMultiplier * Time.deltaTime;
@@ -214,6 +227,17 @@ public class PlayerController : MonoBehaviour
             //Up
             MoveDirection += Vector3.up * Gravity * JumpingMultiplier * Time.deltaTime;
         }
+
+
+
+        //For TUTORIAL RAMP, Sliding down with quicker speed (WIP)
+        /*if (characterController.isGrounded)
+        {
+            MoveDirection.x += (1f - groundNormal.y) * groundNormal.x * 6 * .03f;
+            MoveDirection.z += (1f - groundNormal.y) * groundNormal.z * 6 * .03f;
+        }*/
+
+
 
         //maintain up/down velocity; continue to move the way ya moving
         MoveDirection.y += characterController.velocity.y;
@@ -228,22 +252,22 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isRunning", true);
             gameObject.transform.rotation = Quaternion.LookRotation(XZMoveDirection.normalized, Vector3.up);
 
-            if (IsCrouching && !IsSliding && XZMoveDirection.magnitude > .3f)
+            if (IsCrouching && !IsSliding && slideTimer > TotalSlideTime && XZMoveDirection.magnitude > .3f)
             {
                 IsSliding = true;
+
                 //tempSpeedX = MoveDirection.x * 1.5;
-                MoveDirection.x *= 1.5f;
-                MoveDirection.z *= 1.5f;
-                MoveDirection.y = 0f;
+                //Adjust Power Slide Here, 
+                MoveDirection.x *= 3f;
+                MoveDirection.z *= 3f;
                 source.PlayOneShot(slideClip);
-                slideTimer = 0f;
             }
         }
         else
         {
             anim.SetBool("isRunning", false);
         }
-
+  
         //Telling CharacterConroller to move in this direction (Also moveDirec*moveSpeed = velocity)
         characterController.Move(MoveDirection * Time.deltaTime);
         //nora fiddling with acceleration: the code
@@ -460,6 +484,13 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
+    //Adds to list (LINE 537ish as of 3/19/2020)
+    public void UnlockWeapon(WeaponState WeaponType)
+    {
+        UnlockedWeapons.Add(WeaponType);
+    }
+
     void UpdateWeapon()
     {
 
@@ -471,6 +502,8 @@ public class PlayerController : MonoBehaviour
             //return = exiting out of this function
             return;
         }
+
+
 
         WeaponState NewWeaponState = CurrentWeaponState;
 
@@ -497,7 +530,11 @@ public class PlayerController : MonoBehaviour
             source.PlayOneShot(maskSwitchClip);
         }
 
-        if (NewWeaponState != CurrentWeaponState)
+
+
+        //                                          Unlocked Weapons list CHECK (If you have the pickup)
+        //                                           YES = switch to weapon; NO = don't switch
+        if (NewWeaponState != CurrentWeaponState && UnlockedWeapons.Contains(NewWeaponState))
         {
             if (CurrentWeaponState == WeaponState.Vista)
             {
