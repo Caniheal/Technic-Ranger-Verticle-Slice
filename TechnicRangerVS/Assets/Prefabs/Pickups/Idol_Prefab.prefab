@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1522226798}
   - component: {fileID: 1522226799}
   m_Layer: 0
-  m_Name: Idol_01 (1)
+  m_Name: Idol_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,7 +220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DistanceToMove: 1
   Speed: 1
-  Player: {fileID: 0}
+  Loop: 1
+  AttachParent: 0
   DirectionToMove: {x: 0, y: 1, z: 0}
 --- !u!114 &1522226799
 MonoBehaviour:

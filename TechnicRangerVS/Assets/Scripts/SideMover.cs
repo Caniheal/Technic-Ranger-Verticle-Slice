@@ -7,6 +7,7 @@ public class SidetoSideMover : MonoBehaviour
     public float DistanceToMove = 6;
     public float Speed = 1;
     public bool Loop = true;
+    public bool AttachParent = true;
 
     //Vector 3 = DirectionToMoveXYZ <-- SAME SHIT
     public Vector3 DirectionToMove = new Vector3(1, 0, 0);
@@ -16,6 +17,7 @@ public class SidetoSideMover : MonoBehaviour
     // child player to platfrom
     private void OnTriggerEnter(Collider other)
     {
+        if (AttachParent && other.GetComponent<PlayerController>())
         if (other.GetComponent<PlayerController>())
         {
             other.transform.parent = transform;
