@@ -260,7 +260,7 @@ public class PlayerController : MonoBehaviour
                 //Adjust Power Slide Here, 
                 MoveDirection.x *= 3f;
                 MoveDirection.z *= 3f;
-                source.PlayOneShot(slideClip);
+                //source.PlayOneShot(slideClip);
             }
         }
         else
