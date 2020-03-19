@@ -2085,7 +2085,7 @@ MonoBehaviour:
   AirControlMultiplier: 0.9
   WarpFirstTestRadius: 0.3
   WarpSecondTestRadius: 1
-  JumpSpeed: 24
+  JumpSpeed: 30
   TotalSlideTime: 5
   Camera: {fileID: 1633487467}
   WarpManager: {fileID: 1120088640}
@@ -2109,7 +2109,6 @@ MonoBehaviour:
   hitClip: {fileID: 8300000, guid: 417a17e857658524b83cc6ec0f63830b, type: 3}
   activateClip: {fileID: 8300000, guid: b94b19a06808f1742870f550e376f493, type: 3}
   destroyClip: {fileID: 0}
-  UnlockedWeapons: 00000000
   Yaw: 0
   Pitch: 0
   MoveDirection: {x: 0, y: 0, z: 0}
