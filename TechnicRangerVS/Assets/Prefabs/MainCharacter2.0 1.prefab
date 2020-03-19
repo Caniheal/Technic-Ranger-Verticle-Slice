@@ -682,6 +682,7 @@ MonoBehaviour:
   Tan: {fileID: 2100000, guid: 058afbf1c7031f4448111601b8d85e46, type: 2}
   Blue: {fileID: 2100000, guid: f5daacb55da09204ebe7246c51571b3d, type: 2}
   White: {fileID: 2100000, guid: 91f4e5ebe9d66cf48a7303c9190b806c, type: 2}
+  Black: {fileID: 0}
   Render: {fileID: 1580274064412375579}
   reticle: {fileID: 6511433788590449420}
   jumpClip: {fileID: 8300000, guid: 6280fc031bfd03f4e85bec20cd558545, type: 3}
@@ -695,7 +696,6 @@ MonoBehaviour:
   hitClip: {fileID: 8300000, guid: 417a17e857658524b83cc6ec0f63830b, type: 3}
   activateClip: {fileID: 8300000, guid: b94b19a06808f1742870f550e376f493, type: 3}
   destroyClip: {fileID: 0}
-  UnlockedWeapons: 
   Yaw: 0
   Pitch: 0
   MoveDirection: {x: 0, y: 0, z: 0}
@@ -729,17 +729,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913c09e4e0ed73b4483204c81af79c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrefabStartWarper: {fileID: 0}
+  PrefabEndWarper: {fileID: 0}
   StartWarper: {fileID: 0}
   EndWarper: {fileID: 0}
-  warpRealmStartPosition: {fileID: 0}
-  warpRealmEndPosition: {fileID: 0}
-  RealmSkybox: {fileID: 2100000, guid: 0441bd85461c3a64999eb079bf736d8b, type: 2}
-  NormalSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  warpRealmCameraOrientation: {x: 0, y: 0, z: 0, w: 0}
   WarpTime: 1
   DistanceToWarp: 2
   WarperTestRadius: 3
   WarpTestDistance: 20
+  WarperOffset: {x: 0, y: 4, z: 0}
   isActive: 0
   wasWarperSpawned: 0
 --- !u!114 &707891791
@@ -2799,7 +2797,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5165,10 +5163,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 707891788}
     m_Modifications:
-    - target: {fileID: 100002, guid: 4bafb2b31465acb42b5200f589ebf304, type: 3}
-      propertyPath: m_Name
-      value: Final_CharacterModel
-      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 4bafb2b31465acb42b5200f589ebf304, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 44d422ffbc77cab4da4109f1b6273164, type: 2}
     - target: {fileID: 400002, guid: 4bafb2b31465acb42b5200f589ebf304, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5225,10 +5223,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2372004
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 4bafb2b31465acb42b5200f589ebf304, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 44d422ffbc77cab4da4109f1b6273164, type: 2}
+    - target: {fileID: 100002, guid: 4bafb2b31465acb42b5200f589ebf304, type: 3}
+      propertyPath: m_Name
+      value: Final_CharacterModel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bafb2b31465acb42b5200f589ebf304, type: 3}
 --- !u!4 &1580274064425544505 stripped
@@ -5390,14 +5388,6 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 7476567264332561132}
-    - target: {fileID: 9500000, guid: bf2853283ac361c49875a22d1f4571f1, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 44d422ffbc77cab4da4109f1b6273164, type: 2}
-    - target: {fileID: 9500000, guid: bf2853283ac361c49875a22d1f4571f1, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400072, guid: bf2853283ac361c49875a22d1f4571f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5752,6 +5742,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100072, guid: bf2853283ac361c49875a22d1f4571f1, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: bf2853283ac361c49875a22d1f4571f1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 44d422ffbc77cab4da4109f1b6273164, type: 2}
+    - target: {fileID: 9500000, guid: bf2853283ac361c49875a22d1f4571f1, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400086, guid: bf2853283ac361c49875a22d1f4571f1, type: 3}
