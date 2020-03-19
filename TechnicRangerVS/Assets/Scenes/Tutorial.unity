@@ -1128,7 +1128,7 @@ PrefabInstance:
     - target: {fileID: 6827534397422543972, guid: 6f11fedca90f80b4fb075a08747cffc4,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1007072454311025218, guid: 6f11fedca90f80b4fb075a08747cffc4,
         type: 3}
@@ -13377,13 +13377,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1120088642, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
-      propertyPath: TotalSlideTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1551998106, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120088642, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
+      propertyPath: TotalSlideTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7976283731300489913, guid: 099db6ccb500db64da1fd7b47e6b13e0,
         type: 3}
@@ -14010,6 +14010,16 @@ PrefabInstance:
       propertyPath: Back
       value: 
       objectReference: {fileID: 1366893727}
+    - target: {fileID: 1356544817592477876, guid: c966ab5847bce924b872ede80faff0ad,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356544817592477876, guid: c966ab5847bce924b872ede80faff0ad,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6717232696230363591, guid: c966ab5847bce924b872ede80faff0ad,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -14036,16 +14046,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6717232696722410022, guid: c966ab5847bce924b872ede80faff0ad,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1356544817592477876, guid: c966ab5847bce924b872ede80faff0ad,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1356544817592477876, guid: c966ab5847bce924b872ede80faff0ad,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
