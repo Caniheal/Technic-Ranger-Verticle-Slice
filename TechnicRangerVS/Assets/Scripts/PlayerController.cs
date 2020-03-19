@@ -464,7 +464,7 @@ public class PlayerController : MonoBehaviour
 
         if (CurrentWeaponState == WeaponState.Shield)
         {
-            if (Input.GetKey(KeyCode.Mouse0) && SpawnedShield == null)
+            if ((Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper")) && SpawnedShield == null)
             {
                 Vector3 spawnLocation = transform.position + (transform.rotation * Vector3.forward * 2f);
                 spawnLocation.y += -.5f;
