@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5628629120775086030}
   - component: {fileID: 3637134083338722730}
   m_Layer: 0
-  m_Name: VISTAMask_pickup
+  m_Name: BlackMask_pickup 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cee63a7b77ddd149a11440a94d8c3e6, type: 2}
+  - {fileID: 2100000, guid: 884d608ed8aafae4db4e8949f277818b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
