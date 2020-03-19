@@ -6,7 +6,7 @@ public class SidetoSideMover : MonoBehaviour
 {
     public float DistanceToMove = 6;
     public float Speed = 1;
-    public GameObject Player;
+    public bool Loop = true;
 
     //Vector 3 = DirectionToMoveXYZ <-- SAME SHIT
     public Vector3 DirectionToMove = new Vector3(1, 0, 0);
@@ -16,17 +16,17 @@ public class SidetoSideMover : MonoBehaviour
     // child player to platfrom
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == Player)
+        if (other.GetComponent<PlayerController>())
         {
-            Player.transform.parent = transform;
+            other.transform.parent = transform;
         }
     }
     // unchild player to platfrom
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == Player)
+        if (other.GetComponent<PlayerController>())
         {
-            Player.transform.parent = null;
+            other.transform.parent = null;
         }
     }
 
@@ -58,7 +58,7 @@ public class SidetoSideMover : MonoBehaviour
         currentDistance = currentDistance + Vector3.Distance(PreviousLocation, transform.position);
 
         //if current distance >= 6 then reverse direction
-        if (currentDistance >= DistanceToMove)
+        if (currentDistance >= DistanceToMove && Loop)
         {
             //  Vector3(1, 0, 0) ->  Vector3(-1, 0, 0)
             DirectionToMove = DirectionToMove * -1;
