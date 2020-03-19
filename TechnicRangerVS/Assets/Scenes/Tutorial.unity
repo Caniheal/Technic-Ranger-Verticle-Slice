@@ -12044,6 +12044,16 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3795637596168158986, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795637596168158986, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_Pitch
+      value: -0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4056435645292021112, guid: 32ac15c13e0b71f4698a17a002cb663f,
         type: 3}
       propertyPath: m_PlayOnAwake
