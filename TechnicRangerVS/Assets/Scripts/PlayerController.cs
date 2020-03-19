@@ -176,12 +176,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-
+            MoveDirection += -MoveDirection * .035f;
             slideTimer += Time.deltaTime;
 
             if (slideTimer >= TotalSlideTime)
             {
-
                 IsSliding = false;
             }
         }
@@ -205,7 +204,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //current character velocity
-        if (characterController.velocity.y < 0)
+        if (characterController.velocity.y < 0 || IsSliding)
         {
             //Down
             MoveDirection += Vector3.up * Gravity * FallingMultiplier * Time.deltaTime;
