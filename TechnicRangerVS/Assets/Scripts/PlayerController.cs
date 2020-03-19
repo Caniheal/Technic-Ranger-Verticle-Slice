@@ -319,7 +319,7 @@ public class PlayerController : MonoBehaviour
 
             if (hit.distance < MinCameraDistance)
             {
-                desiredCameraPosition = Camera.transform.position;
+                //desiredCameraPosition = Camera.transform.position;
             }
         }
 
