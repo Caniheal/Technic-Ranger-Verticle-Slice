@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     public WarpManager WarpManager;
     public GameObject ShieldPrefab;
     // color swaping references
-    public Material Purple, Teal, Tan, Blue, White;
+    public Material Purple, Teal, Tan, Blue, White, Black;
     public SkinnedMeshRenderer Render;
 
 
@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
     private double tempSpeedY;
 
     private CharacterController characterController;
+    private CapsuleCollider capsuleCollider;
     private bool movementEnabled = true;
     private GameObject SpawnedShield;
 
@@ -94,6 +95,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
         forward = transform.forward;
 
         Cursor.visible = false;
@@ -118,12 +120,14 @@ public class PlayerController : MonoBehaviour
     {
         movementEnabled = false;
         characterController.enabled = false;
+        capsuleCollider.enabled = false;
     }
 
     public void EnableMovement()
     {
         movementEnabled = true;
         characterController.enabled = true;
+        capsuleCollider.enabled = true;
     }
     // Update is called once per frame
     void Update()
@@ -247,7 +251,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isRunning", true);
             gameObject.transform.rotation = Quaternion.LookRotation(XZMoveDirection.normalized, Vector3.up);
 
-            if (IsCrouching && !IsSliding && slideTimer > TotalSlideTime && XZMoveDirection.magnitude > .3f)
+            if (IsCrouching && !IsSliding && slideTimer > TotalSlideTime && XZMoveDirection.magnitude > .3f && CurrentWeaponState == WeaponState.Default)
             {
                 IsSliding = true;
 
@@ -342,10 +346,17 @@ public class PlayerController : MonoBehaviour
 
         if (CurrentWeaponState == WeaponState.Vista)
         {
-           
 
-            //ANCHOR
-            materials[0] = Purple;
+            if (WarpManager.IsWarperActive())
+            {
+                //ANCHOR
+                materials[0] = Black;
+            }
+            else
+            {
+                //ANCHOR
+                materials[0] = Purple;
+            }
         }
 
         Render.materials = materials;

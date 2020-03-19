@@ -2096,6 +2096,7 @@ MonoBehaviour:
   Tan: {fileID: 2100000, guid: 058afbf1c7031f4448111601b8d85e46, type: 2}
   Blue: {fileID: 2100000, guid: f5daacb55da09204ebe7246c51571b3d, type: 2}
   White: {fileID: 2100000, guid: 91f4e5ebe9d66cf48a7303c9190b806c, type: 2}
+  Black: {fileID: 2100000, guid: 15b0c7614254a57499d5719fe0800912, type: 2}
   Render: {fileID: 437172577}
   reticle: {fileID: 355023941}
   jumpClip: {fileID: 8300000, guid: 6280fc031bfd03f4e85bec20cd558545, type: 3}
@@ -2142,17 +2143,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913c09e4e0ed73b4483204c81af79c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrefabStartWarper: {fileID: 5161351169080598828, guid: f47091315500bab4b8de2c11ff89ab88,
+    type: 3}
+  PrefabEndWarper: {fileID: 5161351169080598828, guid: f47091315500bab4b8de2c11ff89ab88,
+    type: 3}
   StartWarper: {fileID: 0}
   EndWarper: {fileID: 0}
-  warpRealmStartPosition: {fileID: 0}
-  warpRealmEndPosition: {fileID: 0}
-  RealmSkybox: {fileID: 2100000, guid: 0441bd85461c3a64999eb079bf736d8b, type: 2}
-  NormalSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  warpRealmCameraOrientation: {x: 0, y: 0, z: 0, w: 0}
   WarpTime: 1
   DistanceToWarp: 2
   WarperTestRadius: 3
   WarpTestDistance: 20
+  WarperOffset: {x: 0, y: 4, z: 0}
   isActive: 0
   wasWarperSpawned: 0
 --- !u!114 &1120088639

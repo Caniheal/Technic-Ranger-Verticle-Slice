@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class WarpManager : MonoBehaviour
 {
+    public GameObject PrefabStartWarper;
+    public GameObject PrefabEndWarper;
+
     public GameObject StartWarper;
     public GameObject EndWarper;
 
-    public Transform warpRealmStartPosition;
-    public Transform warpRealmEndPosition;
-    public Material RealmSkybox;
-    public Material NormalSkybox;
-
-    //Camera roation; ROTATION = QUATERNION
-    public Quaternion warpRealmCameraOrientation;
     public float WarpTime = 1;
     public float DistanceToWarp = 1;
 
@@ -21,6 +17,8 @@ public class WarpManager : MonoBehaviour
     public float WarperTestRadius = 1;
     //How long sphere cast balls are ;D
     public float WarpTestDistance = 3;
+
+    public Vector3 WarperOffset = new Vector3(0f, 4f, 0f);
 
     //This is the warp; not in use
     public bool isActive = false;
@@ -53,7 +51,7 @@ public class WarpManager : MonoBehaviour
             //lerpRatio(10, 20, 1) = 20;
 
 
-            Vector3 currentPostion = Vector3.Lerp(warpRealmStartPosition.position, warpRealmEndPosition.position, lerpRatio);
+            Vector3 currentPostion = Vector3.Lerp(StartWarper.transform.position, EndWarper.transform.position, lerpRatio);
 
             player.gameObject.transform.position = currentPostion;
 
@@ -67,12 +65,10 @@ public class WarpManager : MonoBehaviour
                 //Set to 0 so we can count up to te despawn time
                 currentTime = 0f;
                 Vector3 EndPostion = EndWarper.transform.position;
-                EndPostion.y = 1.1f;
 
                 player.gameObject.transform.position = EndPostion;
 
                 player.EnableMovement();
-                RenderSettings.skybox = NormalSkybox;
             }
         }
         else if (wasWarperSpawned)
@@ -132,6 +128,12 @@ public class WarpManager : MonoBehaviour
             endWarperLocation = hit.point;
         }
 
+        if (StartWarper == null)
+        {
+            StartWarper = Instantiate(PrefabStartWarper);
+            EndWarper = Instantiate(PrefabEndWarper);
+        }
+
         StartWarper.SetActive(true);
         EndWarper.SetActive(true);
 
@@ -140,26 +142,22 @@ public class WarpManager : MonoBehaviour
         StartWarper.transform.rotation = rotation;
         EndWarper.transform.rotation = rotation;
 
-        StartWarper.transform.position = placePosition;
-        EndWarper.transform.position = endWarperLocation;
+        StartWarper.transform.position = placePosition + WarperOffset;
+        EndWarper.transform.position = endWarperLocation + WarperOffset;
     }
 
     //Warp activated; in use STARTING
     void Warp()
     {
-        wasWarperSpawned = false;
-        isActive = true;
-        player.DisableMovement();
-        RenderSettings.skybox = RealmSkybox;
+        if (!isActive)
+        {
+            wasWarperSpawned = false;
+            isActive = true;
+            player.DisableMovement();
 
-        //Teleporting player to the REALM start position
-        player.gameObject.transform.position = warpRealmStartPosition.position;
-
-        //setting camera orientation to the warp realm orientation
-        player.Camera.gameObject.transform.rotation = warpRealmCameraOrientation;
-
-        //current time in realm always starts at 0
-        currentTime = 0;
+            //current time in realm always starts at 0
+            currentTime = 0;
+        }
     }
 
 }
