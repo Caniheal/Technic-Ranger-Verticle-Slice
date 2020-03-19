@@ -235,7 +235,7 @@ public class PlayerController : MonoBehaviour
                 MoveDirection.x *= 1.5f;
                 MoveDirection.z *= 1.5f;
                 MoveDirection.y = 0f;
-                source.PlayOneShot(slideClip);
+                //source.PlayOneShot(slideClip);
                 slideTimer = 0f;
             }
         }
