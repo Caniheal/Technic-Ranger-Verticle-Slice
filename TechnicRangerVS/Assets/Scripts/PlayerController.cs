@@ -63,10 +63,6 @@ public class PlayerController : MonoBehaviour
     public AudioClip activateClip;
     public AudioClip destroyClip;
 
-    //For Weapon/Ability/Mask pick-ups (also see MaskPickup script)
-    //USE LIST insead of ARRAY because a list CAN GROW, Array can not (can add and contain in a list)
-    public List<WeaponState> UnlockedWeapons;
-
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
     public float Yaw;
@@ -111,7 +107,6 @@ public class PlayerController : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         groundNormal = hit.normal;
-        Debug.Log(groundNormal);
     }
 
     private void Awake()
@@ -488,7 +483,14 @@ public class PlayerController : MonoBehaviour
     //Adds to list (LINE 537ish as of 3/19/2020)
     public void UnlockWeapon(WeaponState WeaponType)
     {
-        UnlockedWeapons.Add(WeaponType);
+        PersistentData.Instance.UnlockedWeapons.Add(WeaponType);
+    }
+
+
+    //Gets the weapons from persistantData script
+    public List<WeaponState> GetUnlockedWeapons()
+    {
+        return PersistentData.Instance.UnlockedWeapons;
     }
 
     void UpdateWeapon()
@@ -534,7 +536,7 @@ public class PlayerController : MonoBehaviour
 
         //                                          Unlocked Weapons list CHECK (If you have the pickup)
         //                                           YES = switch to weapon; NO = don't switch
-        if (NewWeaponState != CurrentWeaponState && UnlockedWeapons.Contains(NewWeaponState))
+        if (NewWeaponState != CurrentWeaponState && GetUnlockedWeapons().Contains(NewWeaponState))
         {
             if (CurrentWeaponState == WeaponState.Vista)
             {

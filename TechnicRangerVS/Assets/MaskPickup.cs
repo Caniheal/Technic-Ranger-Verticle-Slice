@@ -15,10 +15,18 @@ public class MaskPickup : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("CollectedObject");
         PlayerController Controller = other.GetComponent<PlayerController>();
         if (Controller)
         {
+            if (sound)
+            {
+                sound.Play();
+            }
+
             Controller.UnlockWeapon(weaponUnlock);
+            Destroy(gameObject, .15f);
+
         }
     }
 }
