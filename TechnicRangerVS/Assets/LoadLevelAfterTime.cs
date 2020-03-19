@@ -21,5 +21,10 @@ public class LoadLevelAfterTime : MonoBehaviour
         {
             SceneManager.LoadScene(sceneNameToLoad);
         }
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            SceneManager.LoadScene(sceneNameToLoad);
+        }
     }
 }
