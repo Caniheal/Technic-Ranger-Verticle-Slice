@@ -344,6 +344,61 @@ PrefabInstance:
       propertyPath: InitialModule.maxNumParticles
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: ShapeModule.type
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: ShapeModule.alignToDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: ShapeModule.randomDirectionAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170178317566326690, guid: 03b053d98981d5445b5df7dd29c4cc96,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03b053d98981d5445b5df7dd29c4cc96, type: 3}
 --- !u!4 &3535612786928032231 stripped
