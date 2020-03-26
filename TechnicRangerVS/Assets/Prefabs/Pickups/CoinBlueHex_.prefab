@@ -227,11 +227,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3916277297258677947, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: coinBox
+      value: 
+      objectReference: {fileID: 48754954123186492}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b764b42701acef40bf29887301395f4, type: 3}
 --- !u!4 &6352597708697341102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2714262208324062389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &48754954123186492 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2668322608266730889, guid: 9b764b42701acef40bf29887301395f4,
     type: 3}
   m_PrefabInstance: {fileID: 2714262208324062389}
   m_PrefabAsset: {fileID: 0}
@@ -317,11 +328,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3916277297258677947, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: coinBox
+      value: 
+      objectReference: {fileID: 48754954184954722}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b764b42701acef40bf29887301395f4, type: 3}
 --- !u!4 &6352597708757012208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2714262208398610155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &48754954184954722 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2668322608266730889, guid: 9b764b42701acef40bf29887301395f4,
     type: 3}
   m_PrefabInstance: {fileID: 2714262208398610155}
   m_PrefabAsset: {fileID: 0}
@@ -407,11 +429,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3916277297258677947, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: coinBox
+      value: 
+      objectReference: {fileID: 48754954605515420}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b764b42701acef40bf29887301395f4, type: 3}
 --- !u!4 &6352597708298866446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2714262209049693973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &48754954605515420 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2668322608266730889, guid: 9b764b42701acef40bf29887301395f4,
     type: 3}
   m_PrefabInstance: {fileID: 2714262209049693973}
   m_PrefabAsset: {fileID: 0}
@@ -497,11 +530,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3916277297258677947, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: coinBox
+      value: 
+      objectReference: {fileID: 48754954596173326}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b764b42701acef40bf29887301395f4, type: 3}
 --- !u!4 &6352597708362931100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2714262209061395335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &48754954596173326 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2668322608266730889, guid: 9b764b42701acef40bf29887301395f4,
     type: 3}
   m_PrefabInstance: {fileID: 2714262209061395335}
   m_PrefabAsset: {fileID: 0}
@@ -587,11 +631,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3916277297258677947, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: coinBox
+      value: 
+      objectReference: {fileID: 48754953138599430}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b764b42701acef40bf29887301395f4, type: 3}
 --- !u!4 &6352597707635157908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2714262209444981647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &48754953138599430 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2668322608266730889, guid: 9b764b42701acef40bf29887301395f4,
     type: 3}
   m_PrefabInstance: {fileID: 2714262209444981647}
   m_PrefabAsset: {fileID: 0}
@@ -677,11 +732,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3916277297258677947, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: coinBox
+      value: 
+      objectReference: {fileID: 48754952660658880}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b764b42701acef40bf29887301395f4, type: 3}
 --- !u!4 &6352597707964626770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2714262209785034569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &48754952660658880 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2668322608266730889, guid: 9b764b42701acef40bf29887301395f4,
     type: 3}
   m_PrefabInstance: {fileID: 2714262209785034569}
   m_PrefabAsset: {fileID: 0}

@@ -76,6 +76,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 5314510464929814280}
+  coinBox: {fileID: 1219704680356171968}
+  diamond: {fileID: 1219704680347167899}
+  ring: {fileID: 1219704680484222542}
 --- !u!82 &5314510464929814280
 AudioSource:
   m_ObjectHideFlags: 0

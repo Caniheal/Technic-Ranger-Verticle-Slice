@@ -247,6 +247,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 2685884695265384809}
+  coinBox: {fileID: 5840744792660076791}
+  diamond: {fileID: 375576562919142467}
+  ring: {fileID: 6922008071571799711}
 --- !u!82 &2685884695265384809
 AudioSource:
   m_ObjectHideFlags: 0
@@ -624,6 +627,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 4194567383542914442}
+  coinBox: {fileID: 4585492080040734604}
+  diamond: {fileID: 997134113506886989}
+  ring: {fileID: 9209045942513616049}
 --- !u!82 &4194567383542914442
 AudioSource:
   m_ObjectHideFlags: 0
@@ -875,6 +881,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 3613302979362139072}
+  coinBox: {fileID: 3111419757048112648}
+  diamond: {fileID: 2306854329031185299}
+  ring: {fileID: 4106612340001179879}
 --- !u!82 &3613302979362139072
 AudioSource:
   m_ObjectHideFlags: 0
