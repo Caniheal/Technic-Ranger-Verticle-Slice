@@ -42,6 +42,11 @@ public class Paused : MonoBehaviour
             pauseMenuUI.SetActive(false);
         }
 
+        if (GameIsPaused && settingsMenuUI == isActiveAndEnabled && Input.GetButtonDown("B Button"))
+        {
+            TaskOnClick();
+        }
+
     }
 
     public void Resume()
@@ -87,4 +92,5 @@ public class Paused : MonoBehaviour
         
     }
 
+    
 }
