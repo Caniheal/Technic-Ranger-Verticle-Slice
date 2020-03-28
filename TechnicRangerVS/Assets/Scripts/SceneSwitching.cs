@@ -11,6 +11,7 @@ public class SceneSwitching : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
+
     public void StartGame()
     {
         SceneManager.LoadScene("IntroCutscene");
