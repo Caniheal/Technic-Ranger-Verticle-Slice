@@ -795,7 +795,6 @@ GameObject:
   - component: {fileID: 636071899274096212}
   - component: {fileID: 1512985037501387191}
   - component: {fileID: 595919402401925976}
-  - component: {fileID: 7774154510170255732}
   m_Layer: 5
   m_Name: Trophies Canvas
   m_TagString: Untagged
@@ -888,19 +887,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7774154510170255732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9034872294901544071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 344ead753f72cd540979f40bd8eb3c5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rgbValue: 0.5
 --- !u!1 &9221501545022327026
 GameObject:
   m_ObjectHideFlags: 0
