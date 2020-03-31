@@ -38,20 +38,31 @@ public class AnchorAnimation : MonoBehaviour
 
     public void OnRayHit ()
     {
-        
-        // the animation is bugged so im using the mover script for now
-        //  MovingPlatform.GetComponent<Animation>().enabled = true;
-        MovingPlatform.GetComponent<SidetoSideMover>().enabled = true;
+              // idea for how to make it so the anchor can hold the platfroms in place but for some reason it causes the platfroms to sometimes stop and sometimes stop and instantly continue with a single click
+
+     /*   if (MovingPlatform.GetComponent<SidetoSideMover>().enabled == false)
+        { */
+            // the animation is bugged so im using the mover script for now
+            //  MovingPlatform.GetComponent<Animation>().enabled = true;
+            MovingPlatform.GetComponent<SidetoSideMover>().enabled = true;
 
             // change the materical to the activated form of the platfrom
 
             Render.sharedMaterial = activeMat[1];
+     /*   }
 
-
-
-
-
+        else if(MovingPlatform.GetComponent<SidetoSideMover>().enabled == true)
+        {
+            MovingPlatform.GetComponent<SidetoSideMover>().enabled = false;
         }
+            
+       */
+
+
+
+
+
+     }
 
    
 }
