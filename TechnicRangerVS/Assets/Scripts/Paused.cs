@@ -9,6 +9,7 @@ public class Paused : MonoBehaviour
     private static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
+    public GameObject trophiesMenuUI;
     public Button Back;
 
     void Start()
@@ -16,6 +17,7 @@ public class Paused : MonoBehaviour
         Button btn = Back.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         pauseMenuUI.SetActive(false);
+        trophiesMenuUI.SetActive(false);
 
     }
         
@@ -53,6 +55,7 @@ public class Paused : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
+        trophiesMenuUI.SetActive(false);
         AudioListener.pause = false;
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -62,6 +65,7 @@ public class Paused : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
+        trophiesMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -77,15 +81,28 @@ public class Paused : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(true);
+        trophiesMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
+    public void Trophies()
+    {
+        pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
+        trophiesMenuUI.SetActive(true);
+        AudioListener.pause = true;
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+
     void TaskOnClick()
     {
         pauseMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
+        trophiesMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
