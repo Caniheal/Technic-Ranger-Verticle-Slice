@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9095668835060817951}
   - component: {fileID: 7903824818031399321}
   - component: {fileID: 1859827319676256489}
+  - component: {fileID: 4935338400538176869}
   m_Layer: 0
   m_Name: SandBit_
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &4935338400538176869
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3576150132329580475}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.009107084
+  m_Center: {x: 0.000005302429, y: 0, z: 0}
