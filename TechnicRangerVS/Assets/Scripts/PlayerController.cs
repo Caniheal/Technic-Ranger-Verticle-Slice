@@ -410,7 +410,7 @@ public class PlayerController : MonoBehaviour
 
         if (CurrentWeaponState == WeaponState.Anchor)
         {
-            if (Input.GetKey(KeyCode.Mouse1))
+            if (Input.GetKey(KeyCode.Mouse1) || Input.GetButton("Right Bumper"))
             {
                 reticle.enabled = true;
             }

@@ -1387,7 +1387,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 6717232696499400115}
   settingsMenuUI: {fileID: 0}
+  trophiesMenuUI: {fileID: 9034872294901544071, guid: 816b6092cd8a19841b95691daac21094,
+    type: 3}
   Back: {fileID: 0}
+  TButton: {fileID: 0}
 --- !u!1 &6717232695919736865
 GameObject:
   m_ObjectHideFlags: 0
