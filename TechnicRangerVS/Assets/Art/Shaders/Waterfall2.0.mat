@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Waterfall2.0
+  m_Shader: {fileID: 4800000, guid: 82b097356d57b194e96c25c9f8bce538, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Texture2DAsset_9AE77FA7_Out:
+        m_Texture: {fileID: 2800000, guid: 19dea496394cc464abd1fa020d090e99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_1706230B: 1
+    - Vector1_465730F2: 30
+    - Vector1_4EFACBE3: -0.2
+    - Vector1_A3AE252D: 3
+    - Vector1_B30CAE15: 4
+    - Vector1_FB762E45: 0.7
+    m_Colors:
+    - Color_A688630D: {r: 4.237095, g: 0.86516595, b: 3.6825013, a: 0}
+    - Vector2_415A34E9: {r: 0, g: 0.5, b: 0, a: 0}
+    - Vector2_C0FB9853: {r: 10, g: 10, b: 0, a: 0}
+    - Vector2_CE6FA493: {r: 0, g: 10, b: 0, a: 0}
