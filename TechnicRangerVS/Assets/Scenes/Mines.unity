@@ -14355,6 +14355,19 @@ PrefabInstance:
       propertyPath: WarperOffset.y
       value: 2.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4540799230730395645, guid: 099db6ccb500db64da1fd7b47e6b13e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608111841, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551998109, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
 --- !u!4 &782302519 stripped
