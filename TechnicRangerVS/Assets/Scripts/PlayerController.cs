@@ -91,6 +91,9 @@ public class PlayerController : MonoBehaviour
     private float slideTimer = 0;
     private Vector3 groundNormal;
 
+    private bool warpGhostMode = false;
+    private float warpToggleCooldown = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -365,30 +368,55 @@ public class PlayerController : MonoBehaviour
 
         if (CurrentWeaponState == WeaponState.Vista)
         {
+            warpToggleCooldown -= Time.deltaTime;
             if (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper"))
             {
-                Vector3 CameraDirection = Camera.transform.rotation * Vector3.forward;
-                RaycastHit hit;
-
-                Debug.DrawLine(Camera.transform.position, Camera.transform.position + CameraDirection * 100, Color.red, 30);
-
-                if (Physics.SphereCast(Camera.transform.position, WarpFirstTestRadius, CameraDirection, out hit, 10f))
+                if (warpToggleCooldown <= 0)
                 {
-                    Debug.Log(hit.collider);
-
-                    CameraDirection.y = 0;
-
-                    if (WarpManager)
+                    //Toggle for ghost mode 
+                    //If we are in ghost we turn it off; if not, we turn it on
+                    if (warpGhostMode)
                     {
-                        WarpManager.PlaceWarper(hit.point, CameraDirection);
-                        source.PlayOneShot(createPortalClip);
+
+                        //on --> off
+                        if (WarpManager)
+                        {
+                            Debug.Log("Place");
+                            WarpManager.CompletWarpPlacement();
+                            source.PlayOneShot(createPortalClip);
+                        }
+
+                        warpGhostMode = false;
                     }
+
+                    //off --> on
+                    else
+                    {
+                        Debug.Log("Start");
+
+                        warpGhostMode = true;
+                    }
+
+                    warpToggleCooldown = .5f;
                 }
-                else
+                
+            }
+
+            if (warpGhostMode)
+            {
+                Vector3 CameraDirection = Camera.transform.rotation * Vector3.forward;
+                CameraDirection.y = 0;
+ 
+                if (WarpManager)
                 {
-                    // no warping cast sound
+                    WarpManager.PlaceWarper(transform.position, transform.position + CameraDirection * 3, CameraDirection);
                 }
             }
+        }
+        else
+        {
+            warpToggleCooldown = 0;
+            warpGhostMode = false;
         }
     }
     // Anchor fuctionallity
