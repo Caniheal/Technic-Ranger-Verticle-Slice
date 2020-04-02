@@ -105,8 +105,9 @@ AudioSource:
   m_GameObject: {fileID: 1522226796}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cefa1a8fdc817574fbbf3fc29d7eca16, type: 3}
+  OutputAudioMixerGroup: {fileID: 243003931232457952, guid: eb34e8103a2dc3b458e203d5df48647c,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: b6d65c081e749f14a9e4bfe7a2b76657, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -237,3 +238,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   coinBox: {fileID: 7069981895435263538}
+  diamond: {fileID: 0}
+  ring: {fileID: 0}
