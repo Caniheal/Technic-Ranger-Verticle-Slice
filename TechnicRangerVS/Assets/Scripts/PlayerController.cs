@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        bool IsCrouching = Input.GetKey(KeyCode.LeftControl);
+        bool IsCrouching = Input.GetKey(KeyCode.LeftControl) || Input.GetButton("B Button");
 
         //Our "forward" is the same as the camera
         //Zero out the y so you don't fly up or fall down 
