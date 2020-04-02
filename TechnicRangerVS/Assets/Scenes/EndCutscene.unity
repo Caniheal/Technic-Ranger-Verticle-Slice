@@ -409,7 +409,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 8600000, guid: 868efd42981787241940ee1607f5be97, type: 2}
+  m_Texture: {fileID: 8400000, guid: 0653feb769d5dd4449a75c85c8b76d1d, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -589,11 +589,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497110089}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a288b0dedf439b241945a0c7178fa3c2, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 16c93150599088e48ad11e019492b199, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8600000, guid: 868efd42981787241940ee1607f5be97, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 0653feb769d5dd4449a75c85c8b76d1d, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
