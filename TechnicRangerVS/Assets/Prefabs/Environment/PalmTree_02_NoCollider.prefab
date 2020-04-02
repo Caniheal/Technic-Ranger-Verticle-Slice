@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8293756117829405852}
   - component: {fileID: 9177611330970640742}
   - component: {fileID: 6666420732074938485}
+  - component: {fileID: 8317337840449681819}
+  - component: {fileID: 2296449711252333837}
+  - component: {fileID: 4752312013504158036}
   m_Layer: 0
   m_Name: PalmTree_02_NoCollider
   m_TagString: Untagged
@@ -77,3 +80,44 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &8317337840449681819
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606153593988073395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.00907716
+  m_Height: 0.08835598
+  m_Direction: 2
+  m_Center: {x: -0.002876583, y: -0.0011424503, z: 0.035110205}
+--- !u!135 &2296449711252333837
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606153593988073395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.012741383
+  m_Center: {x: -0.023876552, y: -0.020059314, z: -0.065337}
+--- !u!136 &4752312013504158036
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606153593988073395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0061791088
+  m_Height: 0.05361269
+  m_Direction: 2
+  m_Center: {x: -0.013542913, y: -0.008846315, z: -0.03068744}
