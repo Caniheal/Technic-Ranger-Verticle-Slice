@@ -17,9 +17,8 @@ public class Paused : MonoBehaviour
     {
         Button btn = Back.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
-        btn.onClick.AddListener(SecondTaskOnClick);
+        //btn.onClick.AddListener(SecondTaskOnClick);
         pauseMenuUI.SetActive(false);
-        trophiesMenuUI.SetActive(false);
 
     }
         
@@ -109,17 +108,5 @@ public class Paused : MonoBehaviour
         GameIsPaused = true;
         
     }
-
-    void SecondTaskOnClick()
-    {
-        pauseMenuUI.SetActive(true);
-        settingsMenuUI.SetActive(false);
-        trophiesMenuUI.SetActive(false);
-        AudioListener.pause = true;
-        Time.timeScale = 0f;
-        GameIsPaused = true;
-
-    }
-
 
 }
