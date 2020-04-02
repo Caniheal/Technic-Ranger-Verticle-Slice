@@ -2148,13 +2148,16 @@ MonoBehaviour:
     type: 3}
   PrefabEndWarper: {fileID: 5161351169080598828, guid: f47091315500bab4b8de2c11ff89ab88,
     type: 3}
+  PrefabGhost: {fileID: 5161351169080598828, guid: baca08cca21bc6a4882b15ade1f61fd3,
+    type: 3}
   StartWarper: {fileID: 0}
   EndWarper: {fileID: 0}
+  GhostWarper: {fileID: 0}
   WarpTime: 1
   DistanceToWarp: 2
   WarperTestRadius: 3
   WarpTestDistance: 20
-  WarperOffset: {x: 0, y: 4, z: 0}
+  WarperOffset: {x: 0, y: 3, z: 0}
   isActive: 0
   wasWarperSpawned: 0
 --- !u!114 &1120088639

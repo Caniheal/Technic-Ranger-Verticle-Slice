@@ -6,9 +6,11 @@ public class WarpManager : MonoBehaviour
 {
     public GameObject PrefabStartWarper;
     public GameObject PrefabEndWarper;
+    public GameObject PrefabGhost;
 
     public GameObject StartWarper;
     public GameObject EndWarper;
+    public GameObject GhostWarper;
 
     public float WarpTime = 1;
     public float DistanceToWarp = 1;
@@ -18,7 +20,7 @@ public class WarpManager : MonoBehaviour
     //How long sphere cast balls are ;D
     public float WarpTestDistance = 3;
 
-    public Vector3 WarperOffset = new Vector3(0f, 4f, 0f);
+    public Vector3 WarperOffset = new Vector3(0f, 3f, 0f);
 
     //This is the warp; not in use
     public bool isActive = false;
@@ -110,7 +112,7 @@ public class WarpManager : MonoBehaviour
 
     //public lets other scripts call the function
     //Where the warper is going to be placed in the world
-    public void PlaceWarper(Vector3 placePosition, Vector3 placedDirection)
+    public void PlaceWarper(Vector3 startPosition, Vector3 placePosition, Vector3 placedDirection)
     {
         if (isActive)
         {
@@ -119,7 +121,7 @@ public class WarpManager : MonoBehaviour
 
         RaycastHit hit;
         //multiply so we can move that distance (in that direction)
-        Vector3 endWarperLocation = placePosition + placedDirection * WarpTestDistance;
+        Vector3 endWarperLocation = startPosition + placedDirection * WarpTestDistance;
 
         //Where the warper is places, how big the sphere cast is, what direction we're testing, reported hits (walls), how long the sphere cast is
         if (Physics.SphereCast(placePosition, WarperTestRadius, placedDirection, out hit, WarpTestDistance))
@@ -132,18 +134,30 @@ public class WarpManager : MonoBehaviour
         {
             StartWarper = Instantiate(PrefabStartWarper);
             EndWarper = Instantiate(PrefabEndWarper);
+            GhostWarper = Instantiate(PrefabGhost);
         }
 
-        StartWarper.SetActive(true);
-        EndWarper.SetActive(true);
+        StartWarper.SetActive(false);
+        EndWarper.SetActive(false);
+        GhostWarper.SetActive(true);
 
         Quaternion rotation = Quaternion.LookRotation(placedDirection, Vector3.up);
 
         StartWarper.transform.rotation = rotation;
         EndWarper.transform.rotation = rotation;
+        GhostWarper.transform.rotation = EndWarper.transform.rotation;
 
         StartWarper.transform.position = placePosition + WarperOffset;
         EndWarper.transform.position = endWarperLocation + WarperOffset;
+        GhostWarper.transform.position = EndWarper.transform.position;
+
+    }
+
+    public void CompletWarpPlacement()
+    {
+        StartWarper.SetActive(true);
+        EndWarper.SetActive(true);
+        GhostWarper.SetActive(false);
     }
 
     //Warp activated; in use STARTING
