@@ -12659,6 +12659,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1063929684}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1064771207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 244, guid: 816b6092cd8a19841b95691daac21094,
+    type: 3}
+  m_PrefabInstance: {fileID: 311083449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1065779312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15259,6 +15265,11 @@ PrefabInstance:
       propertyPath: Back
       value: 
       objectReference: {fileID: 1366893727}
+    - target: {fileID: 6717232695456108345, guid: c966ab5847bce924b872ede80faff0ad,
+        type: 3}
+      propertyPath: trophiesMenuUI
+      value: 
+      objectReference: {fileID: 1064771207}
     - target: {fileID: 6717232696499400115, guid: c966ab5847bce924b872ede80faff0ad,
         type: 3}
       propertyPath: m_IsActive
