@@ -204,10 +204,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2113908843, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
-      propertyPath: field of view
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 707891777, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
       propertyPath: m_Name
       value: MainCharacter2.0 1
@@ -264,10 +260,23 @@ PrefabInstance:
       propertyPath: PowerSlideDelay
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 707891782, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113908843, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 9197620586133457519, guid: 32ac15c13e0b71f4698a17a002cb663f,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190322418831881694, guid: 32ac15c13e0b71f4698a17a002cb663f,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 217418057548793944, guid: 32ac15c13e0b71f4698a17a002cb663f,
         type: 3}
@@ -279,10 +288,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 707891782, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5016703463228081851, guid: 32ac15c13e0b71f4698a17a002cb663f,
         type: 3}
       propertyPath: isGlobal
@@ -292,11 +297,6 @@ PrefabInstance:
         type: 3}
       propertyPath: priority
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190322418831881694, guid: 32ac15c13e0b71f4698a17a002cb663f,
-        type: 3}
-      propertyPath: m_PixelPerfect
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4349790017157299145, guid: 32ac15c13e0b71f4698a17a002cb663f,
         type: 3}
@@ -2487,10 +2487,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 382, guid: 816b6092cd8a19841b95691daac21094, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7532675333806206221, guid: 816b6092cd8a19841b95691daac21094,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2611,6 +2607,10 @@ PrefabInstance:
     - target: {fileID: 351, guid: 816b6092cd8a19841b95691daac21094, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 34.527
+      objectReference: {fileID: 0}
+    - target: {fileID: 382, guid: 816b6092cd8a19841b95691daac21094, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7970341766758490723, guid: 816b6092cd8a19841b95691daac21094,
         type: 3}
