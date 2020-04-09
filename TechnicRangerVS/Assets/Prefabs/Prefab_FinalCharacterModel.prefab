@@ -2083,10 +2083,10 @@ MonoBehaviour:
   Gravity: -24
   FallingMultiplier: 1.5
   JumpingMultiplier: 2
-  AirControlMultiplier: 0.9
+  AirControlMultiplier: 1
   WarpFirstTestRadius: 0.3
   WarpSecondTestRadius: 1
-  JumpSpeed: 26
+  JumpSpeed: 23
   TotalSlideTime: 5
   Camera: {fileID: 1633487467}
   WarpManager: {fileID: 1120088640}
