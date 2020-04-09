@@ -36,9 +36,9 @@ public class CoinKiller : MonoBehaviour
         coinBox.enabled = false;
             sound.Play();
 
-        count = count + 1;
-        SetCountText();
-
+            count = count + 1;
+            SetCountText();
+        
 
         Object.Destroy(gameObject, .15f);
 
@@ -48,10 +48,7 @@ public class CoinKiller : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Coins Collected: " + count.ToString();
-        if (count >= 12)
-        {
-            
-        }
+        
     }
 
 }

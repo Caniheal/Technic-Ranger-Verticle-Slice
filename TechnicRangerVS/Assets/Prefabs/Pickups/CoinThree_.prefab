@@ -64,6 +64,7 @@ MonoBehaviour:
   coinBox: {fileID: 963888789661250613}
   diamond: {fileID: 9188937592200223016}
   ring: {fileID: 6839447381486933872}
+  countText: {fileID: 0}
 --- !u!82 &3287112525315309111
 AudioSource:
   m_ObjectHideFlags: 0
@@ -225,6 +226,7 @@ MonoBehaviour:
   coinBox: {fileID: 4084015129591349344}
   diamond: {fileID: 7189911768156374217}
   ring: {fileID: 6402442092774815442}
+  countText: {fileID: 0}
 --- !u!82 &2812289262469367983
 AudioSource:
   m_ObjectHideFlags: 0
@@ -553,6 +555,7 @@ GameObject:
   - component: {fileID: 8753744870702869269}
   - component: {fileID: 3073031906659476330}
   - component: {fileID: 7987989008840141731}
+  - component: {fileID: 3439464432471777599}
   m_Layer: 0
   m_Name: CoinBluePickup_ (1)
   m_TagString: Untagged
@@ -605,6 +608,7 @@ MonoBehaviour:
   coinBox: {fileID: 8753744870702869269}
   diamond: {fileID: 6167196392877342487}
   ring: {fileID: 7734413739107990562}
+  countText: {fileID: 0}
 --- !u!82 &7987989008840141731
 AudioSource:
   m_ObjectHideFlags: 0
@@ -702,6 +706,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3439464432471777599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6440689212276670160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076a36b12957c4a49b00e7b11882f3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customImage: {fileID: 0}
 --- !u!1 &6839447381486933872
 GameObject:
   m_ObjectHideFlags: 0
