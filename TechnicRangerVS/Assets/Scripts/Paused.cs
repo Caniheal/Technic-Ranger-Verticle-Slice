@@ -11,7 +11,6 @@ public class Paused : MonoBehaviour
     public GameObject settingsMenuUI;
     public GameObject trophiesMenuUI;
     public Button Back;
-    public Button TButton;
 
     void Start()
     {
