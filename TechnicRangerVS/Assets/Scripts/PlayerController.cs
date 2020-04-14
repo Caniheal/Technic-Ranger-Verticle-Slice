@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private float DpadX;
     private float DpadY;
     public Animator anim;
+    public Text countText;
+    private int count;
 
     public float MovementSpeed = 1;
     public float MouseSensitivity = 1;
@@ -107,6 +109,23 @@ public class PlayerController : MonoBehaviour
 
         // make it so the reticle isnt shown by default
         reticle.enabled = false;
+        count = 0;
+        SetCountText ();
+    }
+
+    void SetCountText()
+    {
+        countText.text = "Count: " + count.ToString();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+            count = count + 1;
+            SetCountText();
+        }
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)

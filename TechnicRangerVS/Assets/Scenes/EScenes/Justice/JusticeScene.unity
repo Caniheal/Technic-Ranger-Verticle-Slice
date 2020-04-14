@@ -120,11 +120,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3439464432471777599, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
-        type: 3}
-      propertyPath: customImage
-      value: 
-      objectReference: {fileID: 116876734}
     - target: {fileID: 3001018239782008661, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
         type: 3}
       propertyPath: m_Name
@@ -185,6 +180,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.9170003
       objectReference: {fileID: 0}
+    - target: {fileID: 1740276932125106230, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440689212276670160, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933328674429534707, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
+      objectReference: {fileID: 0}
     - target: {fileID: 8139356814881685796, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
         type: 3}
       propertyPath: countText
@@ -200,6 +210,11 @@ PrefabInstance:
       propertyPath: countText
       value: 
       objectReference: {fileID: 40544753}
+    - target: {fileID: 3439464432471777599, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
+        type: 3}
+      propertyPath: customImage
+      value: 
+      objectReference: {fileID: 116876734}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92a4613b1a5832d4d8ee38cf596d97bf, type: 3}
 --- !u!1001 &40544752
@@ -265,6 +280,10 @@ PrefabInstance:
       propertyPath: PowerSlideDelay
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 707891784, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
+      propertyPath: countText
+      value: 
+      objectReference: {fileID: 40544753}
     - target: {fileID: 707891782, guid: 32ac15c13e0b71f4698a17a002cb663f, type: 3}
       propertyPath: m_Enabled
       value: 0

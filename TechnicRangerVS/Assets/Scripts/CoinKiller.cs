@@ -8,8 +8,6 @@ public class CoinKiller : MonoBehaviour
     public AudioSource sound;
     public Collider coinBox;
     public GameObject diamond, ring;
-    public Text countText;
-    private int count;
 
     public ParticleSystem pickUpEffect;
     public ParticleSystem orbEffect;
@@ -19,8 +17,6 @@ public class CoinKiller : MonoBehaviour
     {
         sound = GetComponent<AudioSource>();
         coinBox.enabled = true;
-        count = 0;
-        SetCountText();
     }
 
     
@@ -39,20 +35,13 @@ public class CoinKiller : MonoBehaviour
         coinBox.enabled = false;
             sound.Play();
 
-            count = count + 1;
-            SetCountText();
-
 
         Destroy();
 
      
             
         }
-    void SetCountText()
-    {
-        countText.text = "Coins Collected: " + count.ToString();
-        
-    }
+    
     public void Destroy()
     {
         Instantiate(pickUpEffect, transform.position, Quaternion.identity);
