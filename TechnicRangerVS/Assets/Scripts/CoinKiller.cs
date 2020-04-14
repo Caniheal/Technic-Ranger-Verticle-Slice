@@ -11,6 +11,9 @@ public class CoinKiller : MonoBehaviour
     public Text countText;
     private int count;
 
+    public ParticleSystem pickUpEffect;
+    public ParticleSystem orbEffect;
+
 
     private void Start()
     {
@@ -38,9 +41,9 @@ public class CoinKiller : MonoBehaviour
 
             count = count + 1;
             SetCountText();
-        
 
-        Object.Destroy(gameObject, .15f);
+
+        Destroy();
 
      
             
@@ -49,6 +52,13 @@ public class CoinKiller : MonoBehaviour
     {
         countText.text = "Coins Collected: " + count.ToString();
         
+    }
+    public void Destroy()
+    {
+        Instantiate(pickUpEffect, transform.position, Quaternion.identity);
+        Instantiate(orbEffect, transform.position, Quaternion.identity);
+
+        Object.Destroy(gameObject, .15f);
     }
 
 }
