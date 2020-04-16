@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3287112525315309111}
   m_Layer: 0
   m_Name: CoinBluePickup_ (3)
-  m_TagString: Untagged
+  m_TagString: Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,8 @@ MonoBehaviour:
   coinBox: {fileID: 963888789661250613}
   diamond: {fileID: 9188937592200223016}
   ring: {fileID: 6839447381486933872}
-  countText: {fileID: 0}
+  pickUpEffect: {fileID: 0}
+  orbEffect: {fileID: 0}
 --- !u!82 &3287112525315309111
 AudioSource:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ GameObject:
   - component: {fileID: 2812289262469367983}
   m_Layer: 0
   m_Name: CoinBluePickup_ (2)
-  m_TagString: Untagged
+  m_TagString: Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +227,8 @@ MonoBehaviour:
   coinBox: {fileID: 4084015129591349344}
   diamond: {fileID: 7189911768156374217}
   ring: {fileID: 6402442092774815442}
-  countText: {fileID: 0}
+  pickUpEffect: {fileID: 0}
+  orbEffect: {fileID: 0}
 --- !u!82 &2812289262469367983
 AudioSource:
   m_ObjectHideFlags: 0
@@ -558,7 +560,7 @@ GameObject:
   - component: {fileID: 3439464432471777599}
   m_Layer: 0
   m_Name: CoinBluePickup_ (1)
-  m_TagString: Untagged
+  m_TagString: Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -608,7 +610,8 @@ MonoBehaviour:
   coinBox: {fileID: 8753744870702869269}
   diamond: {fileID: 6167196392877342487}
   ring: {fileID: 7734413739107990562}
-  countText: {fileID: 0}
+  pickUpEffect: {fileID: 0}
+  orbEffect: {fileID: 0}
 --- !u!82 &7987989008840141731
 AudioSource:
   m_ObjectHideFlags: 0
