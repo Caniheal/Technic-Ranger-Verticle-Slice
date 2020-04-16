@@ -79,6 +79,10 @@ MonoBehaviour:
   coinBox: {fileID: 1378888993064875256}
   diamond: {fileID: 8097204616490137800}
   ring: {fileID: 1557030708478563608}
+  pickUpEffect: {fileID: 4483421963186821846, guid: 323e442c51ea2674e864d2ff75e329a9,
+    type: 3}
+  orbEffect: {fileID: 7731852260634693912, guid: 8101f17f62ca3bb4fb2dfc4be99f3e8a,
+    type: 3}
 --- !u!82 &8726944877069294098
 AudioSource:
   m_ObjectHideFlags: 0
@@ -198,6 +202,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 781830026301345673}
     m_Modifications:
+    - target: {fileID: 100000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
+      propertyPath: m_Name
+      value: CoinRing_
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0009
@@ -253,10 +261,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.97015595
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
-      propertyPath: m_Name
-      value: CoinRing_
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_Materials.Array.data[0]

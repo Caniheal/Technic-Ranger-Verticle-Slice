@@ -79,8 +79,10 @@ MonoBehaviour:
   coinBox: {fileID: 1219704680356171968}
   diamond: {fileID: 1219704680347167899}
   ring: {fileID: 1219704680484222542}
-  pickUpEffect: {fileID: 0}
-  orbEffect: {fileID: 0}
+  pickUpEffect: {fileID: 4483421963186821846, guid: 2df1647093c44a94b85c6f538a5a35f3,
+    type: 3}
+  orbEffect: {fileID: 7731852260634693912, guid: 354271d03a5c7d84ab0a7f4d280dbe65,
+    type: 3}
 --- !u!82 &5314510464929814280
 AudioSource:
   m_ObjectHideFlags: 0

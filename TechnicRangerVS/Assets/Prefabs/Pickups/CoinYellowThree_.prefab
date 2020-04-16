@@ -64,8 +64,10 @@ MonoBehaviour:
   coinBox: {fileID: 2685748920339406737}
   diamond: {fileID: 8782996894515518472}
   ring: {fileID: 2083866955227598783}
-  pickUpEffect: {fileID: 0}
-  orbEffect: {fileID: 0}
+  pickUpEffect: {fileID: 4483421963186821846, guid: 72a1a12846a50104aaf6fc323a963920,
+    type: 3}
+  orbEffect: {fileID: 7731852260634693912, guid: 93867f836bda43f4ea4ac83768fc7893,
+    type: 3}
 --- !u!82 &8177182167696143090
 AudioSource:
   m_ObjectHideFlags: 0
@@ -413,8 +415,10 @@ MonoBehaviour:
   coinBox: {fileID: 2842413956945711610}
   diamond: {fileID: 8305185560993240512}
   ring: {fileID: 5944526077509403074}
-  pickUpEffect: {fileID: 0}
-  orbEffect: {fileID: 0}
+  pickUpEffect: {fileID: 4483421963186821846, guid: 72a1a12846a50104aaf6fc323a963920,
+    type: 3}
+  orbEffect: {fileID: 7731852260634693912, guid: 93867f836bda43f4ea4ac83768fc7893,
+    type: 3}
 --- !u!82 &7489176986225043596
 AudioSource:
   m_ObjectHideFlags: 0
@@ -762,8 +766,10 @@ MonoBehaviour:
   coinBox: {fileID: 5637224427316358326}
   diamond: {fileID: 888295105953039862}
   ring: {fileID: 5332362958054400627}
-  pickUpEffect: {fileID: 0}
-  orbEffect: {fileID: 0}
+  pickUpEffect: {fileID: 4483421963186821846, guid: 72a1a12846a50104aaf6fc323a963920,
+    type: 3}
+  orbEffect: {fileID: 7731852260634693912, guid: 93867f836bda43f4ea4ac83768fc7893,
+    type: 3}
 --- !u!82 &4415902621502883338
 AudioSource:
   m_ObjectHideFlags: 0
