@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public enum WeaponState
@@ -161,6 +162,7 @@ public class PlayerController : MonoBehaviour
         UpdateWarper();
         UpdateAnchor();
         UpdateDefault();
+        UpdateScene();
     }
 
 
@@ -554,6 +556,30 @@ public class PlayerController : MonoBehaviour
         }
 
         return new List<WeaponState>();
+    }
+
+
+    //OUR DEV CHEATS :)
+    void UpdateScene()
+    {
+        if (Input.GetKeyDown("8"))
+        {
+            SceneManager.LoadScene("Jungle");
+        }
+
+
+        if (Input.GetKeyDown("9"))
+        {
+            SceneManager.LoadScene("Temple");
+        }
+
+
+        if (Input.GetKeyDown("0"))
+        {
+            SceneManager.LoadScene("Mines");
+        }
+
+    
     }
 
     void UpdateWeapon()
