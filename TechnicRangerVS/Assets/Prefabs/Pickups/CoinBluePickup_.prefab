@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 1810702137527884539}
   m_Layer: 0
   m_Name: CoinBluePickup_
-  m_TagString: Untagged
+  m_TagString: Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +79,10 @@ MonoBehaviour:
   coinBox: {fileID: 2668322608266730889}
   diamond: {fileID: 129445030556009485}
   ring: {fileID: 1803748904489609621}
+  pickUpEffect: {fileID: 4483421963186821846, guid: 29913511a262e8848916e1095860789f,
+    type: 3}
+  orbEffect: {fileID: 7731852260634693912, guid: 7de23daa323aa464cb73942a6fb987ea,
+    type: 3}
 --- !u!82 &1810702137527884539
 AudioSource:
   m_ObjectHideFlags: 0
@@ -283,6 +287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9043803012080975899}
     m_Modifications:
+    - target: {fileID: 100000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
+      propertyPath: m_Name
+      value: CoinRing_
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0009
@@ -338,10 +346,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.97015595
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
-      propertyPath: m_Name
-      value: CoinRing_
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_Materials.Array.data[0]

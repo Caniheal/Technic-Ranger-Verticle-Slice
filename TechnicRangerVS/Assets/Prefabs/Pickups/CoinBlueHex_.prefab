@@ -157,6 +157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBluePickup_ (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1209945597006291063, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
+      objectReference: {fileID: 0}
     - target: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -257,6 +262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoinBluePickup_ (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209945597006291063, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
       objectReference: {fileID: 0}
     - target: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
         type: 3}
@@ -359,6 +369,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBluePickup_ (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1209945597006291063, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
+      objectReference: {fileID: 0}
     - target: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -434,6 +449,18 @@ PrefabInstance:
       propertyPath: coinBox
       value: 
       objectReference: {fileID: 48754954605515420}
+    - target: {fileID: 3916277297258677947, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: pickUpEffect
+      value: 
+      objectReference: {fileID: 4483421963186821846, guid: 29913511a262e8848916e1095860789f,
+        type: 3}
+    - target: {fileID: 3916277297258677947, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: orbEffect
+      value: 
+      objectReference: {fileID: 7731852260634693912, guid: 7de23daa323aa464cb73942a6fb987ea,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b764b42701acef40bf29887301395f4, type: 3}
 --- !u!4 &6352597708298866446 stripped
@@ -459,6 +486,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoinBluePickup_ (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209945597006291063, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
       objectReference: {fileID: 0}
     - target: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
         type: 3}
@@ -561,6 +593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBluePickup_ (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1209945597006291063, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
+      objectReference: {fileID: 0}
     - target: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -661,6 +698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoinBluePickup_ (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209945597006291063, guid: 9b764b42701acef40bf29887301395f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
       objectReference: {fileID: 0}
     - target: {fileID: 9043803012080975899, guid: 9b764b42701acef40bf29887301395f4,
         type: 3}

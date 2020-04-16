@@ -14660,10 +14660,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1120088642, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
-      propertyPath: TotalSlideTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7976283731300489913, guid: 099db6ccb500db64da1fd7b47e6b13e0,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -20536,6 +20532,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.9170003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042916041687159179, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0405
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042916041687159179, guid: 92a4613b1a5832d4d8ee38cf596d97bf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92a4613b1a5832d4d8ee38cf596d97bf, type: 3}
