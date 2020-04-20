@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3419618871282509396}
   - component: {fileID: 7282722054110272769}
   - component: {fileID: 7039214204724575458}
+  - component: {fileID: 6645031594594052206}
   m_Layer: 0
   m_Name: Baobab_Form02
   m_TagString: Untagged
@@ -92,3 +93,17 @@ CapsuleCollider:
   m_Height: 0.25
   m_Direction: 2
   m_Center: {x: -0.023567481, y: 0.05807131, z: -0.11999998}
+--- !u!136 &6645031594594052206
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4336457728791360463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.009212339
+  m_Height: 0.07492714
+  m_Direction: 1
+  m_Center: {x: -0.020834316, y: 0.1138364, z: -0.075227864}
