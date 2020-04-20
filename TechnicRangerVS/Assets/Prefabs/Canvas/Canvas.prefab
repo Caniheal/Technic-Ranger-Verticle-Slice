@@ -1453,10 +1453,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 6717232696499400115}
-  settingsMenuUI: {fileID: 0}
-  trophiesMenuUI: {fileID: 9034872294901544071, guid: 816b6092cd8a19841b95691daac21094,
+  settingsMenuUI: {fileID: 6542195178155430012, guid: df135eff81089004d800d9d745b79cf1,
     type: 3}
+  trophiesMenuUI: {fileID: 244, guid: 816b6092cd8a19841b95691daac21094, type: 3}
   Back: {fileID: 0}
+  Image1: {fileID: 0}
+  Image2: {fileID: 0}
+  Image3: {fileID: 0}
+  Image4: {fileID: 0}
+  Image5: {fileID: 0}
+  Image6: {fileID: 0}
+  Image7: {fileID: 0}
+  Image8: {fileID: 0}
 --- !u!1 &6717232695919736865
 GameObject:
   m_ObjectHideFlags: 0

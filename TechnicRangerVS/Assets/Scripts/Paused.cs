@@ -11,6 +11,8 @@ public class Paused : MonoBehaviour
     public GameObject settingsMenuUI;
     public GameObject trophiesMenuUI;
     public Button Back;
+
+
     [SerializeField] public Image Image1;
     [SerializeField] public Image Image2;
     [SerializeField] public Image Image3;
@@ -106,7 +108,8 @@ public class Paused : MonoBehaviour
     public void Trophies()
     {
         
-        PlayerController coin = GameObject.Find("MainCharacter2.0 1").GetComponent<PlayerController>();
+        //PlayerController coin = GameObject.Find("MainCharacter2.0 1").GetComponent<PlayerController>();
+        PlayerController coin = GameObject.Find("Prefab_FinalCharacterModel").GetComponent<PlayerController>();
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
         trophiesMenuUI.SetActive(true);
@@ -116,6 +119,11 @@ public class Paused : MonoBehaviour
         if (coin.count == 3)
         {
             Image1.enabled = true;
+        }
+
+        else if (coin.count == 12)
+        {
+            Image2.enabled = true;
         }
     }
 
