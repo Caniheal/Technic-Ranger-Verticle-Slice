@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private float DpadY;
     public Animator anim;
     public Text countText;
-    private int count;
+    public int count;
 
     public float MovementSpeed = 1;
     public float MouseSensitivity = 1;
@@ -97,6 +97,8 @@ public class PlayerController : MonoBehaviour
     private bool warpGhostMode = false;
     private float warpToggleCooldown = 0;
 
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -107,6 +109,7 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
 
         Cursor.lockState = CursorLockMode.Locked;
+
 
         // make it so the reticle isnt shown by default
         reticle.enabled = false;
