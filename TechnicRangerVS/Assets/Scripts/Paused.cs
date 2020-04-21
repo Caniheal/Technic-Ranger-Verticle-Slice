@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static SceneSwitching;
+using Newtonsoft.Json;
 
 public class Paused : MonoBehaviour
 {
@@ -92,6 +94,16 @@ public class Paused : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
+        // Saving a game file
+        List<SaveData> _data = new List<SaveData>();
+        _data.Add(new SaveData()
+        {
+            coinCount = 0
+        });
+        string json = JsonConvert.SerializeObject(_data.ToArray());
+        //write string to file
+        System.IO.File.WriteAllText(@"SaveFile.json", json);
+
         SceneManager.LoadScene("MainMenu");
     }
 

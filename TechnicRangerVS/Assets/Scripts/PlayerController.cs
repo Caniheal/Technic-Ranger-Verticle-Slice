@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using Newtonsoft.Json.Linq;
+using System.IO;
+using static SceneSwitching;
+using Newtonsoft.Json;
 
 public enum WeaponState
 {
@@ -113,7 +116,9 @@ public class PlayerController : MonoBehaviour
 
         // make it so the reticle isnt shown by default
         reticle.enabled = false;
-        count = 0;
+
+        JObject o1 = JObject.Parse(File.ReadAllText(@"SaveFile.json"));
+        count = (int)o1.GetValue("coinCount");
         SetCountText ();
     }
 
@@ -128,6 +133,16 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
+            // Saving a game file
+            List<SaveData> _data = new List<SaveData>();
+            _data.Add(new SaveData()
+            {
+                coinCount = count
+            });
+            string json = JsonConvert.SerializeObject(_data.ToArray());
+            //write string to file
+            System.IO.File.WriteAllText(@"SaveFile.json", json);
+
             SetCountText();
         }
     }
