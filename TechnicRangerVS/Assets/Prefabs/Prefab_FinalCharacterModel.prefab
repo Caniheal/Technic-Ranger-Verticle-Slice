@@ -2074,6 +2074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 204322979}
   countText: {fileID: 4729634503404860309}
+  count: 0
   MovementSpeed: 12
   MouseSensitivity: 1
   CameraDistance: 5
@@ -5380,7 +5381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Coins Collected:'
 --- !u!1 &8530723148506492042
 GameObject:
   m_ObjectHideFlags: 0

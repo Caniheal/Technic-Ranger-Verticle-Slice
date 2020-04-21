@@ -117,9 +117,14 @@ public class PlayerController : MonoBehaviour
         // make it so the reticle isnt shown by default
         reticle.enabled = false;
 
-        JObject o1 = JObject.Parse(File.ReadAllText(@"SaveFile.json"));
+        JObject o1 = NewMethod();
         count = (int)o1.GetValue("coinCount");
-        SetCountText ();
+        SetCountText();
+    }
+
+    private static JObject NewMethod()
+    {
+        return JObject.Parse(File.ReadAllText(@"c:\\SaveFile.json"));
     }
 
     void SetCountText()

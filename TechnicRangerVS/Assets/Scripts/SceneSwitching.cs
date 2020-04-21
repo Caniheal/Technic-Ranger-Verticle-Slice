@@ -15,7 +15,7 @@ public class SceneSwitching : MonoBehaviour
     private void Start()
     {
 
-        if (!File.Exists("SaveFile.json"))
+        if (!File.Exists("c:\\SaveFile.json"))
         {
             // Saving a game file
             List<SaveData> _data = new List<SaveData>();
@@ -25,7 +25,7 @@ public class SceneSwitching : MonoBehaviour
             });
             string json = JsonConvert.SerializeObject(_data.ToArray());
             //write string to file
-            System.IO.File.WriteAllText(@"SaveFile.json", json);
+            File.WriteAllText(@"c:\\SaveFile.json", json);
         }
 
         Cursor.visible = true;
