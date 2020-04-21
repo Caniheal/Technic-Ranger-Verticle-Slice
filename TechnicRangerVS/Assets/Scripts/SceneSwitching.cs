@@ -5,36 +5,29 @@ using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using static Paused;
 
 public class SceneSwitching : MonoBehaviour
 {
+    //Paused paused;
+    public GameObject pausedInstanceObject;
+    public Paused pause;
     public class SaveData
     {
         public int coinCount { get; set; }
     }
     private void Start()
     {
-
-        if (!File.Exists("c:\\SaveFile.json"))
-        {
-            // Saving a game file
-            List<SaveData> _data = new List<SaveData>();
-            _data.Add(new SaveData()
-            {
-                coinCount = 0
-            });
-            string json = JsonConvert.SerializeObject(_data.ToArray());
-            //write string to file
-            File.WriteAllText(@"c:\\SaveFile.json", json);
-        }
-
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        pause = pausedInstanceObject.GetComponent<Paused>();
     }
-
+    
     public void StartGame()
     {
-
+        //paused = new Paused();
+        //saving and ititilizing the number to 0 if it doesnt existe
+        Paused.Save(0);
         SceneManager.LoadScene("IntroCutscene");
     }
 

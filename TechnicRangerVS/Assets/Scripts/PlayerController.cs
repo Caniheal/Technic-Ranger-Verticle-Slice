@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using Newtonsoft.Json.Linq;
 using System.IO;
 using static SceneSwitching;
+using static Paused;
 using Newtonsoft.Json;
 
 public enum WeaponState
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public Text countText;
     public int count;
+   
+
 
     public float MovementSpeed = 1;
     public float MouseSensitivity = 1;
@@ -117,14 +120,20 @@ public class PlayerController : MonoBehaviour
         // make it so the reticle isnt shown by default
         reticle.enabled = false;
 
-        JObject o1 = NewMethod();
-        count = (int)o1.GetValue("coinCount");
+        SaveData o1 = LoadFile();
+        count = (int)o1.coinCount;
         SetCountText();
     }
 
-    private static JObject NewMethod()
+    private static SaveData LoadFile()
     {
-        return JObject.Parse(File.ReadAllText(@"c:\\SaveFile.json"));
+        //Paused paused = new Paused();
+        
+        // if static: CLASSNAME.WHATYOUWANT
+        // if not: CLASS INSTANCE.WHATYOUWANT
+
+        SaveData savedFile = JsonConvert.DeserializeObject<List<SaveData>>(File.ReadAllText(Paused.fileName))[0];
+        return savedFile;
     }
 
     void SetCountText()
@@ -138,15 +147,8 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
-            // Saving a game file
-            List<SaveData> _data = new List<SaveData>();
-            _data.Add(new SaveData()
-            {
-                coinCount = count
-            });
-            string json = JsonConvert.SerializeObject(_data.ToArray());
-            //write string to file
-            System.IO.File.WriteAllText(@"SaveFile.json", json);
+
+            Paused.Save(count);
 
             SetCountText();
         }

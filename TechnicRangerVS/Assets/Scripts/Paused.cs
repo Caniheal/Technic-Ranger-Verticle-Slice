@@ -14,7 +14,9 @@ public class Paused : MonoBehaviour
     public GameObject settingsMenuUI;
     public GameObject trophiesMenuUI;
     public Button Back;
-
+    PlayerController coin;
+    public static string fileName = Application.streamingAssetsPath + "/" + fileBackup; //"C:/Users/Public/Documents/Tech/SaveFile.json";
+    public static string fileBackup = "SaveFile.json";
 
     [SerializeField] public Image Image1;
     [SerializeField] public Image Image2;
@@ -39,6 +41,7 @@ public class Paused : MonoBehaviour
         Image6.enabled = false;
         Image7.enabled = false;
         Image8.enabled = false;
+        coin = GameObject.Find("Prefab_FinalCharacterModel").GetComponent<PlayerController>();
 
     }
         
@@ -96,7 +99,7 @@ public class Paused : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
-        Save();
+        Save(coin.count);
     }
 
     public void Settings()
@@ -112,8 +115,6 @@ public class Paused : MonoBehaviour
     public void Trophies()
     {
         
-        //PlayerController coin = GameObject.Find("MainCharacter2.0 1").GetComponent<PlayerController>();
-        PlayerController coin = GameObject.Find("Prefab_FinalCharacterModel").GetComponent<PlayerController>();
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
         trophiesMenuUI.SetActive(true);
@@ -130,18 +131,40 @@ public class Paused : MonoBehaviour
             Image2.enabled = true;
         }
     }
-
-    public void Save()
+    
+    public static void Save(int coinNum)
     {
+        /*if (!Directory.Exists(Application.streamingAssetsPath))
+        {
+            Directory.CreateDirectory(Application.streamingAssetsPath);
+        }*/
+        // Creates file if it doesnt exist
+        //if (!File.Exists(fileName))
+
+        fileName = Application.streamingAssetsPath + "/" + fileBackup;
+        if (!File.Exists(fileName))
+        {
+            File.Create(fileName).Close();
+        }
+
         // Saving a game file
         List<SaveData> _data = new List<SaveData>();
         _data.Add(new SaveData()
         {
-            coinCount = 0
+            coinCount = coinNum
         });
-        string json = JsonConvert.SerializeObject(_data.ToArray());
+        string json = JsonConvert.SerializeObject(_data.ToArray()); // [{'coinCount': 0 }] 
         //write string to file
-        File.WriteAllText(@"c:\\SaveFile.json", json);
+        File.WriteAllText(fileName, json);
+
+        //FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
+        //StreamWriter outputStream = new StreamWriter(fs);
+        //outputStream.Write(json);
+
+        //outputStream.Close();
+        //fs.Close();
+        //fs.Dispose();
+
 
     }
 
