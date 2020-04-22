@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -30150,7 +30150,7 @@ Transform:
   - {fileID: 1072878360}
   - {fileID: 565460937}
   m_Father: {fileID: 1890206708}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -270, y: 180, z: -200}
 --- !u!1001 &979409717
 PrefabInstance:
@@ -56113,10 +56113,10 @@ Transform:
   m_LocalPosition: {x: -180.43, y: -0.19767094, z: 148.76001}
   m_LocalScale: {x: 1.2500002, y: 1.25, z: 1.2500002}
   m_Children:
+  - {fileID: 979343633}
   - {fileID: 1313490051}
   - {fileID: 614423458}
   - {fileID: 1325260728}
-  - {fileID: 979343633}
   - {fileID: 114796283}
   - {fileID: 567046011}
   - {fileID: 1087960135}
@@ -60053,7 +60053,7 @@ MonoBehaviour:
   DistanceToMove: 0.2
   Speed: 0.1
   Loop: 1
-  AttachParent: 1
+  AttachParent: 0
   DirectionToMove: {x: 1, y: 1, z: 0}
 --- !u!65 &2027466903
 BoxCollider:
