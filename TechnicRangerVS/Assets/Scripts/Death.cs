@@ -16,9 +16,9 @@ public class Death : MonoBehaviour
         {
             PC.DisableMovement();
             other.gameObject.transform.position = GameManager.Instance.lastCheckPoint.position;
-            
+            source.PlayOneShot(deathClip);
+
             PC.EnableMovement();
-            //source.PlayOneShot(deathClip);
         }
 
     }
