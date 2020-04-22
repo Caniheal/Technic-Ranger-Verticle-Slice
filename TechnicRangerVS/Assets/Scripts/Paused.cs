@@ -153,17 +153,10 @@ public class Paused : MonoBehaviour
         {
             coinCount = coinNum
         });
-        string json = JsonConvert.SerializeObject(_data.ToArray()); // [{'coinCount': 0 }] 
+        string json = JsonConvert.SerializeObject(_data.ToArray());
+
         //write string to file
         File.WriteAllText(fileName, json);
-
-        //FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-        //StreamWriter outputStream = new StreamWriter(fs);
-        //outputStream.Write(json);
-
-        //outputStream.Close();
-        //fs.Close();
-        //fs.Dispose();
 
 
     }
