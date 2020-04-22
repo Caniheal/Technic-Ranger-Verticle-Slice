@@ -2119,7 +2119,13 @@ MonoBehaviour:
   hitClip: {fileID: 8300000, guid: 417a17e857658524b83cc6ec0f63830b, type: 3}
   activateClip: {fileID: 8300000, guid: b94b19a06808f1742870f550e376f493, type: 3}
   destroyClip: {fileID: 0}
-  changeMaskEffect: {fileID: 4650729439480440385, guid: e997b5e8e1add8949984b0e9863af9a0,
+  defaultMaskEffect: {fileID: 4650729439480440385, guid: e997b5e8e1add8949984b0e9863af9a0,
+    type: 3}
+  vistaMaskEffect: {fileID: 4650729439480440385, guid: 5a4d32b9d1956e8469c0a80f31cd1ea4,
+    type: 3}
+  anchorMaskEffect: {fileID: 4650729439480440385, guid: 0d2a32b9688ccae408068513a1d2c42a,
+    type: 3}
+  shieldMaskEffect: {fileID: 4650729439480440385, guid: 1eafb3d7891cd4843af7eae5aa29d9f9,
     type: 3}
   Yaw: 0
   Pitch: 0
