@@ -512,7 +512,7 @@ public class PlayerController : MonoBehaviour
                 reticle.enabled = false;
             }*/
 
-            if (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper"))
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetButtonDown("Right Bumper"))
             {
                 RaycastHit hit;
                 source.PlayOneShot(fireBoltClip);
