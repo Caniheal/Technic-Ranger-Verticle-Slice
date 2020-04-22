@@ -2119,6 +2119,8 @@ MonoBehaviour:
   hitClip: {fileID: 8300000, guid: 417a17e857658524b83cc6ec0f63830b, type: 3}
   activateClip: {fileID: 8300000, guid: b94b19a06808f1742870f550e376f493, type: 3}
   destroyClip: {fileID: 0}
+  changeMaskEffect: {fileID: 4650729439480440385, guid: e997b5e8e1add8949984b0e9863af9a0,
+    type: 3}
   Yaw: 0
   Pitch: 0
   MoveDirection: {x: 0, y: 0, z: 0}
@@ -4749,7 +4751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.25006104, y: 0}
+  m_AnchoredPosition: {x: -0.25, y: 0}
   m_SizeDelta: {x: -1.5, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4891398132151557602

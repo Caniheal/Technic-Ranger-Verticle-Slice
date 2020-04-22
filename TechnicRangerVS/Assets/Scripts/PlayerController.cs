@@ -73,6 +73,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip activateClip;
     public AudioClip destroyClip;
 
+    //Particle Effects
+    public ParticleSystem changeMaskEffect;
+
     //Welcome to Lylly's notes in the script. :)
     // Euler Angle (rotation) is when... x = pitch; y = yaw; z= roll
     public float Yaw;
@@ -664,23 +667,27 @@ public class PlayerController : MonoBehaviour
         {
             NewWeaponState = WeaponState.Default;
             source.PlayOneShot(maskSwitchClip);
-            
+            Instantiate(changeMaskEffect, transform.position, Quaternion.identity);
+
         }
         if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") > 0))
         {
             NewWeaponState = WeaponState.Vista;
             source.PlayOneShot(maskSwitchClip);
+            Instantiate(changeMaskEffect, transform.position, Quaternion.identity);
         }
         if (Input.GetKeyDown("3") || (Input.GetAxis("Dpad X") > 0))
         {
             NewWeaponState = WeaponState.Anchor;
             source.PlayOneShot(maskSwitchClip);
+            Instantiate(changeMaskEffect, transform.position, Quaternion.identity);
         }
 
         if (Input.GetKeyDown("4") || (Input.GetAxis("Dpad X") < 0))
         {
             NewWeaponState = WeaponState.Shield;
             source.PlayOneShot(maskSwitchClip);
+            Instantiate(changeMaskEffect, transform.position, Quaternion.identity);
         }
 
 
