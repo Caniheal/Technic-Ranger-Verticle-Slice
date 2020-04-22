@@ -7,16 +7,21 @@ public class Death : MonoBehaviour
 
     public Transform startPos;
     private AudioSource source;
-    public AudioClip deathClip;
+    public AudioClip deathClip; //this is bugged by the way
+    //public GameObject Player;
+
     private void OnTriggerEnter(Collider other)
     {
+        //Player.GetComponent<PlayerController>().SpawnAtCheckpoint();
+
         PlayerController PC = other.gameObject.GetComponent<PlayerController>();
 
         if (PC)
         {
             PC.DisableMovement();
-            other.gameObject.transform.position = GameManager.Instance.lastCheckPoint.position;
-            source.PlayOneShot(deathClip);
+            other.transform.position = GameManager.Instance.lastCheckPoint.position;
+            //deathclip is bugged, uncomment with caution
+            //source.PlayOneShot(deathClip);
 
             PC.EnableMovement();
         }

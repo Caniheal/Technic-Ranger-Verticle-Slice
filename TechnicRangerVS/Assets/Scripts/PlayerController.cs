@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     // color swaping references
     public Material Purple, Teal, Tan, Blue, White, Black;
     public SkinnedMeshRenderer Render;
+    public GameObject VistaHalo, AnchorLauncher, Shield;
 
 
     // reference for reticle
@@ -117,8 +118,11 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
 
-        // make it so the reticle isnt shown by default
+        // make it so the reticle and weapons isnt shown by default
         reticle.enabled = false;
+        VistaHalo.GetComponent<MeshRenderer>().enabled = false;
+        AnchorLauncher.GetComponent<MeshRenderer>().enabled = false;
+        Shield.GetComponent<MeshRenderer>().enabled = false;
 
         SaveData o1 = LoadFile();
         count = (int)o1.coinCount;
@@ -153,6 +157,14 @@ public class PlayerController : MonoBehaviour
             SetCountText();
         }
     }
+
+    /*public void SpawnAtCheckpoint()
+    {
+        DisableMovement();
+        this.transform.position = GameManager.Instance.lastCheckPoint.position;
+        EnableMovement();
+
+    }*/
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -395,6 +407,7 @@ public class PlayerController : MonoBehaviour
 
         if (CurrentWeaponState == WeaponState.Vista)
         {
+            VistaHalo.GetComponent<MeshRenderer>().enabled = true;
 
             if (WarpManager.IsWarperActive())
             {
@@ -427,6 +440,7 @@ public class PlayerController : MonoBehaviour
                         //on --> off
                         if (WarpManager)
                         {
+                            //VistaHalo.GetComponent<MeshRenderer>().enabled = false;
                             Debug.Log("Place");
                             WarpManager.CompletWarpPlacement();
                             source.PlayOneShot(createPortalClip);
@@ -441,6 +455,7 @@ public class PlayerController : MonoBehaviour
                         Debug.Log("Start");
 
                         warpGhostMode = true;
+                        //VistaHalo.GetComponent<MeshRenderer>().enabled = true;
                     }
 
                     warpToggleCooldown = .5f;
@@ -463,6 +478,7 @@ public class PlayerController : MonoBehaviour
         {
             warpToggleCooldown = 0;
             warpGhostMode = false;
+            VistaHalo.GetComponent<MeshRenderer>().enabled = false;
         }
     }
     // Anchor fuctionallity
@@ -476,6 +492,7 @@ public class PlayerController : MonoBehaviour
 
             //ANCHOR
             materials[0] = Teal;
+            AnchorLauncher.GetComponent<MeshRenderer>().enabled = true;
         }
 
         Render.materials = materials;
@@ -484,14 +501,16 @@ public class PlayerController : MonoBehaviour
 
         if (CurrentWeaponState == WeaponState.Anchor)
         {
-            if (Input.GetKey(KeyCode.Mouse1) || Input.GetButton("Left Trigger"))
+            reticle.enabled = true;
+
+            /*if (Input.GetKey(KeyCode.Mouse1) || Input.GetButton("Left Trigger"))
             {
                 reticle.enabled = true;
             }
             else
             {
                 reticle.enabled = false;
-            }
+            }*/
 
             if (Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper"))
             {
@@ -520,6 +539,11 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            AnchorLauncher.GetComponent<MeshRenderer>().enabled = false;
+            reticle.enabled = false;
+        }
     }
 
     void UpdateSpawnShield()
@@ -545,6 +569,19 @@ public class PlayerController : MonoBehaviour
                 SpawnedShield = Instantiate(ShieldPrefab, spawnLocation, Quaternion.identity);
                 source.PlayOneShot(createBoardClip);
             }
+            if (SpawnedShield == null)
+            {
+                Shield.GetComponent<MeshRenderer>().enabled = true;
+            }
+            else
+            {
+                Shield.GetComponent<MeshRenderer>().enabled = false;
+
+            }
+        }
+        else
+        {
+            Shield.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 
