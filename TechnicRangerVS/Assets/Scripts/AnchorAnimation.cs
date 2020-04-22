@@ -48,8 +48,8 @@ public class AnchorAnimation : MonoBehaviour
     {
               // idea for how to make it so the anchor can hold the platfroms in place but for some reason it causes the platfroms to sometimes stop and sometimes stop and instantly continue with a single click
 
-     /*   if (MovingPlatform.GetComponent<SidetoSideMover>().enabled == false)
-        { */
+       if (MovingPlatform.GetComponent<SidetoSideMover>().enabled == false)
+        { 
             // the animation is bugged so im using the mover script for now
             //  MovingPlatform.GetComponent<Animation>().enabled = true;
         MovingPlatform.GetComponent<SidetoSideMover>().enabled = true;
@@ -59,14 +59,15 @@ public class AnchorAnimation : MonoBehaviour
 
         //if (MovingPlatform.GetComponent<SidetoSideMover>().enabled == true)
         //Render.sharedMaterial = activeMat[1];
-        /*   }
+        }
 
            else if(MovingPlatform.GetComponent<SidetoSideMover>().enabled == true)
            {
                MovingPlatform.GetComponent<SidetoSideMover>().enabled = false;
+            Render.sharedMaterial = activeMat[0];
            }
 
-          */
+          
 
 
 
