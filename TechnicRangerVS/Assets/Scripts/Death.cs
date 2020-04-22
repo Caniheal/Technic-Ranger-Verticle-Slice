@@ -19,7 +19,7 @@ public class Death : MonoBehaviour
         if (PC)
         {
             PC.DisableMovement();
-            other.transform.position = GameManager.Instance.lastCheckPoint.position;
+            PC.transform.position = GameManager.Instance.lastCheckPoint.position;
             //deathclip is bugged, uncomment with caution
             //source.PlayOneShot(deathClip);
 
