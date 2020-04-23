@@ -62,11 +62,6 @@ public class Paused : MonoBehaviour
         {
             pauseMenuUI.SetActive(false);
         }
-
-        if (GameIsPaused && trophiesMenuUI == isActiveAndEnabled && Input.GetButtonDown("B Button"))
-        {
-            TaskOnClick();
-        }
     }
 
     public void Resume()
