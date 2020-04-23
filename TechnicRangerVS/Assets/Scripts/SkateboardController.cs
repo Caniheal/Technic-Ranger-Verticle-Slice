@@ -55,6 +55,11 @@ public class SkateboardController : MonoBehaviour
         {
             enabletriggerenter = true;
         }
+        
+        //if (other.gameObject.CompareTag("Player"))
+        //{
+            //enabletriggerenter = true;
+        //}
     }
 
     public void ExitShield()
@@ -67,7 +72,7 @@ public class SkateboardController : MonoBehaviour
             player.IsOnShield = false;
             player = null;
             enabletriggerenter = false;
-            Destroy(gameObject, 3);
+            Destroy(gameObject, 1);
         }
     }
 

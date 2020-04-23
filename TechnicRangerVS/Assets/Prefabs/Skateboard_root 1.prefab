@@ -11,8 +11,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01713473, y: 0.012094625, z: 0.008929777}
-  m_Center: {x: 0.00055101304, y: 0.000005998554, z: 0.04986033}
+  m_Size: {x: 0.016979525, y: 0.012094625, z: 0.0184834}
+  m_Center: {x: 0.0006286051, y: 0.000005998554, z: 0.06901426}
 --- !u!1 &1896548301126762841
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +178,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4054658647429722788}
-  m_Layer: 0
+  - component: {fileID: 6538122437660011927}
+  m_Layer: 9
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,6 +200,19 @@ Transform:
   m_Father: {fileID: 5061163131385685862}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6538122437660011927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210945501550446566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6812968, y: 1.4591131, z: 2.909954}
+  m_Center: {x: -0.072868586, y: -0.22955656, z: 0.056905746}
 --- !u!1 &6574231704430957148
 GameObject:
   m_ObjectHideFlags: 0
