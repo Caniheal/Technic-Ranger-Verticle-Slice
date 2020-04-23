@@ -30,8 +30,12 @@ public class SkateboardController : MonoBehaviour
         if (player && enabletriggerenter)
         {
             player.DisableMovement();
+            player.IsOnShield = true;
             player.transform.parent = AttachPoint.gameObject.transform;
             player.transform.position = AttachPoint.gameObject.transform.position;
+
+            //Snap your rotation to forward (parent)
+            player.transform.localRotation = Quaternion.identity;
             GetComponent<Collider>().enabled = false;
         }
 
@@ -53,18 +57,24 @@ public class SkateboardController : MonoBehaviour
         }
     }
 
+    public void ExitShield()
+    {
+        player.transform.parent = null;
+        player.EnableMovement();
+        player.transform.rotation = Quaternion.identity;
+        player.IsOnShield = false;
+        player = null;
+        enabletriggerenter = false;
+        Destroy(gameObject, 3);
+    }
+
     public void FixedUpdate()
     {
         if (player)
         {
             if (Input.GetButton("Jump"))
             {
-                player.transform.parent = null;
-                player.EnableMovement();
-                player.transform.rotation = Quaternion.identity;
-                player = null;
-                enabletriggerenter = false;
-                Destroy(gameObject, 3);
+                ExitShield();
             }
 
             float motor = maxMotorTorque * Input.GetAxis("Vertical");
