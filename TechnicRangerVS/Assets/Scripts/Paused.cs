@@ -29,7 +29,10 @@ public class Paused : MonoBehaviour
     void Start()
     {
         Button btn = Back.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        if (btn)
+        {
+            btn.onClick.AddListener(TaskOnClick);
+        }
         //btn.onClick.AddListener(SecondTaskOnClick);
         GameIsPaused = false;
         Image1.enabled = false;
@@ -68,18 +71,20 @@ public class Paused : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         trophiesMenuUI.SetActive(false);
-        AudioListener.pause = false;
         Time.timeScale = 1f;
         GameIsPaused = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
         trophiesMenuUI.SetActive(false);
-        AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void MainMenu()
