@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &6036876658476092404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219704680347167899}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.027538225, y: 0.029072542, z: 0.02468371}
+  m_Center: {x: 0.0005242058, y: -0.00039303195, z: -0.010411701}
 --- !u!114 &1219704680347134526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,7 +39,7 @@ GameObject:
   - component: {fileID: 1219704680356171969}
   m_Layer: 0
   m_Name: CoinPickup_
-  m_TagString: Pick Up
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,8 +167,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.019999998, y: 0.019999992, z: 0.09726251}
-  m_Center: {x: 0.0000000296184, y: 0.000000029618402, z: 0.0015974365}
+  m_Size: {x: 0.020528624, y: 0.021263381, z: 0.09726251}
+  m_Center: {x: 0.00039482617, y: -0.0003634818, z: 0.0015974365}
 --- !u!114 &1219704680484253933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +214,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
       propertyPath: m_Name
       value: Coin_
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_TagString
-      value: Pick Up
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_LocalPosition.x
