@@ -19,8 +19,9 @@ public class LoadAScene : MonoBehaviour
 
         if (other.gameObject.tag == ("Player") )
 		{
+
+            SceneManager.LoadScene(scene, LoadSceneMode.Single);
             Paused.Save(coin.count);//coin.count should be it's input  might need to import paused as static
-            SceneManager.LoadScene (scene, LoadSceneMode.Single);
 
             Debug.Log("test");
 		}
