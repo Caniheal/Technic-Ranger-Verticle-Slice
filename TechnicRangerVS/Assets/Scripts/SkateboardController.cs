@@ -25,11 +25,13 @@ public class SkateboardController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        player = other.gameObject.GetComponent<PlayerController>();
-
-        if (player && enabletriggerenter)
+        if (other.gameObject.GetComponent<PlayerController>() && enabletriggerenter)
         {
-            player.DisableMovement();
+
+            //IF the coliding has has a player controller (us) then do all the pick up stuff
+            player = other.gameObject.GetComponent<PlayerController>();
+
+            player.DisableMovement(); 
             player.IsOnShield = true;
             player.transform.parent = AttachPoint.gameObject.transform;
             player.transform.position = AttachPoint.gameObject.transform.position;
