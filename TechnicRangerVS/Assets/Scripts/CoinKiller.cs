@@ -33,7 +33,7 @@ public class CoinKiller : MonoBehaviour
             this.GetComponent<MeshRenderer>().enabled = false;
 
         coinBox.enabled = false;
-            sound.Play();
+            sound.Play(0);
 
 
         Destroy();
