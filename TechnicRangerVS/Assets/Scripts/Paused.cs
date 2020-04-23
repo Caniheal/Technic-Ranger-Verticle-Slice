@@ -11,11 +11,10 @@ public class Paused : MonoBehaviour
 {
     private static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject settingsMenuUI;
     public GameObject trophiesMenuUI;
     public Button Back;
     PlayerController coin;
-    public static string fileName = Application.streamingAssetsPath + "/" + fileBackup; //"C:/Users/Public/Documents/Tech/SaveFile.json";
+    public static string fileName = Application.streamingAssetsPath + "/" + fileBackup;
     public static string fileBackup = "SaveFile.json";
 
     [SerializeField] public Image Image1;
@@ -32,7 +31,7 @@ public class Paused : MonoBehaviour
         Button btn = Back.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         //btn.onClick.AddListener(SecondTaskOnClick);
-        pauseMenuUI.SetActive(false);
+        GameIsPaused = false;
         Image1.enabled = false;
         Image2.enabled = false;
         Image3.enabled = false;
@@ -59,26 +58,20 @@ public class Paused : MonoBehaviour
                 Pause();
             }
         }
-       else if (GameIsPaused && settingsMenuUI.activeInHierarchy)
-        {
-            Settings();
-        }
         if (!GameIsPaused)
         {
             pauseMenuUI.SetActive(false);
         }
 
-        if (GameIsPaused && settingsMenuUI == isActiveAndEnabled && Input.GetButtonDown("B Button"))
+        if (GameIsPaused && trophiesMenuUI == isActiveAndEnabled && Input.GetButtonDown("B Button"))
         {
             TaskOnClick();
         }
-
     }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        settingsMenuUI.SetActive(false);
         trophiesMenuUI.SetActive(false);
         AudioListener.pause = false;
         Time.timeScale = 1f;
@@ -88,7 +81,6 @@ public class Paused : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
-        settingsMenuUI.SetActive(false);
         trophiesMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
@@ -102,25 +94,24 @@ public class Paused : MonoBehaviour
         Save(coin.count);
     }
 
-    public void Settings()
+    /*public void Settings()
     {
         pauseMenuUI.SetActive(false);
-        settingsMenuUI.SetActive(true);
         trophiesMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
-    }
+    }*/
 
     public void Trophies()
     {
         
         pauseMenuUI.SetActive(false);
-        settingsMenuUI.SetActive(false);
         trophiesMenuUI.SetActive(true);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
+
         if (coin.count == 3)
         {
             Image1.enabled = true;
@@ -130,6 +121,7 @@ public class Paused : MonoBehaviour
         {
             Image2.enabled = true;
         }
+
     }
     
     public static void Save(int coinNum)
@@ -164,7 +156,6 @@ public class Paused : MonoBehaviour
     void TaskOnClick()
     {
         pauseMenuUI.SetActive(true);
-        settingsMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;

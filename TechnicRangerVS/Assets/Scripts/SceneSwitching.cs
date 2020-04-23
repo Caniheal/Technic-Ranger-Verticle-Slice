@@ -27,8 +27,8 @@ public class SceneSwitching : MonoBehaviour
     {
         //paused = new Paused();
         //saving and ititilizing the number to 0 if it doesnt existe
-        Paused.Save(0);
         SceneManager.LoadScene("IntroCutscene");
+        Paused.Save(0);
     }
 
     public void SettingsMenu()

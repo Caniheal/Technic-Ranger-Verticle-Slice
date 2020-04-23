@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 6542195177339606114}
   - component: {fileID: 6542195177339606115}
   m_Layer: 5
-  m_Name: Gamma Slider
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 6542195177649540072}
   - component: {fileID: 6542195177649540073}
   m_Layer: 5
-  m_Name: SFX Slider
+  m_Name: Slider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1841,7 +1841,7 @@ GameObject:
   - component: {fileID: 6542195177980052272}
   - component: {fileID: 6542195177980052273}
   m_Layer: 5
-  m_Name: BGM Slider
+  m_Name: Slider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1941,7 +1941,7 @@ GameObject:
   - component: {fileID: 6542195178044459513}
   - component: {fileID: 6542195178044459512}
   m_Layer: 5
-  m_Name: Master Slider
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2086,7 +2086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6542195178155429889
 RectTransform:
   m_ObjectHideFlags: 0
