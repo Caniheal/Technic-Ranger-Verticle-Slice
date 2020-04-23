@@ -110,6 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponUnlock: 1
+  maskPickUpEffect: {fileID: 6052841871305558502, guid: 60d904143ca84f64aaa23c31ac54004f,
+    type: 3}
 --- !u!82 &3137494619668713328
 AudioSource:
   m_ObjectHideFlags: 0

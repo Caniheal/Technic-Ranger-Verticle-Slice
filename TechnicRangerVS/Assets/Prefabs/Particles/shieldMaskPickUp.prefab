@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6052841871305558502}
   - component: {fileID: 3879040382477164916}
   m_Layer: 0
-  m_Name: maskPickUp
+  m_Name: shieldMaskPickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4681,7 +4681,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 10e501f8f8ed0894abb0be1d5e2d5913, type: 2}
+  - {fileID: 2100000, guid: 19e8198fe000ce74aafb5c438174c1bc, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponUnlock: 3
+  maskPickUpEffect: {fileID: 6052841871305558502, guid: 01a94c0f34bd1244eb8b6b489df5d68b,
+    type: 3}
 --- !u!135 &1620474737121258078
 SphereCollider:
   m_ObjectHideFlags: 0
