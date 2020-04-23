@@ -65,6 +65,7 @@ public class Paused : MonoBehaviour
         if (!GameIsPaused)
         {
             pauseMenuUI.SetActive(false);
+            AudioListener.pause = false;
         }
     }
 
@@ -84,6 +85,7 @@ public class Paused : MonoBehaviour
         trophiesMenuUI.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        AudioListener.pause = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -100,7 +102,6 @@ public class Paused : MonoBehaviour
         
         pauseMenuUI.SetActive(false);
         trophiesMenuUI.SetActive(true);
-        AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
         if (coin.count == 3)
@@ -144,11 +145,9 @@ public class Paused : MonoBehaviour
 
     }
 
-    void TaskOnClick()
+    public void TaskOnClick()
     {
         pauseMenuUI.SetActive(true);
-        trophiesMenuUI.SetActive(false);
-        AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
         
