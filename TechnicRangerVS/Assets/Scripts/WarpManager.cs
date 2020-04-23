@@ -108,6 +108,7 @@ public class WarpManager : MonoBehaviour
     {
         StartWarper.SetActive(false);
         EndWarper.SetActive(false);
+        GhostWarper.SetActive(false);
     }
 
     //public lets other scripts call the function
