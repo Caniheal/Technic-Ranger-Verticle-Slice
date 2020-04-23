@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponUnlock: 2
+  maskPickUpEffect: {fileID: 6052841871305558502, guid: 58c5b9a65ce97664aaf58a81f6c0d04c,
+    type: 3}
 --- !u!135 &5807302342503447258
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -245,11 +247,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6752744121206520715}
     m_Modifications:
-    - target: {fileID: 4362893017923196950, guid: 390c6ad04747a884da48f7770683c01d,
-        type: 3}
-      propertyPath: m_Name
-      value: GlowRing_Orange_ (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1131506804641017174, guid: 390c6ad04747a884da48f7770683c01d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -320,6 +317,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.1073592
       objectReference: {fileID: 0}
+    - target: {fileID: 4362893017923196950, guid: 390c6ad04747a884da48f7770683c01d,
+        type: 3}
+      propertyPath: m_Name
+      value: GlowRing_Orange_ (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390c6ad04747a884da48f7770683c01d, type: 3}
 --- !u!4 &517646922236112942 stripped
@@ -335,11 +337,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6752744121206520715}
     m_Modifications:
-    - target: {fileID: 4362893017923196950, guid: 390c6ad04747a884da48f7770683c01d,
-        type: 3}
-      propertyPath: m_Name
-      value: GlowRing_Orange_
-      objectReference: {fileID: 0}
     - target: {fileID: 1131506804641017174, guid: 390c6ad04747a884da48f7770683c01d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -409,6 +406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.8606749
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362893017923196950, guid: 390c6ad04747a884da48f7770683c01d,
+        type: 3}
+      propertyPath: m_Name
+      value: GlowRing_Orange_
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390c6ad04747a884da48f7770683c01d, type: 3}

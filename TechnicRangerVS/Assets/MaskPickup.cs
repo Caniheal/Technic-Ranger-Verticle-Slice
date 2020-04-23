@@ -8,6 +8,8 @@ public class MaskPickup : MonoBehaviour
 
     private AudioSource sound;
 
+    public ParticleSystem maskPickUpEffect;
+
     private void Start()
     {
         sound = GetComponent<AudioSource>();
@@ -26,6 +28,7 @@ public class MaskPickup : MonoBehaviour
 
             Controller.UnlockWeapon(weaponUnlock);
             Destroy(gameObject, .15f);
+            Instantiate(maskPickUpEffect, transform.position, Quaternion.identity);
 
         }
     }
