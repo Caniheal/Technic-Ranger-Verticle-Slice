@@ -13796,7 +13796,7 @@ AudioSource:
   m_GameObject: {fileID: 394776859}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243152530080682742, guid: eb34e8103a2dc3b458e203d5df48647c,
+  OutputAudioMixerGroup: {fileID: 243319854153227468, guid: eb34e8103a2dc3b458e203d5df48647c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 2484d86963426fa4b94cc7ff9a2f6b4a, type: 3}
   m_PlayOnAwake: 1
@@ -32645,11 +32645,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8748113952018624720, guid: 816b6092cd8a19841b95691daac21094,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -9.999878
-      objectReference: {fileID: 0}
     - target: {fileID: 416, guid: 816b6092cd8a19841b95691daac21094, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
@@ -32669,6 +32664,11 @@ PrefabInstance:
     - target: {fileID: 181, guid: 816b6092cd8a19841b95691daac21094, type: 3}
       propertyPath: m_RootOrder
       value: 192
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748113952018624720, guid: 816b6092cd8a19841b95691daac21094,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -9.999878
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 816b6092cd8a19841b95691daac21094, type: 3}
@@ -71956,11 +71956,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 877798559505466070, guid: 8b1bca8dd0d88ca43b30c0bafeafc90c,
-        type: 3}
-      propertyPath: m_Name
-      value: GlowRing_Yellow_
-      objectReference: {fileID: 0}
     - target: {fileID: 1743129856922306605, guid: 8b1bca8dd0d88ca43b30c0bafeafc90c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72030,6 +72025,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 68.258675
+      objectReference: {fileID: 0}
+    - target: {fileID: 877798559505466070, guid: 8b1bca8dd0d88ca43b30c0bafeafc90c,
+        type: 3}
+      propertyPath: m_Name
+      value: GlowRing_Yellow_
       objectReference: {fileID: 0}
     - target: {fileID: 1167431850912437534, guid: 8b1bca8dd0d88ca43b30c0bafeafc90c,
         type: 3}
