@@ -692,28 +692,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("1") || (Input.GetAxis("Dpad Y") < 0))
         {
             NewWeaponState = WeaponState.Default;
-            source.PlayOneShot(maskSwitchClip);
-            Instantiate(defaultMaskEffect, transform.position, Quaternion.identity);
-
         }
         if (Input.GetKeyDown("2") || (Input.GetAxis("Dpad Y") > 0))
         {
-            NewWeaponState = WeaponState.Vista;
-            source.PlayOneShot(maskSwitchClip);
-            Instantiate(vistaMaskEffect, transform.position, Quaternion.identity);
+            NewWeaponState = WeaponState.Vista; 
         }
         if (Input.GetKeyDown("3") || (Input.GetAxis("Dpad X") > 0))
         {
-            NewWeaponState = WeaponState.Anchor;
-            source.PlayOneShot(maskSwitchClip);
-            Instantiate(anchorMaskEffect, transform.position, Quaternion.identity);
+            NewWeaponState = WeaponState.Anchor;    
         }
 
         if (Input.GetKeyDown("4") || (Input.GetAxis("Dpad X") < 0))
         {
             NewWeaponState = WeaponState.Shield;
-            source.PlayOneShot(maskSwitchClip);
-            Instantiate(shieldMaskEffect, transform.position, Quaternion.identity);
         }
 
 
@@ -722,6 +713,30 @@ public class PlayerController : MonoBehaviour
         //                                           YES = switch to weapon; NO = don't switch
         if (NewWeaponState != CurrentWeaponState && GetUnlockedWeapons().Contains(NewWeaponState))
         {
+
+            source.PlayOneShot(maskSwitchClip);
+
+            if (NewWeaponState == WeaponState.Default)
+            {
+                Instantiate(defaultMaskEffect, transform.position, Quaternion.identity);
+            }
+            else if (NewWeaponState == WeaponState.Anchor)
+            {
+                Instantiate(anchorMaskEffect, transform.position, Quaternion.identity);
+            }
+            else if (NewWeaponState == WeaponState.Vista)
+            {
+                Instantiate(vistaMaskEffect, transform.position, Quaternion.identity);
+            }
+            else if (NewWeaponState == WeaponState.Shield)
+            {
+                Instantiate(shieldMaskEffect, transform.position, Quaternion.identity);
+            }
+
+
+
+
+
             if (CurrentWeaponState == WeaponState.Vista)
             {
                 WarpManager.DisableWarper();
@@ -729,13 +744,18 @@ public class PlayerController : MonoBehaviour
             }
 
             //CALL EXIT SHIELD when switching masks :)
+  
             if (CurrentWeaponState == WeaponState.Shield)
             {
-                SkateboardController Skateboard = SpawnedShield.GetComponent<SkateboardController>();
+                if (SpawnedShield)
+                {
+                    SkateboardController Skateboard = SpawnedShield.GetComponent<SkateboardController>();
 
-                Skateboard.ExitShield();
+                    Skateboard.ExitShield();
 
-                SpawnedShield = null;
+                    SpawnedShield = null;
+                }
+
                 source.PlayOneShot(destroyClip);
             }
 
