@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
     public Camera Camera;
     public WarpManager WarpManager;
     public GameObject ShieldPrefab;
+    public bool IsOnShield;
+
     // color swaping references
     public Material Purple, Teal, Tan, Blue, White, Black;
     public SkinnedMeshRenderer Render;
@@ -569,6 +571,26 @@ public class PlayerController : MonoBehaviour
 
         if (CurrentWeaponState == WeaponState.Shield)
         {
+            //ALWAYS set these to false unlessss..... (below)
+            anim.SetBool("isShieldLefting", false);
+            anim.SetBool("isShieldRighting", false);
+            anim.SetBool("isRunning", false);
+
+            //The ranger is on the shield :) Then take in values
+            if (IsOnShield)
+            {
+                float HorizontalValue = Input.GetAxis("Horizontal");
+                Debug.Log(HorizontalValue);
+                if (HorizontalValue > 0f)
+                {
+                    anim.SetBool("isShieldLefting", true);
+                }
+                else if (HorizontalValue < 0f)
+                {
+                    anim.SetBool("isShieldRighting", true);
+                }
+            }
+
             if ((Input.GetKey(KeyCode.Mouse0) || Input.GetButton("Right Bumper")) && SpawnedShield == null)
             {
                 Vector3 spawnLocation = transform.position + (transform.rotation * Vector3.forward * 2f);
@@ -706,9 +728,13 @@ public class PlayerController : MonoBehaviour
                 source.PlayOneShot(destroyClip);
             }
 
+            //CALL EXIT SHIELD when switching masks :)
             if (CurrentWeaponState == WeaponState.Shield)
             {
-                Destroy(SpawnedShield);
+                SkateboardController Skateboard = SpawnedShield.GetComponent<SkateboardController>();
+
+                Skateboard.ExitShield();
+
                 SpawnedShield = null;
                 source.PlayOneShot(destroyClip);
             }
