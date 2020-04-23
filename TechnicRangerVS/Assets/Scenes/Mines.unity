@@ -2838,6 +2838,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6717232695456108344, guid: c966ab5847bce924b872ede80faff0ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6717232695456108349, guid: c966ab5847bce924b872ede80faff0ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2968,6 +2973,16 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6717232696305119949, guid: c966ab5847bce924b872ede80faff0ad,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717232696305119949, guid: c966ab5847bce924b872ede80faff0ad,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6377724513662068880, guid: c966ab5847bce924b872ede80faff0ad,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -2984,16 +2999,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6717232696230363591, guid: c966ab5847bce924b872ede80faff0ad,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6717232696305119949, guid: c966ab5847bce924b872ede80faff0ad,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6717232696305119949, guid: c966ab5847bce924b872ede80faff0ad,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -24269,14 +24274,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1120088640, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
-      propertyPath: WarperOffset.y
-      value: 2.3
-      objectReference: {fileID: 0}
     - target: {fileID: 4540799230730395645, guid: 099db6ccb500db64da1fd7b47e6b13e0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120088640, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
+      propertyPath: WarperOffset.y
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 1608111841, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -24816,6 +24821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trophies Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 244, guid: 816b6092cd8a19841b95691daac21094, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 368, guid: 816b6092cd8a19841b95691daac21094, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -24899,6 +24908,27 @@ PrefabInstance:
     - target: {fileID: 368, guid: 816b6092cd8a19841b95691daac21094, type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748113952018624720, guid: 816b6092cd8a19841b95691daac21094,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -9.999878
+      objectReference: {fileID: 0}
+    - target: {fileID: 416, guid: 816b6092cd8a19841b95691daac21094, type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 416, guid: 816b6092cd8a19841b95691daac21094, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415, guid: 816b6092cd8a19841b95691daac21094, type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415, guid: 816b6092cd8a19841b95691daac21094, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 816b6092cd8a19841b95691daac21094, type: 3}
@@ -55537,6 +55567,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 877798559505466070, guid: 8b1bca8dd0d88ca43b30c0bafeafc90c,
+        type: 3}
+      propertyPath: m_Name
+      value: GlowRing_Yellow_
+      objectReference: {fileID: 0}
     - target: {fileID: 1743129856922306605, guid: 8b1bca8dd0d88ca43b30c0bafeafc90c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -55606,11 +55641,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 68.258675
-      objectReference: {fileID: 0}
-    - target: {fileID: 877798559505466070, guid: 8b1bca8dd0d88ca43b30c0bafeafc90c,
-        type: 3}
-      propertyPath: m_Name
-      value: GlowRing_Yellow_
       objectReference: {fileID: 0}
     - target: {fileID: 1167431850912437534, guid: 8b1bca8dd0d88ca43b30c0bafeafc90c,
         type: 3}

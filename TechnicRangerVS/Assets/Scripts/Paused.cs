@@ -156,6 +156,7 @@ public class Paused : MonoBehaviour
     void TaskOnClick()
     {
         pauseMenuUI.SetActive(true);
+        trophiesMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
