@@ -31,7 +31,7 @@ public class Paused : MonoBehaviour
         Button btn = Back.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         //btn.onClick.AddListener(SecondTaskOnClick);
-        pauseMenuUI.SetActive(false);
+        GameIsPaused = false;
         Image1.enabled = false;
         Image2.enabled = false;
         Image3.enabled = false;
@@ -67,7 +67,6 @@ public class Paused : MonoBehaviour
         {
             TaskOnClick();
         }
-
     }
 
     public void Resume()
@@ -95,14 +94,14 @@ public class Paused : MonoBehaviour
         Save(coin.count);
     }
 
-    public void Settings()
+    /*public void Settings()
     {
         pauseMenuUI.SetActive(false);
         trophiesMenuUI.SetActive(false);
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
-    }
+    }*/
 
     public void Trophies()
     {
@@ -112,6 +111,7 @@ public class Paused : MonoBehaviour
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
+
         if (coin.count == 3)
         {
             Image1.enabled = true;
@@ -121,6 +121,7 @@ public class Paused : MonoBehaviour
         {
             Image2.enabled = true;
         }
+
     }
     
     public static void Save(int coinNum)
