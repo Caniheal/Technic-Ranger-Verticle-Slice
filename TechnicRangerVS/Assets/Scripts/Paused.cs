@@ -85,7 +85,6 @@ public class Paused : MonoBehaviour
         trophiesMenuUI.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
-        AudioListener.pause = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
