@@ -47,7 +47,7 @@ public class CoinKiller : MonoBehaviour
         Instantiate(pickUpEffect, transform.position, Quaternion.identity);
         Instantiate(orbEffect, transform.position, Quaternion.identity);
 
-        Object.Destroy(gameObject);
+        Object.Destroy(gameObject,.15f);
     }
 
 }
