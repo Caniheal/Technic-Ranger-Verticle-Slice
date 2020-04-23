@@ -24,7 +24,7 @@ public class LoadLevelAfterTime : MonoBehaviour
 
         if (Input.anyKey)
         {
-            SceneManager.LoadScene(sceneNameToLoad);
+           // SceneManager.LoadScene(sceneNameToLoad);
         }
     }
 }
