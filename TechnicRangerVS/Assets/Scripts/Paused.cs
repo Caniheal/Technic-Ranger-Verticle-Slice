@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using static SceneSwitching;
 using Newtonsoft.Json;
 using System.IO;
+using UnityEngine.EventSystems;
 
 public class Paused : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class Paused : MonoBehaviour
         Image6.enabled = false;
         Image7.enabled = false;
         Image8.enabled = false;
-        coin = GameObject.Find("Prefab_FinalCharacterModel").GetComponent<PlayerController>();
+        coin = GameObject.Find("Prefab_FinalCharacterModel").GetComponent<PlayerController>();// need this game object to access count
 
     }
         
@@ -94,15 +95,6 @@ public class Paused : MonoBehaviour
         Save(coin.count);
     }
 
-    /*public void Settings()
-    {
-        pauseMenuUI.SetActive(false);
-        trophiesMenuUI.SetActive(false);
-        AudioListener.pause = true;
-        Time.timeScale = 0f;
-        GameIsPaused = true;
-    }*/
-
     public void Trophies()
     {
         
@@ -111,7 +103,6 @@ public class Paused : MonoBehaviour
         AudioListener.pause = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
-
         if (coin.count == 3)
         {
             Image1.enabled = true;
