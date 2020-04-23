@@ -59,13 +59,16 @@ public class SkateboardController : MonoBehaviour
 
     public void ExitShield()
     {
-        player.transform.parent = null;
-        player.EnableMovement();
-        player.transform.rotation = Quaternion.identity;
-        player.IsOnShield = false;
-        player = null;
-        enabletriggerenter = false;
-        Destroy(gameObject, 3);
+        if (player)
+        {
+            player.transform.parent = null;
+            player.EnableMovement();
+            player.transform.rotation = Quaternion.identity;
+            player.IsOnShield = false;
+            player = null;
+            enabletriggerenter = false;
+            Destroy(gameObject, 3);
+        }
     }
 
     public void FixedUpdate()
