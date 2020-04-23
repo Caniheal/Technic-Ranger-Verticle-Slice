@@ -161,9 +161,9 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
 
-            Paused.Save(count);
-
             SetCountText();
+
+            Paused.Save(count);
         }
     }
 
