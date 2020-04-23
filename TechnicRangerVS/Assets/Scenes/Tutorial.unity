@@ -15092,6 +15092,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4540799230730395645, guid: 099db6ccb500db64da1fd7b47e6b13e0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1120088642, guid: 099db6ccb500db64da1fd7b47e6b13e0, type: 3}
       propertyPath: Paused
       value: 
@@ -15101,11 +15106,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4650729439480440385, guid: e997b5e8e1add8949984b0e9863af9a0,
         type: 3}
-    - target: {fileID: 4540799230730395645, guid: 099db6ccb500db64da1fd7b47e6b13e0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 2354844194780994616, guid: 099db6ccb500db64da1fd7b47e6b13e0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -18688,7 +18688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 95, guid: 816b6092cd8a19841b95691daac21094, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 816b6092cd8a19841b95691daac21094, type: 3}
