@@ -40,14 +40,14 @@ public class CoinKiller : MonoBehaviour
 
      
             
-    }
+        }
     
     public void Destroy()
     {
         Instantiate(pickUpEffect, transform.position, Quaternion.identity);
         Instantiate(orbEffect, transform.position, Quaternion.identity);
 
-        Object.Destroy(gameObject);
+        Object.Destroy(gameObject, .15f);
     }
 
 }
