@@ -15,6 +15,19 @@ MonoBehaviour:
   xAngle: 0
   yAngle: 0
   zAngle: -80
+--- !u!65 &5932069921697217799
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2312993040842182926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.026745867, y: 0.026940612, z: 0.02468371}
+  m_Center: {x: -0.0004261356, y: 0.0006412462, z: -0.010411691}
 --- !u!65 &5425317782026343482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26,8 +39,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.019999998, y: 0.019999992, z: 0.11025041}
-  m_Center: {x: 0.0000000296184, y: 8.898158e-19, z: 0.00063133903}
+  m_Size: {x: 0.019492708, y: 0.019695114, z: 0.11025041}
+  m_Center: {x: -0.000038061557, y: 0.00073314237, z: 0.0006313391}
 --- !u!82 &8535432418722742308
 AudioSource:
   m_ObjectHideFlags: 0
@@ -171,7 +184,7 @@ GameObject:
   - component: {fileID: 2060496623855471449}
   m_Layer: 0
   m_Name: CoinYellowPickup_
-  m_TagString: Pick Up
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,6 +214,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
       propertyPath: m_Name
       value: Coin_
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_TagString
-      value: Pick Up
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_LocalPosition.x

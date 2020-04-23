@@ -191,6 +191,19 @@ MonoBehaviour:
   xAngle: 0
   yAngle: 0
   zAngle: -80
+--- !u!65 &799645648373517815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097204616490137800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.034115978, y: 0.03100489, z: 0.023771456}
+  m_Center: {x: -0.00030921836, y: -0.001436405, z: -0.008665794}
 --- !u!1001 &1557030708478530488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_TagString
-      value: Pick Up
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_LocalPosition.x
@@ -290,6 +303,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
       propertyPath: m_Name
       value: Coin_
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
+      propertyPath: m_TagString
+      value: Pick Up
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
       propertyPath: m_LocalPosition.x
