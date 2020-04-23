@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Coins Collected: " + count.ToString();
+        countText.text = "Bits Collected: " + count.ToString();
     }
 
     void OnTriggerEnter(Collider other)
