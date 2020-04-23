@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9043803012080975899}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: CoinBluePickup_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c586edefdf69c7f478a47fc203cb57c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -312,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 32a214d2a177a9d4c847db8907edce83, type: 3}
       propertyPath: m_LocalPosition.x
